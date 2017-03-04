@@ -278,33 +278,33 @@ input.button.next {
 
 /* Final example website */
 
-#final-example .wrapper {
+#MiniContosAmbulantes .wrapper {
 	width: 800px;
 	padding: 0;
 }
 
-#final-example .content {
+#MiniContosAmbulantes .content {
 	padding: 20px 50px 50px;
 	text-align: left;
 }
 
-#final-example #nav {
+#MiniContosAmbulantes #nav {
 	margin: -27px 0 0;
 }
 
-#final-example #nav ul {
+#MiniContosAmbulantes #nav ul {
 	display: inline-block;
 	list-style: none;
 	text-align: left;
 }
 
-#final-example #nav ul li {
+#MiniContosAmbulantes #nav ul li {
 	display: inline-block;
 	text-align: center;
 	margin: 0 10px;
 }
 
-#final-example #nav ul li a {
+#MiniContosAmbulantes #nav ul li a {
 	display: block;
 	background: #353535;
 	outline: solid 2px #353535;
@@ -314,67 +314,67 @@ input.button.next {
 	text-decoration: none;
 }
 
-#final-example #nav ul li a:hover {
+#MiniContosAmbulantes #nav ul li a:hover {
 	background: #000;
 	outline: solid 2px #000;
 }
 
-#final-example #philosophy {
+#MiniContosAmbulantes #philosophy {
 	text-align: center;
 	font-size: 18px;
 	line-height: 22px;
 }
 
-#final-example #footer {
+#MiniContosAmbulantes #footer {
 	font-size: 12px;
 	line-height: 15px;
 	margin: 60px 0 0 0;
 }
 
-#final-example #footer strong {
+#MiniContosAmbulantes #footer strong {
 	display: block;
 	margin: 0 0 20px;
 }
 
-#final-example .column {
+#MiniContosAmbulantes .column {
 	display: block;
 	float: left;
 }
 
-#final-example .column.three {
+#MiniContosAmbulantes .column.three {
 	width: 203px;
 	margin-right: 45px;
 }
 
-#final-example .column.last {
+#MiniContosAmbulantes .column.last {
 	margin: 0;
 }
 
-#final-example small {
+#MiniContosAmbulantes small {
 	display: block;
 	text-align: center;
 	margin: 40px 0 0;
 }
 
-#final-example .member {
+#MiniContosAmbulantes .member {
 	width: 203px;
 	float: left;
 	margin-right: 45px;
 }
 
-#final-example .member:last-child {
+#MiniContosAmbulantes .member:last-child {
 	margin: 0;
 }
 
-#final-example .member img {
+#MiniContosAmbulantes .member img {
 	max-width: 100%;
 }
 
-#final-example .closed {
+#MiniContosAmbulantes .closed {
 	color: #d13916;
 }
 
-#final-example .open {
+#MiniContosAmbulantes .open {
 	color: #67b512;
 }
 
