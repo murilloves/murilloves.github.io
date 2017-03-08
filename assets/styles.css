@@ -7,7 +7,7 @@
 
 body {
 	background: #f5f4f1;
-	background-image: url('img/typeWrt.jpg');
+	background-image: url('img/bg.jpg');
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	line-height: 20px;
@@ -49,6 +49,16 @@ h4.error {
 
 h5,h6 {
 	font-size: 20px;
+}
+
+h5 {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+h6 {
+	padding: 5%;
+	text-align: justify;
 }
 
 p {
@@ -159,10 +169,6 @@ aside {
 aside h3 {
 	font-size: 24px;
 	margin-top: 10px;
-}
-
-aside h6 {
-	margin: 15px 0 5px;
 }
 
 table {
