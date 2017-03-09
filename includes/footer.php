@@ -12,19 +12,14 @@
 						Goiânia, GO
 					</div><!-- column 2 -->
 
-					<div class="column three last">
 						<strong>Horário</strong>
 
 						<em>Segunda - Sexta</em><br>
 						9:00am - 5:00pm<br><br>
 
-						<em>Sábado - Domingo</em><br>
-						Fechado<br><br>
-					</div><!-- column 3 -->
-
 				</div><!-- footer -->
 
-				<small>&copy;<?php echo date('Y')." - ".$siteName ?></small>
+				<small>&copy;<?php echo date('Y')." - ".$TITLE ?></small>
 
 			</div><!-- content -->
 
