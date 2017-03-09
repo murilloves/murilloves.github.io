@@ -5,27 +5,10 @@
 
 <style type="text/css">
 @font-face {
-    font-family: "Corona Typewriter";
-    src: url(fonts/corona3Typewriter.ttf) format("truetype");
-}
-@font-face {
     font-family: "Veteran Typewriter";
     src: url(fonts/veteranTypewriter.ttf) format("truetype");
 }
-@font-face {
-    font-family: "Elegant Typewriter";
-    src: url(fonts/elegantTypewriter.ttf) format("truetype");
-}
-@font-face {
-    font-family: "Freeky Typewriter";
-    src: url(fonts/freekyTypewriter.ttf) format("truetype");
-}
-@font-face {
-    font-family: "Old Typewriter";
-    src: url(fonts/oldTypewriter.ttf) format("truetype");
-}
 </style>
-
 <font face="Veteran Typewriter" >
 
 <h6>
@@ -58,10 +41,7 @@
 
 
 <font face="Times" >
-<small>&copy;<?php echo date('Y')." - ".$siteName ?></small>
+<small>&copy;<?php echo date('Y')." - ".$TITLE ?></small>
 	</div><!-- content -->
 </div><!-- wrapper -->
 
-<div class="copyright-info">
-	<?php include('assets/includes/copyright.php') ?>
-</div><!-- copyright-info -->
