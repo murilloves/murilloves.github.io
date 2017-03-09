@@ -6,8 +6,8 @@
 }
 
 body {
-	background: #f5f4f1;
-	background-image: url('img/bg.jpg');
+//	background: #f5f4f1;
+//	background-image: url('img/background.jpg');
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	line-height: 20px;
@@ -137,14 +137,14 @@ sup {
 	left: -5px;
 	width: 100%;
 	height: 100%;
-	background: #97917e;
+//	background: #97917e;
 	z-index: -1;
 }
 
 .wrapper:before {
 	top: 10px;
 	left: -10px;
-	background: #514933;
+//	background: #514933;
 }
 
 #logo {
@@ -285,7 +285,7 @@ input.button.next {
 /* Final example website */
 
 #MiniContosAmbulantes .wrapper {
-	width: 800px;
+	width: 720px;
 	padding: 0;
 }
 
