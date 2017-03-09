@@ -1,5 +1,5 @@
 <?php
-	define ("TITLE","MiniContosAmbulantes");
+	define ("TITLE","Home | MiniContosAmbulantes");
 	include ('includes/header.php');
 ?>
 
@@ -11,6 +11,7 @@
 </style>
 <font face="Corona Typewriter" >
 
+
 <div>
 	<hr>
 	<h5><center>
@@ -20,11 +21,7 @@
 </div>
 
 
-<font face="Helvetica" >
-<small>&copy;<?php echo date('Y')." - ".$siteName ?></small>
+<font face="Times" >
+<small>&copy;<?php echo date('Y')." - ".$TITLE ?></small>
 	</div><!-- content -->
 </div><!-- wrapper -->
-
-<div class="copyright-info">
-	<?php include('assets/includes/copyright.php') ?>
-</div><!-- copyright-info -->
