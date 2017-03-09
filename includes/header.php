@@ -1,6 +1,5 @@
 <?php
-	$siteName = MiniContosAmbulantes;
-	include('includes/arrays.php');
+	$TITLE = "MiniContosAmbulantes";
 ?>
 
 <!DOCTYPE html>
