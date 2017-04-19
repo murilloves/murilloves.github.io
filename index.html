@@ -1,27 +1,60 @@
-<?php
-	define ("TITLE","Home | MiniContosAmbulantes");
-	include ('includes/header.php');
-?>
+<!DOCTYPE html>
+<html>
 
-<style type="text/css">
-@font-face {
-    font-family: "Corona Typewriter";
-    src: url(fonts/corona3Typewriter.ttf) format("truetype");
-}
-</style>
-<font face="Corona Typewriter" >
+<head>
+
+	<title> Home | MiniContosAmbulantes </title>
+	<link href = "assets/styles.css" rel = "stylesheet">
+
+	<style type="text/css">
+	@font-face {
+	    font-family: "Corona Typewriter";
+	    src: url(fonts/corona3Typewriter.ttf) format("truetype");
+	}
+	</style>
+
+	<style type="text/css">
+		@font-face {
+		    font-family: "Brain Flower";
+		    src: url(fonts/brainFlowerEuro.ttf) format("truetype");
+		}
+	</style>
+
+</head>
+
+<body id = "MiniContosAmbulantes">
+
+	<div class = "wrapper">
+
+		<div id="banner">
+			<a href="" title="stylesheet">
+				<img src="assets/img/banner.jpg" alt="MiniContosAmbulantes">
+			</a>
+		</div><!-- banner -->
+
+		<div id="nav">
+			<ul><h4>
+				<font face="Brain Flower" >
+				<li><a href="index.html">Home</a></li>
+				<li><a href="contos.html">Contos</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			</ul>
+		</div><!-- nav -->
+
+		<div>
+			<hr>
+			<h5><center>
+				<font face="Corona Typewriter" >
+				Apesar de “Mini”, os contos são completos e a complexidade de sua pequenez os torna únicos e deliciosos. Sirva-se à vontade.
+			</center></h5>
+			<hr>
+		</div>
+
+	</div> <!-- wrapper -->
 
 
-<div>
-	<hr>
-	<h5><center>
-		Apesar de “Mini”, os contos são completos e a complexidade de sua pequenez os torna únicos e deliciosos. Sirva-se à vontade.
-	</center></h5>
-	<hr>
-</div>
+	<font face="Times" >
+	<small>&copy; 2017 - MiniContosAmbulantes </small>
+	</font>
 
-
-<font face="Times" >
-<small>&copy;<?php echo date('Y')." - ".$TITLE ?></small>
-	</div><!-- content -->
-</div><!-- wrapper -->
+</body>
