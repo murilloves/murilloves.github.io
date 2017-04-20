@@ -5,6 +5,7 @@
 
 	<title> Home | MiniContosAmbulantes </title>
 	<link href = "assets/styles.css" rel = "stylesheet">
+	<link href = "assets/bootstrap.css" rel = "stylesheet">
 
 	<style type="text/css">
 		@font-face
@@ -21,39 +22,42 @@
 
 </head>
 
-<body id = "MiniContosAmbulantes">
+<body id = "MiniContosAmbulantes" class = "col-md-12">
 
-	<div class = "wrapper">
+	<div id="coluna principal" align="center">
 
-		<div id="banner">
-			<a href="" title="stylesheet">
-				<img src="assets/img/banner.jpg" alt="MiniContosAmbulantes">
-			</a>
-		</div><!-- banner -->
+		<div id="banner" class="padding-top-3">
+			<img src="assets/img/banner.jpg">
+		</div><!-- </banner> -->
 
-		<div id="nav">
-			<ul><h4>
+		<div id="nav" class="h2">
+			<ul class="padding-top-3">
 				<font face="Brain Flower" >
-				<li><a href="index.html">Home</a></li>
-				<li><a href="contos.html">Contos</a></li>
-				<li><a href="contato.html">Contato</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="contos.html">Contos</a></li>
+					<li><a href="contato.html">Contato</a></li>
+				</font>
 			</ul>
-		</div><!-- nav -->
+		</div><!-- </nav> -->
 
-		<div>
+		<div class="col-md-2"> </div>
+		<div class="col-md-8">
+			<font face="Corona Typewriter" >
 			<hr>
-			<h5><center>
-				<font face="Corona Typewriter" >
-				Apesar de “Mini”, os contos são completos e a complexidade de sua pequenez os torna únicos e deliciosos. Sirva-se à vontade.
-			</center></h5>
+				<h3 class="display-4">
+					Apesar de “Mini”, os contos são completos e a complexidade de sua pequenez os torna únicos e deliciosos. Sirva-se `a vontade.
+				</h3>
 			<hr>
-		</div>
+		</div> <!-- </col-md8> -->
+		<div class="col-md-2"> </div>
 
-	</div> <!-- wrapper -->
+	</div> <!-- </coluna principal> -->
 
 
-	<font face="Times" >
-	<small>&copy; 2017 - MiniContosAmbulantes </small>
-	</font>
+	<div class="col-md-12">
+		<font face="Times" >
+			<small>&copy; 2017 - MiniContosAmbulantes </small>
+		</font>
+	</div>
 
 </body>
