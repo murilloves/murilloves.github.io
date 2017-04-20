@@ -121,6 +121,18 @@ sup {
 
 /* Layout */
 
+.padding-top-3 {
+	margin-top: 3%;
+}
+
+.padding-top-5 {
+	margin-top: 5%;
+}
+
+.padding-top-10 {
+	margin-top: 10%;
+}
+
 .wrapper {
 	position: relative;
 	width: 620px;
@@ -295,6 +307,10 @@ input.button.next {
 }
 
 #MiniContosAmbulantes #nav {
+	margin: -27px 0 0;
+}
+
+#MiniContosAmbulantes # {
 	margin: -27px 0 0;
 }
 
