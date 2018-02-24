@@ -43,7 +43,7 @@
 		<div class="col-md-8">
 			<font face="Corona Typewriter" >
 			<hr>
-				<h3 class="display-3">
+				<h3 id="test" class="display-3" style="text-align: left !important">
 					Apesar de “Mini”, os contos são completos e a complexidade de sua pequenez os torna únicos e deliciosos. Sirva-se `a vontade.
 				</h3>
 			<hr>
@@ -59,4 +59,25 @@
 		</font>
 	</div>
 
+
+	<script>
+		function typeWriter(text, n) {
+			if (n < (text.length)) {
+				document.getElementById('test').innerHTML = text.substring(0, n+1);
+				n++;
+				setTimeout(function() {
+				typeWriter(text, n)
+				}, 100);
+			}
+		}
+		// $(document).ready(function() {
+		// 	// e.stopPropagation();
+			
+		// });
+		(function() {
+			var text = document.getElementById('test').innerHTML;
+			typeWriter(text, 0);
+		})();
+
+	</script>
 </body>
