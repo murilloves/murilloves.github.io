@@ -26,7 +26,7 @@
                         <span class="record" id="record"></span>
                     </h3>
                     <h2 class="you-are-dead" id="you-are-dead">
-                        You are dead, press spacebar to continue.
+                        You are dead, press spacebar to try again.
                     </h2>
                     <h1 class="you-are-dead" id="game-over">
                         Game over!
@@ -288,7 +288,7 @@ function keyPressed(evt) {
         xVelocity = 0;
         yVelocity = 0;
     } else if (evt.keyCode === 32) {
-        if (lives > 0) {
+        if (lives > 0 && tail === 5) {
             initGame();
         }
     }
