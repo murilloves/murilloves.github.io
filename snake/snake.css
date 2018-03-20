@@ -1,0 +1,71 @@
+.game {
+    background-color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.game-screen {
+    background-color: #B9C501;
+    width: 60vw;
+    height: 100vh;
+}
+.game-board {
+    padding-top: 0.3em;
+    padding-left: 0.3em;
+    width: 59.5vw;
+    height: 98.9vh;
+}
+.game-score {
+    font-size: 3vh;
+    width: 40vw;
+    position: relative;
+    color: white;
+    font-family: monospace;
+    height: 100vh;
+}
+.desc {
+    text-align: center;
+}
+.level {
+    position: absolute;
+    bottom: 1em;
+}
+.pd-left {
+    padding-left: 2em;
+}
+.pd-bottom {
+    padding-bottom: 2em;
+}
+.lives {
+    color: red;
+}
+.you-are-dead {
+    display: none;
+    color: #a59b59;
+    margin-top: 20vh;
+    text-align: center;
+}
+body {
+    margin: 0px;
+}
+button {
+    width: 15vw;
+    height: 3em;
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.5em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color: white;
+    background-color:black;
+    text-align:center;
+    transition: all 0.2s;
+}
+button:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+}
