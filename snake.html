@@ -32,13 +32,13 @@
                         Game over!
                     </h1>
                 </div>
-<!--                 <div class="desc level">
+                <div class="desc level">
                     <h3>SET DIFFICULT: <span id="difficult">Easy</span></h3>
-                    <button onclick="setDifficult('10','10','Easy')">Easy</button>
-                    <button onclick="setDifficult('15','25','Medium')">Medium</button>
-                    <button onclick="setDifficult('25','50','Hard')">Hard</button>
-                    <button onclick="setDifficult('35','100','Insane')">Insane</button>
-                </div> -->
+                    <button id="easy">Easy</button>
+                    <button id="medium">Medium</button>
+                    <button id="hard">Hard</button>
+                    <button id="insane">Insane</button>
+                </div>
             </div>
         </div>
     </body>
@@ -292,5 +292,19 @@
             }
         }
     }
+    (function setupButtonsLevels() {
+        document.getElementById('easy').addEventListener('click', function(){
+            setDifficult('10','10','Easy');
+        });
+        document.getElementById('medium').addEventListener('click', function(){
+            setDifficult('15','25','Medium');
+        });
+        document.getElementById('hard').addEventListener('click', function(){
+            setDifficult('25','50','Hard');
+        });
+        document.getElementById('insane').addEventListener('click', function(){
+            setDifficult('35','100','Insane');
+        });
+    })();
 })();
 </script>
