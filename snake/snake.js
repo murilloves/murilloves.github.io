@@ -11,8 +11,8 @@
     let timer = null;
     let difficult = 10;
     let gameBlocks = 15;
-    let screenSize;
-    width > height ? screenSize = height / gameBlocks - 1 : screenSize = width / gameBlocks - 1;
+    let blockSize;
+    width > height ? blockSize = height / gameBlocks - height / 1536 : blockSize = width / gameBlocks - height / 1536;
     let positionX = positionY = 0;
     let xVelocity = yVelocity = 0;
     let targetX = targetY = 5;
@@ -22,6 +22,8 @@
     let lives = 3;
     let points = 10;
     let gameBegining = true;
+
+    const proportion = 0.0125;
 
     let bgColor = '#B9C501';
     let snakeColor = '#746500';
@@ -34,9 +36,8 @@
     let record = 0;
 
     (function () {
-        document.getElementById('snake-game').setAttribute('width', height - 20);
-        document.getElementById('snake-game').setAttribute('height', height - 20);
-        console.log(screenSize);
+        document.getElementById('snake-game').setAttribute('height', height - (proportion * height));
+        document.getElementById('snake-game').setAttribute('width', height - (proportion/2 * height));
     })();
 
     window.onload = function() {
@@ -51,7 +52,7 @@
         gameBegining = true;
         positionX = positionY = 0;
         xVelocity = yVelocity = 0;
-        targetX = targetY = 5;
+        targetX = targetY = Math.floor(gameBlocks / 2 - 1);
     }
     function initGame() {
         canv = document.getElementById('snake-game');
@@ -126,10 +127,10 @@
         ctx.fillStyle = snakeColor;
         for(var indx = 0; indx < trail.length; indx++) {
             ctx.fillRect(
-                trail[indx].x*screenSize,
-                trail[indx].y*screenSize,
-                screenSize-2,
-                screenSize-2
+                trail[indx].x*blockSize,
+                trail[indx].y*blockSize,
+                blockSize-2,
+                blockSize-2
             );
             if(trail[indx].x === positionX && trail[indx].y === positionY) {
                 updateLives();
@@ -152,10 +153,10 @@
         }
         ctx.fillStyle = targetColor;
         ctx.fillRect(
-            targetX*screenSize,
-            targetY*screenSize,
-            screenSize-2,
-            screenSize-2
+            targetX*blockSize,
+            targetY*blockSize,
+            blockSize-2,
+            blockSize-2
         );
     }
     function keyPressed(evt) {
