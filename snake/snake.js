@@ -1,8 +1,18 @@
 (function () {
 
+    let width = window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
+
+    let height = window.innerHeight
+    || document.documentElement.clientHeight
+    || document.body.clientHeight;
+
     let timer = null;
     let difficult = 10;
-    let gameSize = 15;
+    let gameBlocks = 15;
+    let screenSize;
+    width > height ? screenSize = height / gameBlocks - 1 : screenSize = width / gameBlocks - 1;
     let positionX = positionY = 0;
     let xVelocity = yVelocity = 0;
     let targetX = targetY = 5;
@@ -17,7 +27,17 @@
     let snakeColor = '#746500';
     let targetColor = '#867C03';
 
+    // let bgColor = '#eee';
+    // let snakeColor = 'grey';
+    // let targetColor = '#aaa';
+
     let record = 0;
+
+    (function () {
+        document.getElementById('snake-game').setAttribute('width', height - 20);
+        document.getElementById('snake-game').setAttribute('height', height - 20);
+        console.log(screenSize);
+    })();
 
     window.onload = function() {
         initGame();
@@ -89,15 +109,15 @@
         positionX += xVelocity;
         positionY += yVelocity;
         if(positionX < 0) {
-            positionX = gameSize - 1;
+            positionX = gameBlocks - 1;
         }
-        if(positionX > gameSize - 1) {
+        if(positionX > gameBlocks - 1) {
             positionX = 0;
         }
         if(positionY < 0) {
-            positionY = gameSize - 1;
+            positionY = gameBlocks - 1;
         }
-        if(positionY > gameSize - 1) {
+        if(positionY > gameBlocks - 1) {
             positionY = 0;
         }
         ctx.fillStyle = bgColor;
@@ -106,10 +126,10 @@
         ctx.fillStyle = snakeColor;
         for(var indx = 0; indx < trail.length; indx++) {
             ctx.fillRect(
-                trail[indx].x*gameSize,
-                trail[indx].y*gameSize,
-                gameSize-2,
-                gameSize-2
+                trail[indx].x*screenSize,
+                trail[indx].y*screenSize,
+                screenSize-2,
+                screenSize-2
             );
             if(trail[indx].x === positionX && trail[indx].y === positionY) {
                 updateLives();
@@ -126,16 +146,16 @@
 
         if(targetX === positionX && targetY === positionY) {
             tail++;
-            targetX = Math.floor(Math.random() * gameSize);
-            targetY = Math.floor(Math.random() * gameSize);
+            targetX = Math.floor(Math.random() * gameBlocks);
+            targetY = Math.floor(Math.random() * gameBlocks);
             updateScore(false);
         }
         ctx.fillStyle = targetColor;
         ctx.fillRect(
-            targetX*gameSize,
-            targetY*gameSize,
-            gameSize-2,
-            gameSize-2
+            targetX*screenSize,
+            targetY*screenSize,
+            screenSize-2,
+            screenSize-2
         );
     }
     function keyPressed(evt) {
