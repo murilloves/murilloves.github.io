@@ -23,7 +23,7 @@
     let points = 10;
     let gameBegining = true;
 
-    const proportion = 0.0125;
+    const proportion = 0.0135;
 
     let bgColor = '#B9C501';
     let snakeColor = '#746500';
@@ -36,9 +36,25 @@
     let record = 0;
 
     (function () {
-        document.getElementById('snake-game').setAttribute('height', height - (proportion * height));
-        document.getElementById('snake-game').setAttribute('width', height - (proportion/2 * height));
+        if(width > height) {
+            setCssWidescreen();
+            blockSize = height / gameBlocks - height / 1536;
+            document.getElementById('snake-game').setAttribute('height', height - (proportion * height));
+            document.getElementById('snake-game').setAttribute('width', height - (proportion/2 * height));
+        } else {
+            setCssMobile();
+            blockSize = width / gameBlocks - height / 1536;
+            document.getElementById('snake-game').setAttribute('height', width - (proportion * width));
+            document.getElementById('snake-game').setAttribute('width', width - (proportion/2 * width));
+        }
     })();
+
+    function setCssWidescreen() {
+    }
+    function setCssMobile() {
+        document.getElementById('score-widescreen').style.display = 'none';
+    }
+    
 
     window.onload = function() {
         initGame();
