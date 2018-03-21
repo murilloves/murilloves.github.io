@@ -6,14 +6,14 @@
 }
 .game-screen {
     background-color: #B9C501;
-    width: 60vw;
-    height: 100vh;
+    /* width: 60vw;
+    height: 100vh; */
 }
 .game-board {
     padding-top: 0.3em;
     padding-left: 0.3em;
-    width: 59.5vw;
-    height: 98.9vh;
+    /* width: 59.5vw;
+    height: 98.9vh; */
 }
 .game-score {
     font-size: 3vh;
