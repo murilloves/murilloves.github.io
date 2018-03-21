@@ -50,9 +50,10 @@
     })();
 
     function setCssWidescreen() {
+        document.getElementById('score-widescreen').style.display = 'block';
     }
     function setCssMobile() {
-        document.getElementById('score-widescreen').style.display = 'none';
+        document.getElementById('score-mobile').style.display = 'block';
     }
     
 
