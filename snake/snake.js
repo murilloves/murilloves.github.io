@@ -124,7 +124,11 @@
         blockSize = width / gameBlocks - height / 1536;
         document.getElementById('snake-game').setAttribute('height', width - (proportion * width));
         document.getElementById('snake-game').setAttribute('width', width - (proportion/2 * width));
+        document.getElementById('move-mobile').style.display = 'block';
         document.getElementById('score-mobile').style.display = 'block';
+        document.getElementsByClassName('game-score-mobile')[0].setAttribute('style', 'height: ' + (height - 1.15 * width) + 'px;');
+        const element = document.getElementById('game');
+        element.classList.remove('flex');
     }
     function setColours() {
         document.getElementsByClassName('game-screen')[0].style.backgroundColor = colours[colourIndex].bgColor;
@@ -257,25 +261,25 @@
         );
     }
     function keyPressed(evt) {
-        if(evt.keyCode === 37) {
+        if(evt.keyCode === 37 || evt === 'left') {
             gameBegining = false;
             if (xVelocity !== 1) {
                 xVelocity =- 1;
                 yVelocity = 0;
             }
-        } else if (evt.keyCode === 38) {
+        } else if (evt.keyCode === 38 || evt === 'up') {
             gameBegining = false;
             if (yVelocity !== 1) {
                 xVelocity = 0;
                 yVelocity =- 1;
             }
-        } else if (evt.keyCode === 39) {
+        } else if (evt.keyCode === 39 || evt === 'right') {
             gameBegining = false;
             if (xVelocity !== -1) {
                 xVelocity = 1;
                 yVelocity = 0;
             }
-        } else if (evt.keyCode === 40) {
+        } else if (evt.keyCode === 40 || evt === 'down') {
             gameBegining = false;
             if (yVelocity !== -1) {
                 xVelocity = 0;
@@ -304,8 +308,22 @@
         document.getElementById('insane').addEventListener('click', function(){
             setDifficult('35','100','Insane');
         });
+
         document.getElementById('changeColorBtn').addEventListener('click', function() {
             changeColor();
+        });
+
+        document.getElementById('left').addEventListener('click', function(){
+            keyPressed('left');
+        });
+        document.getElementById('up').addEventListener('click', function(){
+            keyPressed('up');
+        });
+        document.getElementById('right').addEventListener('click', function(){
+            keyPressed('right');
+        });
+        document.getElementById('down').addEventListener('click', function(){
+            keyPressed('down');
         });
     })();
 })();
