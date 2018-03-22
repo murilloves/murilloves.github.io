@@ -125,7 +125,7 @@
         document.getElementById('snake-game').setAttribute('height', width - (proportion * width));
         document.getElementById('snake-game').setAttribute('width', width - (proportion/2 * width));
         document.getElementById('move-mobile').style.display = 'block';
-        document.getElementById('score-mobile').style.display = 'block';
+        document.getElementById('top-mobile').style.display = 'block';
         document.getElementsByClassName('game-score-mobile')[0].setAttribute('style', 'height: ' + (height - 1.15 * width) + 'px;');
         const element = document.getElementById('game');
         element.classList.remove('flex');
@@ -181,6 +181,7 @@
     function updateScore(isDead) {
         isDead ? score = 0 : score += points;
         document.getElementById('score').innerHTML = score + ' pts';
+        document.getElementById('score-mobile').innerHTML = score + ' pts';
     }
     function updateLives() {
         if(tail > 5) {
@@ -191,6 +192,7 @@
             text += ' ❤'
         }
         document.getElementById('lives').innerHTML = text;
+        document.getElementById('lives-mobile').innerHTML = text;
     }
     function updateRecord() {
         if (score > record) {
