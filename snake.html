@@ -8,7 +8,17 @@
         </title>
     </head>
     <body>
-        <div class="game">
+        <div id="game" class="flex">
+            <div id="score-mobile" class="game-score-top" style="display: none">
+                <div style="padding-left: 3vw">
+                    Lives:
+                    <span class="lives" id="lives"></span>
+                </div>
+                <div style="float: right; margin-top: -5vw; padding-right: 3vw">
+                    Score:
+                    <span class="desc" id="score"></span>
+                </div>
+            </div>
             <div class="game-screen">
                 <canvas id="snake-game" class="game-board" width="225" height="225"></canvas>
             </div>
@@ -44,8 +54,17 @@
                     </div>
                 </div>
             </div>
-            <div id="score-mobile" class="game-score-mobile" style="display: none">
-                teste
+            <div id="move-mobile" class="game-score-mobile" style="display: none">
+                <div class="div-center">
+                    <button id="up" class="btn-mobile btn-up">Up</button>
+                </div>
+                <div class="div-left-right pd-btn-mobile">
+                    <button id="left" class="btn-mobile btn-left">Left</button>
+                    <button id="right" class="btn-mobile btn-right">Right</button>
+                </div>
+                <div class="div-center pd-btn-mobile">
+                    <button id="down" class="btn-mobile btn-down">Down</button>
+                </div>
             </div>
         </div>
         <!-- Importing scripts after page is loaded -->
