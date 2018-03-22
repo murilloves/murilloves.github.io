@@ -12,7 +12,6 @@
     let difficult = 10;
     let gameBlocks = 15;
     let blockSize;
-    width > height ? blockSize = height / gameBlocks - height / 1536 : blockSize = width / gameBlocks - height / 1536;
     let positionX = positionY = 0;
     let xVelocity = yVelocity = 0;
     let targetX = targetY = 5;
@@ -25,43 +24,123 @@
 
     const proportion = 0.0135;
 
-    let bgColor = '#B9C501';
-    let snakeColor = '#746500';
-    let targetColor = '#867C03';
+    colourIndex = 0;
+    allowColorChange = false;
 
-    // let bgColor = '#eee';
-    // let snakeColor = 'grey';
-    // let targetColor = '#aaa';
+    const colours = [
+        {   // GRAY
+            bgColor: '#eee',
+            snakeColor: 'grey',
+            targetColor: '#aaa',
+        },
+        {   // BLUE
+            bgColor: '#33b5e5',
+            snakeColor: '#117a9c',
+            targetColor: '#0089b7',
+        },
+        {   // UNIQUE
+            bgColor: '#3F729B',
+            snakeColor: '#1C2331',
+            targetColor: '#2a3446',
+        },
+        {   // DEFAULT
+            bgColor: '#2BBBAD',
+            snakeColor: '#05584e',
+            targetColor: '#00695c',
+        },
+        {   // GREEN
+            bgColor: '#00C851',
+            snakeColor: '#007E33',
+            targetColor: '#079a43',
+        },
+        {   // OLD NOKIA
+            bgColor: '#B9C501',
+            snakeColor: '#746500',
+            targetColor: '#867C03',
+        },
+        {   // YELLOW
+            bgColor: '#ffbb33',
+            snakeColor: '#e4800d',
+            targetColor: '#FF8800',
+        },
+        {   // RED
+            bgColor: '#ff4444',
+            snakeColor: '#CC0000',
+            targetColor: '#e40d0d',
+        },
+        {   // PINK
+            bgColor: '#ec407a',
+            snakeColor: '#c2185b',
+            targetColor: '#d81b60',
+        },
+        {   // PURPLE
+            bgColor: '#aa66cc',
+            snakeColor: '#4a148c',
+            targetColor: '#6a1b9a',
+        },
+        {   // HIGH CONTRAST
+            bgColor: '#212121',
+            snakeColor: '#FFFFFF',
+            targetColor: '#E5E5E5',
+        },
+        {   // BRICK GAME
+            bgColor: '#99A58F',
+            snakeColor: '#262b1c',
+            targetColor: '#343C25',
+        },
+    ];
 
     let record = 0;
 
     (function () {
         if(width > height) {
-            setCssWidescreen();
-            blockSize = height / gameBlocks - height / 1536;
-            document.getElementById('snake-game').setAttribute('height', height - (proportion * height));
-            document.getElementById('snake-game').setAttribute('width', height - (proportion/2 * height));
+            setStylesWidescreen();
         } else {
-            setCssMobile();
-            blockSize = width / gameBlocks - height / 1536;
-            document.getElementById('snake-game').setAttribute('height', width - (proportion * width));
-            document.getElementById('snake-game').setAttribute('width', width - (proportion/2 * width));
+            setStylesMobile();
         }
     })();
 
-    function setCssWidescreen() {
-        document.getElementById('score-widescreen').style.display = 'block';
+    function changeColor() {
+        colourIndex++;
+        colourIndex = colourIndex % colours.length;
+        changeColorBtn();
+    };
+    function changeColorBtn() {
+        document.getElementsByClassName('btn-change')[0].style.backgroundColor = colours[colourIndex].bgColor;
+        document.getElementsByClassName('btn-change')[0].style.borderColor = colours[colourIndex].targetColor;
+        colourIndex === 0 ?
+            document.getElementsByClassName('btn-change')[0].style.color = 'black'
+            : document.getElementsByClassName('btn-change')[0].style.color = 'white';
     }
-    function setCssMobile() {
+
+    function setStylesWidescreen() {
+        blockSize = height / gameBlocks - height / 1536;
+        document.getElementById('snake-game').setAttribute('height', height - (proportion * height));
+        document.getElementById('snake-game').setAttribute('width', height - (proportion/2 * height));
+        document.getElementById('score-widescreen').style.display = 'block';
+        document.getElementsByClassName('game-score')[0].setAttribute('style', 'width: ' + (width - height) + 'vw;');
+    }
+    function setStylesMobile() {
+        blockSize = width / gameBlocks - height / 1536;
+        document.getElementById('snake-game').setAttribute('height', width - (proportion * width));
+        document.getElementById('snake-game').setAttribute('width', width - (proportion/2 * width));
         document.getElementById('score-mobile').style.display = 'block';
     }
-    
+    function setColours() {
+        document.getElementsByClassName('game-screen')[0].style.backgroundColor = colours[colourIndex].bgColor;
+        changeColorBtn();
+    }
+    function randomizeColors() {
+        colourIndex = Math.floor(Math.random() * colours.length);
+        setColours();
+    }
 
     window.onload = function() {
         initGame();
         updateLives();
         initVariables();
         updateScore(true);
+        randomizeColors();
     }
     function initVariables() {
         tail = 5;
@@ -138,10 +217,11 @@
         if(positionY > gameBlocks - 1) {
             positionY = 0;
         }
-        ctx.fillStyle = bgColor;
+        document.getElementsByClassName('game-screen')[0].style.backgroundColor = colours[colourIndex].bgColor;
+        ctx.fillStyle = colours[colourIndex].bgColor;
         ctx.fillRect(0, 0, canv.width, canv.height);
 
-        ctx.fillStyle = snakeColor;
+        ctx.fillStyle = colours[colourIndex].snakeColor;
         for(var indx = 0; indx < trail.length; indx++) {
             ctx.fillRect(
                 trail[indx].x*blockSize,
@@ -168,7 +248,7 @@
             targetY = Math.floor(Math.random() * gameBlocks);
             updateScore(false);
         }
-        ctx.fillStyle = targetColor;
+        ctx.fillStyle = colours[colourIndex].targetColor;
         ctx.fillRect(
             targetX*blockSize,
             targetY*blockSize,
@@ -211,7 +291,7 @@
             }
         }
     }
-    (function setupButtonsLevels() {
+    (function setupButtons() {
         document.getElementById('easy').addEventListener('click', function(){
             setDifficult('10','10','Easy');
         });
@@ -223,6 +303,9 @@
         });
         document.getElementById('insane').addEventListener('click', function(){
             setDifficult('35','100','Insane');
+        });
+        document.getElementById('changeColorBtn').addEventListener('click', function() {
+            changeColor();
         });
     })();
 })();
