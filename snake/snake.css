@@ -1,4 +1,4 @@
-.game {
+.flex {
     background-color: black;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -85,4 +85,44 @@ button:hover {
 .btn-change:hover {
     color: white;
     background-color: black;
+}
+
+.game-score-mobile {
+    padding-left: 1em;
+    background-color: black;
+    padding-top: 5vw;
+}
+
+.game-score-top {
+    font-size: 4vw;
+    color: white;
+    background-color: black;
+    font-family:'Roboto',sans-serif;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.div-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-left {
+    float: left;
+}
+.btn-right {
+    float: right;
+}
+.btn-down {
+    float: center;
+}
+
+.pd-btn-mobile {
+    margin-top: 4vw;
+}
+
+.btn-mobile {
+    width: 30vw;
+    height: 15vh;
+    font-size: 5vw;
 }
