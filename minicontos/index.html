@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title> Home | MiniContosAmbulantes </title>
+	<link href = "assets/bootstrap.css" rel = "stylesheet">
+
+	<style type="text/css">
+		@font-face
+		{
+		    font-family: "Corona Typewriter";
+		    src: url(fonts/corona3Typewriter.ttf) format("truetype");
+		}
+		@font-face
+		{
+		    font-family: "Brain Flower";
+		    src: url(fonts/brainFlowerEuro.ttf) format("truetype");
+		}
+	</style>
+
+</head>
+
+<body id = "MiniContosAmbulantes" class = "col-md-12">
+
+	<div id="coluna principal" align="center">
+
+		<div id="banner" class="padding-top-3">
+			<img src="assets/img/banner.jpg">
+		</div><!-- </banner> -->
+
+		<div id="nav">
+			<ul class="padding-top-3">
+				<font face="Brain Flower" size="6">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="contos.html">Contos</a></li>
+					<li><a href="contato.html">Contato</a></li>
+				</font>
+			</ul>
+		</div><!-- </nav> -->
+
+		<div class="col-md-2"> </div>
+		<div class="col-md-8">
+			<font face="Corona Typewriter" >
+			<hr>
+				<h3 id="test" class="display-3" style="text-align: left !important">
+					Apesar de “Mini”, os contos são completos e a complexidade de sua pequenez os torna únicos e deliciosos. Sirva-se `a vontade.
+				</h3>
+			<hr>
+		</div> <!-- </col-md8> -->
+		<div class="col-md-2"> </div>
+
+	</div> <!-- </coluna principal> -->
+
+
+	<div class="col-md-12">
+		<font face="Times" >
+			<small>&copy; 2017 - MiniContosAmbulantes </small>
+		</font>
+	</div>
+
+
+	<script>
+		function typeWriter(text, n) {
+			if (n < (text.length)) {
+				document.getElementById('test').innerHTML = text.substring(0, n+1);
+				n++;
+				setTimeout(function() {
+				typeWriter(text, n)
+				}, 100);
+			}
+		}
+		// $(document).ready(function() {
+		// 	// e.stopPropagation();
+			
+		// });
+		(function() {
+			var text = document.getElementById('test').innerHTML;
+			typeWriter(text, 0);
+		})();
+
+	</script>
+</body>
