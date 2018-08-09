@@ -1,0 +1,831 @@
+#banner-operacao {
+    letter-spacing: 2px;
+    font-family: 'Rajdhani', serif;
+    font-size: 0.75vw;
+    font-weight: 400;
+}
+.logo-actuar-white {
+    position: absolute;
+    padding-left: 3em;
+    padding-top: 3em;
+    width: 10vw;
+}
+
+.bg-banner-color {
+    background-color: #00001A;
+}
+.bg-blue-dashed {
+    background-image: url(../images/bg-pontos-infinito.svg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-size: 32px 32px;
+}
+.w-110 { width: 110% !important }
+.w-100 { width: 100% !important }
+.w-90 { width: 90% !important }
+.w-85 { width: 85% !important }
+.w-80 { width: 80% !important }
+.w-75 { width: 75% !important }
+.w-70 { width: 70% !important }
+.w-65 { width: 65% !important }
+.w-60 { width: 60% !important }
+.w-55 { width: 55% !important }
+.w-45 { width: 45% !important }
+.w-40 { width: 40% !important }
+.w-35 { width: 35% !important }
+.w-30 { width: 30% !important }
+.w-25 { width: 25% !important }
+.w-20 { width: 20% !important }
+.w-10 { width: 10% !important }
+
+.w-primary {
+    width: 75%;
+}
+
+.m-auto {
+    margin: auto;
+}
+.p-absolute {
+    position: absolute;
+}
+.color-white {
+    color: white;
+}
+.color-gold {
+    color: #fcb84d;
+}
+.color-light-blue {
+    color: #3333cc;
+}
+
+.svg-operacao-agosto {
+    padding-top: 3em;
+    width: 15em;
+}
+.op-aug-logo-actuar {
+    position: absolute;
+    padding-left: 3em;
+    padding-top: 3em;
+    width: 10vw
+}
+.shape-valor {
+    display: initial;
+    position: absolute;
+    width: 3em;
+    margin-top: 0.07em;
+    margin-left: -0.25em;
+}
+.valor-dentro-shape {
+    position: relative;
+    z-index: 2;
+}
+
+.line-down-under {
+    width: 11em;
+    margin-left: 0.4em;
+    border-color: #fcb84d;
+}
+.pt-1 { padding-top: 1em }
+.pt-2 { padding-top: 2em }
+.pt-3 { padding-top: 3em }
+.pt-4 { padding-top: 4em }
+.pt-5 { padding-top: 5em }
+.pb-1 { padding-bottom: 1em }
+.pb-2 { padding-bottom: 2em }
+.pb-3 { padding-bottom: 3em }
+.pb-4 { padding-bottom: 4em }
+.pb-5 { padding-bottom: 5em }
+.mt-1 { margin-top: 1em }
+.mt-2 { margin-top: 2em }
+.mt-3 { margin-top: 3em }
+.mt-4 { margin-top: 4em }
+.mt-5 { margin-top: 5em }
+.mb-1 { margin-bottom: 1em }
+.mb-2 { margin-bottom: 2em }
+.mb-3 { margin-bottom: 3em }
+.mb-4 { margin-bottom: 4em }
+.mb-5 { margin-bottom: 5em }
+.ml-5pct { margin-left: 5% }
+
+.ml-10 { margin-left: 10% }
+.pd-form {
+    padding: 0.5em
+}
+
+.row-op-agosto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.flexbox-centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessao-calculo {
+    padding: 5em;
+}
+.input-formula {
+    font-size: 1em !important;
+    height: 1em !important;
+}
+.btn-calcular-formula {
+    height: 2em;
+    color: #fcb84d;
+    border: 1px solid #fcb84d;
+    font-size: 1.8em;
+    font-weight: 900;
+    font-family: 'Rajdhani', serif;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btn-calcular-formula:hover {
+    color: #ffa700;
+    border: 1px solid #ffa700;
+}
+
+.footer-operacao {
+    background-color: #000033;
+    position: absolute;
+    z-index: 2;
+}
+.footer-operacao:hover {
+    background-color: #000044;
+}
+.svg-operacao-horizontal {
+    margin-bottom: -2em;
+}
+.texto-esquerda-shape-footer {
+    margin-top: -5.2em;
+}
+.texto-5-etapas {
+    position: absolute;
+    font-size: 0.4em;
+    letter-spacing: 1px;
+    margin-left: 1em;
+    margin-top: 0.3em;
+}
+.total-promocao {
+    margin-top: -16em;
+    /* margin-left: 1em; */
+}
+.operacao-limitada {
+    padding-top: 3em;
+    padding-left: 4em;
+}
+.string-light-blue {
+    margin-bottom: 0px;
+    border-color: #3333cc;
+}
+.string-gold {
+    margin-bottom: 0px;
+    border: 2px solid #ffa700;
+    margin-top: -0.1em;
+    margin-left: 0;
+}
+.form-div {
+    width: 22.5%;
+}
+.form-hidden {
+    display: none;
+}
+.ml-form-div {
+    margin-left: 1.5%;
+}
+.mr-form-div {
+    margin-right: 1.5%;
+}
+
+#banner-operacao .form-control {
+    height: 2.5em;
+    font-size: 1.5em;
+    font-weight: 900;
+    font-family: 'Rajdhani', serif;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: #ffa700;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+    display: initial;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+#banner-operacao .form-control:focus {
+    border-bottom: 1px solid #ffa700;
+}
+#banner-operacao .receber-proposta {
+    height: 2.5em;
+    color: #000;
+    border: none;
+    font-size: 1.5em;
+    font-weight: 900;
+    font-family: 'Rajdhani', serif;
+    background-color: #fdac2d;
+    cursor: pointer;
+}
+#banner-operacao .receber-proposta:hover {
+    background-color: #ffa700;
+}
+#banner-operacao ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #eee;
+    font-weight: bold;
+}
+#banner-operacao ::-moz-placeholder { /* Firefox 19+ */
+    color: #eee;
+    font-weight: bold;
+}
+#banner-operacao :-ms-input-placeholder { /* IE 10+ */
+    color: #eee;
+    font-weight: bold;
+}
+#banner-operacao :-moz-placeholder { /* Firefox 18- */
+    color: #eee;
+    font-weight: bold;
+}
+
+span.error {
+    font-family: 'Rajdhani', serif;
+    font-size: 1.4em;
+    color: #fdac2d;
+    display: block;
+    text-align: left
+}
+
+div#sucesso {
+    width: 100%;
+}
+.formulario-op-agosto #sucesso h3 {
+    font-family: 'Rajdhani', serif !important;
+    color: aliceblue;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 0px
+}
+i.fa.fa-check.text-success {
+    color: #ffa700;
+}
+
+.link-landing-operacao {
+    color: #fcb84d;
+    cursor: pointer;
+    font-weight: bold;
+}
+.link-landing-operacao:hover {
+    color: #ffa700;
+}
+.link-landing-operacao:focus {
+    color: #ffa700;
+}
+
+.counter-01 {
+    margin-top: -7.3em;
+    margin-left: -3.5em;
+    position: absolute;
+}
+.text-decode-01 {
+    margin-top: -13em;
+    margin-left: 15.7em;
+    position: absolute;
+    max-width: 4.9em;
+    max-height: 3em;
+    overflow: hidden;
+}
+
+.text-decode-session-combo {
+    margin-top: -13.8em;
+    margin-left: -5.7em;
+    text-align: left;
+    position: absolute;
+    max-width: 4.7em;
+    max-height: 3em;
+    overflow: hidden;
+    font-size: 1.95em;
+}
+.text-decode-session-01 {
+    margin-top: -8.5em;
+    margin-left: -6em;
+    text-align: left;
+    position: absolute;
+    max-width: 5.4em;
+    max-height: 3em;
+    overflow: hidden;
+    font-size: 2.95em;
+}
+.text-decode-session-02 {
+    margin-top: -8.4em;
+    margin-left: -11.3em;
+    text-align: left;
+    position: absolute;
+    max-width: 7.5em;
+    max-height: 1.3em;
+    overflow: hidden;
+    font-size: 2.8em;
+}
+.text-decode-session-04 {
+    margin-top: -8.4em;
+    margin-left: -7.8em;
+    text-align: left;
+    position: absolute;
+    max-width: 7.3em;
+    max-height: 2.7em;
+    overflow: hidden;
+    font-size: 2.8em;
+}
+
+.counter-session-combo {
+    position: absolute;
+    font-size: 3.6em;
+    margin-top: -5.6em;
+    margin-left: -2.6em;
+}
+.counter-session-01 {
+    position: absolute;
+    font-size: 4.6em;
+    margin-top: -3.2em;
+    margin-left: -3.3em
+}
+.counter-session-02 {
+    position: absolute;
+    font-size: 1.9em;
+    margin-top: -9em;
+    margin-left: -16em;
+}
+.counter-session-04 {
+    position: absolute;
+    font-size: 1.3em;
+    margin-top: -10.5em;
+    margin-left: -16.3em;
+}
+
+
+
+
+/* ANIMAÇÕES SVG */
+
+
+.anim-spin-01 {
+    -webkit-animation: spin 6s infinite linear;
+    -moz-animation: spin 6s infinite linear;
+    -ms-animation: spin 6s infinite linear;
+    animation: spin 6s infinite linear;
+    transform-origin: 36.2% 45.8%;
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+.anim-spin-02 {
+    -webkit-animation: spin 14s infinite linear reverse;
+    -moz-animation: spin 14s infinite linear reverse;
+    -ms-animation: spin 14s infinite linear reverse;
+    animation: spin 14s infinite linear;
+    animation-direction: reverse;
+    transform-origin: 36.2% 45.8%;
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+.anim-spin-03 {
+    -webkit-animation: spin 18s infinite linear;
+    -moz-animation: spin 18s infinite linear;
+    -ms-animation: spin 18s infinite linear;
+    animation: spin 18s infinite linear;
+    transform-origin: 36.2% 45.8%;
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.anim-pulse {
+    -webkit-animation: fadeInFromNone 1.3s ease-out infinite;
+    -moz-animation: fadeInFromNone 1.3s ease-out infinite;
+    -o-animation: fadeInFromNone 1.3s ease-out infinite;
+    animation: fadeInFromNone 1.3s ease-out infinite;
+}
+@-webkit-keyframes fadeInFromNone {
+    0% { opacity: 0.5 }
+    50% { opacity: 1 }
+    100% { opacity: 0.4 }
+}
+@-moz-keyframes fadeInFromNone {
+    0% { opacity: 0.5 }
+    50% { opacity: 1 }
+    100% { opacity: 0.4 }
+}
+@-o-keyframes fadeInFromNone {
+    0% { opacity: 0.5 }
+    50% { opacity: 1 }
+    100% { opacity: 0.4 }
+}
+@keyframes fadeInFromNone {
+    0% { opacity: 0.5 }
+    50% { opacity: 1 }
+    100% { opacity: 0.4 }
+}
+
+.anim-crescendo-01 {
+    transform-origin: bottom;
+    animation: stretch1 1.75s ease-out forwards;
+    -moz-animation: stretch1 1.75s ease-out forwards;
+    -webkit-animation: stretch1 1.75s ease-out forwards;
+    transform-origin: 0% 45%;
+}
+@-webkit-keyframes stretch1 {
+    0% { transform: scaleY(0.02) }
+    100% { transform: scaleY(1) }
+}
+
+.anim-draw-stroke {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 35s ease-out forwards;
+}
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.zindex-1 {
+    z-index: 1;
+}
+.pos-absolute {
+    position: absolute;
+}
+.hud-topo-01 {
+    margin-left: 32em;
+    margin-right: auto;
+    width: 20em;
+}
+.hud-topo-03 {
+    margin-left: auto;
+    margin-right: 29em;
+    width: 4em;
+    margin-top: -6em;
+    float: right;
+}
+.hud-esquerda-02 {
+    margin-top: 80vh;
+    width: 6em;
+    position: fixed;
+}
+.hud-numeros {
+    width: 15em;
+    margin-left: auto;
+    margin-right: 11em;
+    margin-top: 2em;
+    float: right;
+}
+.hud-regua {
+    margin-left: 1.5em;
+    width: 3.5em;
+    position: fixed;
+    animation: MoveUpDownFew 12s ease-in-out infinite;
+}
+@keyframes MoveUpDownFew {
+    0%, 100% {
+        transform: translateY(1vh);
+    }
+    50% {
+        transform: translateY(-1vh);
+    }
+}
+
+.hud-direita-04 {
+    width: 1.8em;
+    margin-top: 70vh;
+    margin-left: 97vw;
+    margin-right: 3em;
+    position: fixed;
+}
+.hud-direita-05 {
+    width: 4em;
+    margin-top: 25vh;
+    margin-left: 97vw;
+    position: fixed;
+}
+.hud-alvo-01 {
+    width: 12em;
+    position: initial;
+    margin-left: 64vw;
+    margin-top: -5em
+}
+
+.tf-01 {
+    transform-origin: 50% 50% !important
+}
+
+.anim-up-down {
+    animation: MoveUpDown 45s ease-in-out infinite;
+}
+@keyframes MoveUpDown {
+    0%, 100% { transform: translateY(0vh) }
+    7% { transform: translateY(20vh) }
+    14% { transform: translateY(-17vh) }
+    21% { transform: translateY(12vh) }
+    28% { transform: translateY(-10vh) }
+    35% { transform: translateY(7vh) }
+    42% { transform: translateY(-4vh) }
+    49% { transform: translateY(3vh) }
+    56% { transform: translateY(-2vh) }
+    63% { transform: translateY(1vh) }
+    70% { transform: translateY(-3vh) }
+    76% { transform: translateY(6vh) }
+    83% { transform: translateY(-10vh) }
+    89% { transform: translateY(13vh) }
+    97% { transform: translateY(-16vh) }
+}
+
+@media (max-width: 767.98px) {
+    .hud-numeros {
+        margin-left: 5em;
+    }
+    .hud-topo-03 {
+        margin-right: 3em;
+    }
+    .text-decode-session-04 {
+        max-width: 10em;
+    }
+    .text-decode-session-02 {
+        margin-left: -11.8em;
+    }
+    .hud-alvo-01 {
+        margin-top: -11em;
+    }
+}
+
+/* CUSTOMIZED SCROLLBAR */
+/* width */
+/* ::-webkit-scrollbar {
+    width: 0.5vw;
+} */
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #aaa;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+
+
+
+
+
+@media (min-width: 768px){
+    .md-w-50 {
+        width: 50%;
+    }
+    .texto-lado-ilustra {
+        margin-left: 8%;
+        width: 42%;
+        font-size: 3em;
+    }
+    form.form-contato.row-op-agosto.w-100 {
+        margin-left: 2em;
+    }
+    .only-display-small {
+        display: none
+    }
+}
+@media (max-width: 1139.98px) {
+    .resp-body-width {
+        width: 85%;
+    }
+    #banner-operacao {
+        font-size: 0.85vw;
+    }
+    .operacao-limitada {
+        font-size: 0.9em
+    }
+}
+@media (min-width: 768px) and (max-width: 999.98px) {
+    .texto-lado-ilustra {
+        margin-top: 2.5em;
+        font-size: 2.4em;
+    }
+    .text-decode-session-04 {
+        font-size: 2.7em;
+        max-width: 7.2em
+    }
+    .text-decode-session-01 {
+        max-width: 5em;
+        font-size: 2.9em;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1139.98px) {
+}
+@media (min-width: 1140px) and (max-width: 1259.98px) {
+}
+@media (min-width: 1260px) and (max-width: 1319.98px) {
+}
+@media (min-width: 1320px) and (max-width: 1399.98px) {
+}
+@media (min-width: 1400px) and (max-width: 1599.98px) {
+}
+@media (min-width: 1600px) and (max-width: 1799.98px) {
+}
+@media (min-width: 1800px) {
+    .bg-blue-dashed {
+        background-size: 48px 48px;
+    }
+    .w-primary {
+        width: 60%;
+    }
+    #banner-operacao {
+        font-size: 0.6vw;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #banner-operacao {
+        font-size: 1.35vw;
+    }
+    .sm-w-100 {
+        width: 100%;
+    }
+    .op-aug-telinhas {
+        margin: auto;
+        width: 80% !important;
+        padding-bottom: 4em;
+    }
+    biggest {
+        font-size: 4.8em !important;
+    }
+    .op-aug-solucao {
+        font-size: 3.3em;
+    }
+    .texto-lado-ilustra {
+        padding-top: 1.5em;
+        font-size: 3.5em;
+    }
+    smallest {
+        font-size: 2.8em !important
+    }
+    .op-aug-valor {
+        width: 100% !important;
+    }
+    .texto-esquerda-shape-footer {
+        margin-top: -5.2em;
+        /* padding-left: 4%; */
+    }
+    .total-promocao {
+        margin-top: -20em;
+        font-size: 0.8em;
+    }
+    .op-aug-logo-actuar {
+        width: 22em;
+        margin-top: 6em;
+        margin-left: 7em
+    }
+    .svg-operacao-agosto {
+        width: 18em;
+        padding-top: 6em;
+        margin-bottom: 3em;
+        margin-right: 11em;
+    }
+    .operacao-limitada {
+        margin: auto;
+        width: 75% !important;
+        padding-left: 0px !important;
+    }
+    .no-display-small {
+        display: none;
+    }
+    .only-display-small {
+        display: block
+    }
+    .mobile-pl-3 {
+        padding-left: 3em !important;
+    }
+    .mobile-pt-4 {
+        padding-top: 4em;
+    }
+    .form-div {
+        width: 100%;
+    }
+    .mr-form-div {
+        margin-right: 0%;
+    }
+    .ml-form-div {
+        margin-left: 0%;
+    }
+    #banner-operacao .form-control {
+        font-size: 2.8em;
+    }
+    #banner-operacao .receber-proposta {
+        font-size: 2.8em;
+    }
+    span.error {
+        font-size: 1.8em;
+    }
+    .text-decode-session-01 {
+        display: block;
+        max-width: 5.2em;
+    }
+    .op-aug-iconezinho {
+        width: 25% !important;
+    }
+    .op-aug-textinho {
+        width: 60% !important;
+    }
+    #banner-operacao .pt-5 {
+        padding-top: 2em;
+    }
+    .logo-actuar {
+        background-size: 26vw !important;
+        margin-top: -0.25em !important;
+    }
+    .small-centered {
+        text-align: center;
+        display: block;
+    }
+    .form-contato.row-op-agosto.w-100 {
+        margin: auto;
+        padding-top: 7em;
+        padding-bottom: 7em;
+    }
+    .form-contato.row-op-agosto.w-100 .form-group{
+        margin: auto;
+        padding: 1.5em;
+        width: 90% !important
+    }
+    .form-contato.row-op-agosto.w-100 .receber-proposta {
+        margin-top: 2em;
+    }
+    .text-decode-session-01 {
+        margin-left: 8.2em;
+    }
+}
+
+biggest {
+    font-size: 6em;
+    display: inline-block;
+}
+big {
+    font-size: 2.6em;
+}
+medium {
+    font-size: 2.2em;
+}
+smaller {
+    font-size: 2em;
+}
+smallest {
+    font-size: 1.8em;
+}
+smallester {
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+
+
+body {
+    padding-right: 0px !important;
+    margin: 0
+}
