@@ -1,3 +1,7 @@
+body {
+    padding-right: 0px !important;
+    margin: 0
+}
 #banner-operacao {
     letter-spacing: 2px;
     font-family: 'Rajdhani', serif;
@@ -15,7 +19,7 @@
     background-color: #00001A;
 }
 .bg-blue-dashed {
-    background-image: url(../images/bg-pontos-infinito.svg);
+    background-image: url(../imagens/operacao-agosto/bg-pontos-infinito.svg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -73,8 +77,8 @@
     display: initial;
     position: absolute;
     width: 3em;
-    margin-top: 0.07em;
-    margin-left: -0.25em;
+    margin-top: 0.13em;
+    margin-left: -0.3em;
 }
 .valor-dentro-shape {
     position: relative;
@@ -150,8 +154,6 @@
 
 .footer-operacao {
     background-color: #000033;
-    position: absolute;
-    z-index: 2;
 }
 .footer-operacao:hover {
     background-color: #000044;
@@ -315,7 +317,7 @@ i.fa.fa-check.text-success {
     margin-left: -6em;
     text-align: left;
     position: absolute;
-    max-width: 5.4em;
+    max-width: 4.7em;
     max-height: 3em;
     overflow: hidden;
     font-size: 2.95em;
@@ -335,7 +337,7 @@ i.fa.fa-check.text-success {
     margin-left: -7.8em;
     text-align: left;
     position: absolute;
-    max-width: 7.3em;
+    max-width: 6.7em;
     max-height: 2.7em;
     overflow: hidden;
     font-size: 2.8em;
@@ -350,13 +352,13 @@ i.fa.fa-check.text-success {
 .counter-session-01 {
     position: absolute;
     font-size: 4.6em;
-    margin-top: -3.2em;
+    margin-top: -3.4em;
     margin-left: -3.3em
 }
 .counter-session-02 {
     position: absolute;
     font-size: 1.9em;
-    margin-top: -9em;
+    margin-top: -9.5em;
     margin-left: -16em;
 }
 .counter-session-04 {
@@ -482,7 +484,7 @@ i.fa.fa-check.text-success {
 }
 
 .zindex-1 {
-    z-index: 1;
+    z-index: -1;
 }
 .pos-absolute {
     position: absolute;
@@ -497,7 +499,6 @@ i.fa.fa-check.text-success {
     margin-right: 29em;
     width: 4em;
     margin-top: -6em;
-    float: right;
 }
 .hud-esquerda-02 {
     margin-top: 80vh;
@@ -509,7 +510,6 @@ i.fa.fa-check.text-success {
     margin-left: auto;
     margin-right: 11em;
     margin-top: 2em;
-    float: right;
 }
 .hud-regua {
     margin-left: 1.5em;
@@ -571,113 +571,27 @@ i.fa.fa-check.text-success {
     97% { transform: translateY(-16vh) }
 }
 
-@media (max-width: 767.98px) {
-    .hud-numeros {
-        margin-left: 5em;
-    }
-    .hud-topo-03 {
-        margin-right: 3em;
-    }
-    .text-decode-session-04 {
-        max-width: 10em;
-    }
-    .text-decode-session-02 {
-        margin-left: -11.8em;
-    }
-    .hud-alvo-01 {
-        margin-top: -11em;
-    }
+biggest {
+    font-size: 6em;
+    display: inline-block;
+}
+big {
+    font-size: 2.6em;
+}
+medium {
+    font-size: 2.2em;
+}
+smaller {
+    font-size: 2em;
+}
+smallest {
+    font-size: 1.8em;
+}
+smallester {
+    font-size: 1.5em;
 }
 
-/* CUSTOMIZED SCROLLBAR */
-/* width */
-/* ::-webkit-scrollbar {
-    width: 0.5vw;
-} */
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f5f5f5;
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #aaa;
-}
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #999;
-}
-
-
-
-
-
-
-@media (min-width: 768px){
-    .md-w-50 {
-        width: 50%;
-    }
-    .texto-lado-ilustra {
-        margin-left: 8%;
-        width: 42%;
-        font-size: 3em;
-    }
-    form.form-contato.row-op-agosto.w-100 {
-        margin-left: 2em;
-    }
-    .only-display-small {
-        display: none
-    }
-}
-@media (max-width: 1139.98px) {
-    .resp-body-width {
-        width: 85%;
-    }
-    #banner-operacao {
-        font-size: 0.85vw;
-    }
-    .operacao-limitada {
-        font-size: 0.9em
-    }
-}
-@media (min-width: 768px) and (max-width: 999.98px) {
-    .texto-lado-ilustra {
-        margin-top: 2.5em;
-        font-size: 2.4em;
-    }
-    .text-decode-session-04 {
-        font-size: 2.7em;
-        max-width: 7.2em
-    }
-    .text-decode-session-01 {
-        max-width: 5em;
-        font-size: 2.9em;
-    }
-}
-@media (min-width: 1000px) and (max-width: 1139.98px) {
-}
-@media (min-width: 1140px) and (max-width: 1259.98px) {
-}
-@media (min-width: 1260px) and (max-width: 1319.98px) {
-}
-@media (min-width: 1320px) and (max-width: 1399.98px) {
-}
-@media (min-width: 1400px) and (max-width: 1599.98px) {
-}
-@media (min-width: 1600px) and (max-width: 1799.98px) {
-}
-@media (min-width: 1800px) {
-    .bg-blue-dashed {
-        background-size: 48px 48px;
-    }
-    .w-primary {
-        width: 60%;
-    }
-    #banner-operacao {
-        font-size: 0.6vw;
-    }
-}
-
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
     #banner-operacao {
         font-size: 1.35vw;
     }
@@ -796,36 +710,70 @@ i.fa.fa-check.text-success {
     .text-decode-session-01 {
         margin-left: 8.2em;
     }
+    .hud-numeros {
+        margin-left: 5em;
+    }
+    .hud-topo-03 {
+        margin-right: 3em;
+    }
+    .text-decode-session-04 {
+        max-width: 10em;
+    }
+    .text-decode-session-02 {
+        margin-left: -11.8em;
+    }
+    .hud-alvo-01 {
+        margin-top: -11em;
+    }
 }
-
-biggest {
-    font-size: 6em;
-    display: inline-block;
+@media (min-width: 768px){
+    .md-w-50 {
+        width: 50%;
+    }
+    .texto-lado-ilustra {
+        margin-left: 8%;
+        width: 42%;
+    }
+    form.form-contato.row-op-agosto.w-100 {
+        margin-left: 2em;
+    }
+    .only-display-small {
+        display: none
+    }
 }
-big {
-    font-size: 2.6em;
+@media (max-width: 1139.98px) {
+    .resp-body-width {
+        width: 85%;
+    }
+    #banner-operacao {
+        font-size: 0.85vw;
+    }
+    .operacao-limitada {
+        font-size: 0.9em
+    }
 }
-medium {
-    font-size: 2.2em;
+@media (min-width: 768px) and (max-width: 999.98px) {
+    .texto-lado-ilustra {
+        margin-top: 2.5em;
+        font-size: 2.4em;
+    }
+    .text-decode-session-04 {
+        font-size: 2.7em;
+        max-width: 7.2em
+    }
+    .text-decode-session-01 {
+        max-width: 5em;
+        font-size: 2.9em;
+    }
 }
-smaller {
-    font-size: 2em;
-}
-smallest {
-    font-size: 1.8em;
-}
-smallester {
-    font-size: 1.5em;
-}
-
-
-
-
-
-
-
-
-body {
-    padding-right: 0px !important;
-    margin: 0
+@media (min-width: 1800px) {
+    .bg-blue-dashed {
+        background-size: 48px 48px;
+    }
+    .w-primary {
+        width: 60%;
+    }
+    #banner-operacao {
+        font-size: 0.6vw;
+    }
 }
