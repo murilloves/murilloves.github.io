@@ -484,7 +484,7 @@ i.fa.fa-check.text-success {
 }
 
 .zindex-1 {
-    z-index: -1;
+    z-index: 1;
 }
 .pos-absolute {
     position: absolute;
