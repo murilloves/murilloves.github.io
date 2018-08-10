@@ -490,15 +490,16 @@ i.fa.fa-check.text-success {
     position: absolute;
 }
 .hud-topo-01 {
-    margin-left: 32em;
-    margin-right: auto;
+    margin-right: 32em;
     width: 20em;
+    float: right;
 }
 .hud-topo-03 {
     margin-left: auto;
     margin-right: 29em;
     width: 4em;
     margin-top: -6em;
+    float: right;
 }
 .hud-esquerda-02 {
     margin-top: 80vh;
