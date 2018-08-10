@@ -490,9 +490,9 @@ i.fa.fa-check.text-success {
     position: absolute;
 }
 .hud-topo-01 {
-    margin-right: 32em;
+    margin-left: 32em;
+    margin-right: auto;
     width: 20em;
-    float: right;
 }
 .hud-topo-03 {
     margin-left: auto;
@@ -511,6 +511,7 @@ i.fa.fa-check.text-success {
     margin-left: auto;
     margin-right: 11em;
     margin-top: 2em;
+    float: right;
 }
 .hud-regua {
     margin-left: 1.5em;
