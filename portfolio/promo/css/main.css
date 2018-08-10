@@ -19,7 +19,7 @@ body {
     background-color: #00001A;
 }
 .bg-blue-dashed {
-    background-image: url(../imagens/operacao-agosto/bg-pontos-infinito.svg);
+    background-image: url(../images/bg-pontos-infinito.svg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -77,8 +77,8 @@ body {
     display: initial;
     position: absolute;
     width: 3em;
-    margin-top: 0.13em;
-    margin-left: -0.3em;
+    margin-top: 0.07em;
+    margin-left: -0.25em;
 }
 .valor-dentro-shape {
     position: relative;
@@ -154,6 +154,8 @@ body {
 
 .footer-operacao {
     background-color: #000033;
+    position: absolute;
+    z-index: 2;
 }
 .footer-operacao:hover {
     background-color: #000044;
@@ -317,7 +319,7 @@ i.fa.fa-check.text-success {
     margin-left: -6em;
     text-align: left;
     position: absolute;
-    max-width: 4.7em;
+    max-width: 5.4em;
     max-height: 3em;
     overflow: hidden;
     font-size: 2.95em;
@@ -337,7 +339,7 @@ i.fa.fa-check.text-success {
     margin-left: -7.8em;
     text-align: left;
     position: absolute;
-    max-width: 6.7em;
+    max-width: 7.3em;
     max-height: 2.7em;
     overflow: hidden;
     font-size: 2.8em;
@@ -352,13 +354,13 @@ i.fa.fa-check.text-success {
 .counter-session-01 {
     position: absolute;
     font-size: 4.6em;
-    margin-top: -3.4em;
+    margin-top: -3.2em;
     margin-left: -3.3em
 }
 .counter-session-02 {
     position: absolute;
     font-size: 1.9em;
-    margin-top: -9.5em;
+    margin-top: -9em;
     margin-left: -16em;
 }
 .counter-session-04 {
@@ -735,6 +737,7 @@ smallester {
     .texto-lado-ilustra {
         margin-left: 8%;
         width: 42%;
+        font-size: 3em;
     }
     form.form-contato.row-op-agosto.w-100 {
         margin-left: 2em;
