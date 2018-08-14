@@ -261,16 +261,18 @@
 
 })(jQuery);
 
-
-function showOrHide(show, elementClass) {
+function showOrHide(show, elementClass, thisEl) {
     // elements = document.getElementsByClassName(elementClass);
     if (show) {
         Array.from(document.getElementsByClassName(elementClass)).forEach(element => {
             element.style.display = 'block';
         });
+        thisEl.innerHTML = "Show Less"
     } else {
         Array.from(document.getElementsByClassName(elementClass)).forEach(element => {
             element.style.display = 'none';
         });
+        thisEl.innerHTML = "Show More"
     }
 }
+
