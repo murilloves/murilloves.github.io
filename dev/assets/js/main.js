@@ -263,13 +263,13 @@
 
 
 function showOrHide(show, elementClass) {
-    elements = document.getElementsByClassName(elementClass);
+    // elements = document.getElementsByClassName(elementClass);
     if (show) {
-        elements.forEach(element => {
+        Array.from(document.getElementsByClassName(elementClass)).forEach(element => {
             element.style.display = 'block';
         });
     } else {
-        elements.forEach(element => {
+        Array.from(document.getElementsByClassName(elementClass)).forEach(element => {
             element.style.display = 'none';
         });
     }
