@@ -261,18 +261,11 @@
 
 })(jQuery);
 
-function showOrHide(show, elementClass, thisEl) {
-    // elements = document.getElementsByClassName(elementClass);
-    if (show) {
-        Array.from(document.getElementsByClassName(elementClass)).forEach(element => {
-            element.style.display = 'block';
-        });
-        thisEl.innerHTML = "Show Less"
-    } else {
-        Array.from(document.getElementsByClassName(elementClass)).forEach(element => {
+function showHideElements (elementClassToHide, elementClassToShow) {
+	Array.from(document.getElementsByClassName(elementClassToShow)).forEach(element => {
+	    element.style.display = 'block';
+	});
+        Array.from(document.getElementsByClassName(elementClassToHide)).forEach(element => {
             element.style.display = 'none';
         });
-        thisEl.innerHTML = "Show More"
-    }
 }
-
