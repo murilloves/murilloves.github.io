@@ -261,7 +261,7 @@
 
 })(jQuery);
 
-function showHideElements (elementClassToHide, elementClassToShow) {
+function showHideElements (elementClassToShow, elementClassToHide) {
 	Array.from(document.getElementsByClassName(elementClassToShow)).forEach(element => {
 	    element.style.display = 'block';
 	});
