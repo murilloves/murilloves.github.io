@@ -260,3 +260,17 @@
 			});
 
 })(jQuery);
+
+
+function showOrHide(show, elementClass) {
+    elements = document.getElementsByClassName(elementClass);
+    if (show) {
+        elements.forEach(element => {
+            element.style.display = 'block';
+        });
+    } else {
+        elements.forEach(element => {
+            element.style.display = 'none';
+        });
+    }
+}
