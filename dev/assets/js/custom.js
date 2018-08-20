@@ -1,3 +1,8 @@
+(function putYear () {
+    var date = new Date();
+    document.getElementById('year').innerHTML = date.getFullYear();
+})();
+
 function copyToClipboard(element) {
     /* Get the text to be copied */
     var str = element.innerHTML;
