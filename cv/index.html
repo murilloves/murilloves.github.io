@@ -13,7 +13,7 @@
                 <img class="photo-img" src="https://raw.githubusercontent.com/murilloves/murilloves.github.io/master/cv/images/linkedin_profile.jpg" alt="">
             </div>
             <div class="info col-8 p-5">
-                <div class="vertically-centered w-85">
+                <div class="vertically-centered col-11">
                     <div class="name">
                         Murillo Vieira e Silva
                     </div>
@@ -36,22 +36,44 @@
                 </div>
             </div>
         </div>
-        <div class="cv row">
+        <div class="col-12 px-4 cv-body">
+            <div class="row">
+                <div class="col-6 px-4">
+                    <div class="section">
+                        <div class="section-name">Pessoal<hr></div>
+                        <div class="section-body">
+                            <div>Nacionalidade: Brasileiro</div>
+                            <div>Estado Civil: Solteiro</div>
+                            <div>Sexo: Masculino</div>
+                            <div>Nascimento: 02/10/1990</div>
+                            <div>Cidade: Aparecida de Goiânia &emsp; Estado: GO</div>
+                            <!-- <div>Endereço: Rua H-40</div> -->
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-name">Formação<hr></div>
+                    </div>
+                </div>
+                <div class="col-6 pl-4 pr-4">
+                    <div class="section">
+                        <div class="section-name">Linguagens e Softwares<hr></div>
+                        <div class="section-body">
 
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
 </html>
 
 <style>
+    /* GLOBALS */
     body {
         margin: 0px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1vw;
-    }
-    .header {
-        background-color: #000023;
-        color: #ffffff;
     }
     .flexbox-centering {
         display: flex;
@@ -67,10 +89,17 @@
     .str-cpy {
         cursor: pointer;
     }
+
+    /* HEADER */
+    .header {
+        background-color: #000023;
+        color: #ffffff;
+    }
     .photo-img {
         box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.87);
         border: 3px solid rgba(255, 255, 255, 0.6);
         border-radius: 100%;
+        width: 180px;
     }
     .info {
         font-size: 2em
@@ -81,7 +110,27 @@
     .contact {
         color: #eeeeee;
     }
-    .w-85 {
-        width: 85%;
+
+    /* BODY */
+    .cv-body {
+        font-size: 2em;
     }
+    .section {
+        padding-top: 1.5rem;
+    }
+    .section-name {
+        color: #555555;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+        .section-name hr {
+            border-top: 2px solid #444444;
+            margin-top: 3px;
+        }
+
+    .section-body {
+        color: #444444;
+        font-size: 0.8em
+    }
+
 </style>
