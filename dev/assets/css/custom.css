@@ -27,6 +27,10 @@
         border: none;
     }
     .features article {
-        width: 50%
+        width: 50%;
+        text-align: center
+    }
+    .features article .icon {
+        margin: auto
     }
 }
