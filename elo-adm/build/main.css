@@ -25762,6 +25762,10 @@ ion-col.col.ellipsis {
   text-overflow: ellipsis;
 }
 
+.fr-wrapper div a {
+  display: none !important;
+}
+
 page-event-interactive-section hr {
   width: 100%;
   border-bottom: 1px solid #eee;
