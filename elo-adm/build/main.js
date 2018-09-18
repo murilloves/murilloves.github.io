@@ -11,6 +11,7 @@ webpackJsonp([1],{
 var API = {
     dev: "http://localhost:8100/assets/json",
     baseDev: "/elo-api",
+    prod: "https://murilloves.github.io",
     base: "https://elo-api.azurewebsites.net/v1",
     proxyUrl: "https://elo-api.azurewebsites.net/v1",
 };
@@ -58,15 +59,15 @@ var SpeakerService = /** @class */ (function () {
     }
     SpeakerService.prototype.getSpeakers = function () {
         return this.http
-            .get(__WEBPACK_IMPORTED_MODULE_2__environment_environment__["a" /* API */].base + "/speakers");
+            .get(__WEBPACK_IMPORTED_MODULE_2__environment_environment__["a" /* API */].baseDev + "/speakers");
     };
     SpeakerService.prototype.getSpeakerById = function (id) {
         return this.http
-            .get(__WEBPACK_IMPORTED_MODULE_2__environment_environment__["a" /* API */].base + "/speakers/" + id);
+            .get(__WEBPACK_IMPORTED_MODULE_2__environment_environment__["a" /* API */].baseDev + "/speakers/" + id);
     };
     SpeakerService.prototype.addSpeaker = function (data) {
         return this.http
-            .post(__WEBPACK_IMPORTED_MODULE_2__environment_environment__["a" /* API */].base + "/speakers/", data);
+            .post(__WEBPACK_IMPORTED_MODULE_2__environment_environment__["a" /* API */].baseDev + "/speakers/", data);
     };
     SpeakerService.prototype.getSpeakersHardCode = function () {
         return this.http
@@ -224,15 +225,15 @@ var QuestionsService = /** @class */ (function () {
     }
     QuestionsService.prototype.getQuestions = function () {
         return this.http
-            .get(__WEBPACK_IMPORTED_MODULE_2__environment_environment__["a" /* API */].base + "/questions");
+            .get(__WEBPACK_IMPORTED_MODULE_2__environment_environment__["a" /* API */].baseDev + "/questions");
     };
     QuestionsService.prototype.getQuestionById = function (id) {
         return this.http
-            .get(__WEBPACK_IMPORTED_MODULE_2__environment_environment__["a" /* API */].base + "/questions/" + id);
+            .get(__WEBPACK_IMPORTED_MODULE_2__environment_environment__["a" /* API */].baseDev + "/questions/" + id);
     };
     QuestionsService.prototype.addQuestion = function (data) {
         return this.http
-            .post(__WEBPACK_IMPORTED_MODULE_2__environment_environment__["a" /* API */].base + "/questions/", data);
+            .post(__WEBPACK_IMPORTED_MODULE_2__environment_environment__["a" /* API */].baseDev + "/questions/", data);
     };
     QuestionsService.prototype.getQuestionsHardCode = function () {
         return this.http
