@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- FONT AWESOME 5.2 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- GOOGLE FONTS -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Cormorant:300,400,600" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani:500,700"> -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:200,300" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Wire+One" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet"> -->
+</head>
+<body>
+    <div class="">
+        <div class="header row">
+            <div class="col-1"></div>
+            <div class="photo col-3 flexbox-centering p-4">
+                <img class="photo-img" src="https://raw.githubusercontent.com/murilloves/murilloves.github.io/master/cv/images/profile-01.png" alt="">
+                <!-- <img class="photo-img" src="https://raw.githubusercontent.com/murilloves/murilloves.github.io/master/cv/images/profile-02.jpg" alt=""> -->
+            </div>
+            <div class="info col-8 p-3">
+                <div class="vertically-centered col-11">
+                    <div class="name">
+                        Murillo Vieira e Silva
+                    </div>
+                    <div class="contact col-12">
+                        <div class="row">
+                            <div>
+                                <i class="fab fa-whatsapp p-2"></i>
+                            </div>
+                            <div class="phone str-cpy p-1">
+                                +55 (62) 98319-6600
+                            </div>
+                            <div>
+                                <i class="fab fa-telegram-plane p-2 pl-4"></i>
+                            </div>
+                            <div class="email str-cpy p-1">
+                                murillov.dev@gmail.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 cv-body">
+            <div class="row">
+                <div class="col-6 px-4">
+                    <div class="section" style="display: none">
+                        <div class="section-name">Pessoal<hr></div>
+                        <div class="section-body">
+                            <div>Nacionalidade: Brasileiro &nbsp; | &nbsp; Estado Civil: Solteiro</div>
+                            <div>Idade: <span id="myAge"></span> &nbsp; | &nbsp; Endereço: Aparecida de Goiânia (GO), Brasil</div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-name">Introduction<hr></div>
+                        <div class="presentation">
+                            <p>
+                                With about 4 years of experience in the field as a Frontend (and Fullstack) developer. I've worked on important projects in all phases of the software development lifecycle, from business requirements collection to project delivery. I also have developed a business perspective mindset ever since I started to work, always looking for add value to the company.
+                            </p>
+                            <p>
+                                Yet in college, I started developing hard problem solving skills in programming marathons. I've always appreciated good challenges, specially when working with a team, were I always wanted to learn in depth to become proficient in my role as a developer.
+                            </p>
+                            <p>
+                                I'm passionated with the whole software development process, agile and management concerns. However, my favorite part is the coding. I'm furthermore interested in hearing from colleagues and managers to learn something new, I also enjoy sharing my experiences with them, in my opinion, that makes me more engaged.
+                            </p>
+                            <p style="margin-bottom: 0">
+                                At the present time, I'm living at Aparecida de Goiânia, Goiás - Brazil. I'm also a pianist, desiring to know different places in the world and to eat good hamburgers.
+                            </p>
+                        </div>
+                    </div>
+                    <script>
+                        (function printAge() {
+                            const birthDate = new Date(1990, 9, 2)
+                            const ageDifference = Date.now() - birthDate.getTime()
+                            document.getElementById('myAge').innerHTML = Math.abs(new Date(ageDifference).getUTCFullYear() - 1970)
+                        })()
+                    </script>
+
+                    <div class="section">
+                        <div class="section-name">Experience<hr></div>
+                        <div class="row">
+                            <div class="col-1 pt-3"><i class="fas fa-cube size-15"></i></div>
+                            <div class="col-11 pl-10">
+                                <div class="subtitle">NECTAR CRM (dez 2018 - Atualmente)</div>
+                                <div class="section-body">Working on improvements for the backoffice webapp from the enterprise's main product, using ReactJs and Java Spring Framework.</div>
+                            </div>
+                            <div class="col-12 p-2"></div>
+                            <div class="col-1 pt-3"><i class="fas fa-cube size-15"></i></div>
+                            <div class="col-11 pl-10">
+                                <div class="subtitle">ACTUAR (jul 2017 - dez 2018)</div>
+                                <div class="section-body">Development of an ERP focused on gyms and crossfit boxes management. Also maintenance a training mobile app, company websites, blogs and SEO.</div>
+                            </div>
+                            <div class="col-12 p-2"></div>
+                            <div class="col-1 pt-3"><i class="fas fa-cube size-15"></i></div>
+                            <div class="col-11 pl-10">
+                                <div class="subtitle">META TECNOLOGIA (fev 2017 - jul 2017)</div>
+                                <div class="section-body">Improvement of a product to control financial of mobile phone stores, and payment system integration to federal government.</div>
+                            </div>
+                            <div class="col-12 p-2"></div>
+                            <div class="col-1 pt-3"><i class="fas fa-cube size-15"></i></div>
+                            <div class="col-11 pl-10">
+                                <div class="subtitle">NUSSA SISTEMAS (fev 2015 - dez 2016)</div>
+                                <div class="section-body">Freelance website creating an maintenance and blogs for real estate companies.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-name">Education<hr></div>
+                        <div class="row">
+                            <div class="col-1 pt-3"><i class="fas fa-university size-17"></i></div>
+                            <div class="col-11 pl-10">
+                                <div class="subtitle">Institute of Technology, UFG / 2015 - 2018</div>
+                                <div class="section-body">Bachelor degree in Information Systems</div>
+                                <div class="section-body">Status: completed</div>
+                            </div>
+                            <div class="col-12 p-2"></div>
+                            <div class="col-1 pt-3"><i class="fas fa-university size-17"></i></div>
+                            <div class="col-11 pl-10">
+                                <div class="subtitle">Institute of Technology, UFG / 2009 - 2014</div>
+                                <div class="section-body">Bachelor of Science Degree in Computer Science</div>
+                                <div class="section-body">Status: half-way</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 pl-4 pr-4">
+                    <div class="section">
+                        <!-- <div class="section-name">CONHECIMENTOS E HABILIDADES<hr></div> -->
+                        <div class="section-name">Skills & Endorsements<hr></div>
+                        <div class="section-body text-left">
+                            <div><i class="fas fa-circle pr-2 size-055"></i>Vanilla JavaScript (ES6, ES7)</div>
+                            <div><i class="fas fa-circle pr-2 size-055"></i>ReactJS</div>
+                            <div><i class="fas fa-circle pr-2 size-055"></i>React Native</div>
+                            <div><i class="fas fa-circle pr-2 size-055"></i>NodeJS, Express, GraphQL</div>
+                            <div><i class="fas fa-circle pr-2 size-055"></i>AngularJS and Angular 6.0</div>
+                            <div><i class="fas fa-circle pr-2 size-055"></i>Ionic 3</div>
+                            <div><i class="fas fa-circle pr-2 size-055"></i>SASS, LESS, STYLUS</div>
+                            <div><i class="fas fa-circle pr-2 size-055"></i>REST & SOAP</div><div><i class="fas fa-circle pr-2 size-055"></i>Clean Code</div><div><i class="fas fa-circle pr-2 size-055"></i>UI / UX, Lazy Loading and Design Pattern</div>
+                            <div><i class="fas fa-circle pr-2 size-055"></i>Responsive Web Design</div>
+                            <div><i class="fas fa-plus pr-2 size-055"></i><span class="size-085">Acknowledge in NoSQL databases (MongoDB) and SAAS (Firebase)</span></div>
+                            <hr>
+                            <div class="text-center">
+                                <div class="size-085">Module Bundlers: Webpack, Gulp, Grunt</div>
+                                <div class="size-085">Versioning with Github and VSTS</div>
+                                <div class="size-085">Ágile experience with SCRUM</div>
+                                <div class="size-085">Activities management tools: Jira, Github Issues and Trello</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-name">Licenses & Certifications<hr></div>
+                        <div class="section-body">
+                            <div class="pt-2">
+                                <i class="fas fa-award fa-lg pr-3"></i>React Native with NodeJS and Firebase
+                            </div>
+                            <div class="pt-2">
+                                <i class="fas fa-award fa-lg pr-3"></i>MERN Stack, Front to Back
+                            </div>
+                            <div class="pt-2">
+                                <i class="fas fa-award fa-lg pr-3"></i>Agile management with scrum
+                            </div>
+                            <div class="pt-2">
+                                <i class="fas fa-award fa-lg pr-3"></i>Web Design for Web Developers: UI / UX for Websites
+                            </div>
+                            <div class="pt-2">
+                                <i class="fas fa-award fa-lg pr-3"></i>Javascript Completo 2018 - Fundamentals to Master
+                            </div>
+                            <!-- <div class="pt-2">
+                                <i class="fas fa-award fa-lg pr-3"></i>HTML5 and CSS3 II: Turbinating your pages
+                            </div> -->
+                            <!-- <div class="pt-2">
+                                <i class="fas fa-award fa-lg pr-3"></i>C# scripts for Unity3D
+                            </div> -->
+                            <!-- <div class="pt-2">
+                                <i class="fas fa-award fa-lg pr-3"></i>ASP.NET MVC C# With Angular 5
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-name">See more<hr></div>
+                        <div class="section-body saiba-mais">
+                            <div class="">
+                                <i class="fab fa-github fa-lg pr-3"></i><a href="https://github.com/murilloves" target="_blank">/murilloves</a>
+                            </div>
+                            <div class="pt-2">
+                                <i class="fab fa-linkedin fa-lg pr-3"></i><a href="https://www.linkedin.com/in/murillo-vieira/" target="_blank">/in/murillo-vieira</a>
+                            </div>
+                            <div class="pt-2">
+                                <i class="fab fa-internet-explorer fa-lg pr-3"></i><a href="http://murillodev.com" target="_blank">murillodev.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-name">Hobbies<hr></div>
+                        <div>
+                            <img class="w-100 word-cloud" src="https://raw.githubusercontent.com/murilloves/murilloves.github.io/master/cv/images/nuvem.png" alt="" style="">
+                        </div>
+                        <div class="section-body text-center pt-3">
+                            <strong>
+                                Avoid The Asteroids | Play it free:
+                                <img class="img-rocket ml-2 mr-1" src="https://dc607.4shared.com/img/gx_AYKlpce/s20/15a421de1b8/Avoid_The_Asteroids_v102_beta" alt="" style="">
+                                <a href="https://bit.ly/2lPdVJx" style="color: #0657b4;">bit.ly/2lPdVJx</a>
+                            </strong>
+                        </div>
+                    </div>
+                    <!-- <div class="section">
+                        <div class="section-name">Icons<hr></div>
+                        <div class="section-body">
+                            <i class="fas fa-award fa-2x"></i>
+                        </div>
+                        <div class="section-body">
+                            <i class="fas fa-caret-square-right fa-2x"></i>
+                        </div>
+                        <div class="section-body">
+                            <i class="fas fa-circle fa-2x"></i>
+                        </div>
+                        <div class="section-body">
+                            <i class="fas fa-code-branch fa-2x"></i>
+                        </div>
+                        <div class="section-body">
+                            <i class="fas fa-clipboard-list fa-2x"></i>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    /* GLOBALS */
+    body {
+        margin: 0px;
+        /* font-family: 'Julius Sans One', sans-serif; */
+        /* font-family: 'Cormorant', serif; */
+        /* font-family: 'Rajdhani', sans-serif; */
+        font-family: 'IBM Plex Sans', sans-serif;
+        /* font-family: 'Roboto', sans-serif; */
+        /* font-family: 'Lato', sans-serif; */
+        /* COOL FONTS */
+        /* font-family: 'Wire One', sans-serif; */
+        /* font-family: 'Bungee Shade', cursive; */
+        font-size: 1vw;
+    }
+    .flexbox-centering {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .vertically-centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .str-cpy {
+        cursor: pointer;
+    }
+
+    /* HEADER */
+    .header {
+        background-color: #000023;
+        color: #ffffff;
+    }
+    .photo-img {
+        box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.87);
+        border: 3px solid rgba(255, 255, 255, 0.6);
+        border-radius: 100%;
+        width: 180px;
+    }
+    .info {
+        font-size: 2em
+    }
+    .name {
+        font-size: 2em;
+    }
+    .contact {
+        color: #eeeeee;
+    }
+
+    /* BODY */
+    .cv-body {
+        font-size: 2em;
+        padding-left: 1.75em;
+        padding-right: 1.75em;
+        padding-top: 0.6em;
+    }
+    .subtitle {
+        font-size: 0.88em;
+        color: #444444;
+        letter-spacing: -1px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .section {
+        padding-top: 1.5rem;
+    }
+    .section-name {
+        color: #333333;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+        .section-name hr {
+            border-top: 2px solid #2a2a2a;
+            margin-top: 3px;
+        }
+
+    .section-body {
+        color: #2a2a2a;
+        font-size: 0.8em;
+        text-align: justify;
+        text-justify: inter-word;
+
+    }
+    .presentation {
+        font-size: 0.7em;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .word-cloud {
+        filter: grayscale(1);
+    }
+    .img-rocket {
+        width: 24px;
+    }
+
+    .saiba-mais a {
+        color: #212144;
+    }
+        .saiba-mais a:hover {
+            color: #0056b3;
+        }
+
+    /* GENERAL */
+    .w-100 {
+        width: 100%;
+    }
+    .pl-10 {
+        padding-left: 35px
+    }
+    .lgray {
+        color: #999999;
+    }
+    .gray {
+        color: #555555;
+    }
+    .size-17 {
+        font-size: 1.7em;
+    }
+    .size-15 {
+        font-size: 1.5em;
+    }
+    .size-085 {
+        font-size: 0.85em;
+    }
+    .size-07 {
+        font-size: 0.7em;
+    }
+    .size-055 {
+        font-size: 0.55em;
+    }
+
+</style>
