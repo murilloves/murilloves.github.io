@@ -35,7 +35,7 @@
                                 <i class="fab fa-whatsapp p-2"></i>
                             </div>
                             <div class="phone str-cpy p-1">
-                                +55 (62) 98586-1265
+                                +55 (62) 98319-6600
                             </div>
                             <div>
                                 <i class="fab fa-telegram-plane p-2 pl-4"></i>
@@ -51,29 +51,38 @@
         <div class="col-12 cv-body">
             <div class="row">
                 <div class="col-6 px-4">
-                    <div class="section">
+                    <div class="section" style="display: none">
                         <div class="section-name">Pessoal<hr></div>
                         <div class="section-body">
-                            <div>Nacionalidade: Brasileiro | Estado Civil: Solteiro</div>
-                            <div>Nascimento: 02/10/1990</div>
-                            <div>Endereço: Aparecida de Goiânia - GO, Brasil</div>
-                            <!-- <div>Endereço: Rua H-40</div> -->
+                            <div>Nacionalidade: Brasileiro &nbsp; | &nbsp; Estado Civil: Solteiro</div>
+                            <div>Idade: <span id="age"></span> &nbsp; | &nbsp; Endereço: Aparecida de Goiânia (GO), Brasil</div>
                         </div>
                     </div>
                     <div class="section">
                         <div class="section-name">Apresentação<hr></div>
                         <div class="presentation">
                             <p>
-                                Com aproximadamente 4 anos de experiência na área como desenvolvedor full-stack e front-end, trabalhei em projetos importantes em várias fases do ciclo de vida de desenvolvimento de software, desde a coleta de requisitos de negócios até a entrega do produto. Trabalhei com testes, integração e depuração, sempre focado na perspectiva do negócio.
+                                Com aproximadamente 4 anos de experiência na área como desenvolvedor frontend e fullstack, trabalhei em projetos importantes em várias fases do ciclo de vida de desenvolvimento de software, desde a coleta de requisitos de negócios até a entrega do produto. Trabalhei com testes, integração e depuração, sempre focado na perspectiva do negócio.
                             </p>
                             <p>
                                 Na faculdade, desenvolvi habilidades de resolução de problemas difíceis em maratonas de programação. Gosto bastante de trabalhar em equipe e tenho sempre vontade de aprender com profundidade para me tornar proficiente em minhas funções.
                             </p>
-                            <p style="margin-bottom: 0">
+                            <p>
                                 Eu estou sempre interessado em ouvir de colegas de trabalho e gestores para aprender coisas novas, também gosto de compartilhar minhas experiências e conhecimentos sempre que possível.
+                            </p>
+                            <p style="margin-bottom: 0">
+                                No presente, moro em Aparecida de Goiânia, GO - Brasil. Sou pianista, apaixonado por conhecer lugares diferentes e por hamburguers.
                             </p>
                         </div>
                     </div>
+                    <script>
+                        (function printAge() {
+                            const birthDate = new Date(1990, 9, 2)
+                            const ageDifference = Date.now() - birthDate.getTime()
+                            document.getElementById('myAge').innerHTML = Math.abs(new Date(ageDifference).getUTCFullYear() - 1970)
+                        })()
+                    </script>
+
                     <div class="section">
                         <div class="section-name">Experiência<hr></div>
                         <div class="row">
@@ -128,13 +137,15 @@
                         <div class="section-name">Conhecimentos<hr></div>
                         <div class="section-body text-left">
                             <div><i class="fas fa-circle pr-2 size-055"></i>Vanilla JavaScript (ES5 e ES6+)</div>
-                            <div><i class="fas fa-circle pr-2 size-055"></i>AngularJS e Angular2+</div>
-                            <div><i class="fas fa-circle pr-2 size-055"></i>Ionic2+</div>
-                            <div><i class="fas fa-circle pr-2 size-055"></i>React.JS</div>
+                            <div><i class="fas fa-circle pr-2 size-055"></i>ReactJS</div>
+                            <div><i class="fas fa-circle pr-2 size-055"></i>React Native</div>
+                            <div><i class="fas fa-circle pr-2 size-055"></i>NodeJS, Express, GraphQL</div>
+                            <div><i class="fas fa-circle pr-2 size-055"></i>AngularJS e Angular 6.0</div>
+                            <div><i class="fas fa-circle pr-2 size-055"></i>Ionic 3</div>
                             <div><i class="fas fa-circle pr-2 size-055"></i>SASS, LESS e STYLUS</div>
                             <div><i class="fas fa-circle pr-2 size-055"></i>REST e SOAP</div><div><i class="fas fa-circle pr-2 size-055"></i>Clean Code</div><div><i class="fas fa-circle pr-2 size-055"></i>UI / UX, Lazy Loading e Design Pattern</div>
                             <div><i class="fas fa-circle pr-2 size-055"></i>Web Design responsivo, Material Desing</div>
-                            <div><i class="fas fa-plus pr-2 size-055"></i><span class="size-085">Java8, JSP, NoSQL, MongoDB, PHP + Wordpress.</span></div>
+                            <div><i class="fas fa-plus pr-2 size-055"></i><span class="size-085">Conhecimento em bancos de dados NoSQL (MongoDB) e com SAAS (Firebase)</span></div>
                             <hr>
                             <div class="text-center">
                                 <div class="size-085">Module Bundlers: Webpack, Gulp, Grunt</div>
@@ -142,27 +153,32 @@
                                 <div class="size-085">Experiência de Ágile com SCRUM</div>
                                 <div class="size-085">Gerenciamento de atividades e sprints: Jira, Github Issues e Trello</div>
                             </div>
-                            <div class="p-1"></div>
                         </div>
                     </div>
                     <div class="section">
                         <div class="section-name">Cursos e Certificados<hr></div>
                         <div class="section-body">
-                            <div class="">
-                                <i class="fas fa-award fa-lg pr-3"></i>Javascript Completo 2018 - Iniciante ao Mestre
+                            <div class="pt-2">
+                                <i class="fas fa-award fa-lg pr-3"></i>React Native com NodeJS e Firebase
                             </div>
                             <div class="pt-2">
-                                <i class="fas fa-award fa-lg pr-3"></i>Web Design for Web Developers: UI / UX for Websites
-                            </div>
-                            <div class="pt-2">
-                                <i class="fas fa-award fa-lg pr-3"></i>HTML5 and CSS3 II: Turbinating your pages
+                                <i class="fas fa-award fa-lg pr-3"></i>MERN Stack, Front to Back
                             </div>
                             <div class="pt-2">
                                 <i class="fas fa-award fa-lg pr-3"></i>Agile management with scrum
                             </div>
                             <div class="pt-2">
-                                <i class="fas fa-award fa-lg pr-3"></i>C# scripts for Unity3D
+                                <i class="fas fa-award fa-lg pr-3"></i>Web Design for Web Developers: UI / UX for Websites
                             </div>
+                            <div class="pt-2">
+                                <i class="fas fa-award fa-lg pr-3"></i>Javascript Completo 2018 - Iniciante ao Mestre
+                            </div>
+                            <!-- <div class="pt-2">
+                                <i class="fas fa-award fa-lg pr-3"></i>HTML5 and CSS3 II: Turbinating your pages
+                            </div> -->
+                            <!-- <div class="pt-2">
+                                <i class="fas fa-award fa-lg pr-3"></i>C# scripts for Unity3D
+                            </div> -->
                             <!-- <div class="pt-2">
                                 <i class="fas fa-award fa-lg pr-3"></i>ASP.NET MVC C# With Angular 5
                             </div> -->
