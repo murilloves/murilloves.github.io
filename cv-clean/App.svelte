@@ -17,6 +17,14 @@
 
 </script>
 
+<style>
+	.div-container {
+		margin: 1.5cm;
+		margin-top: -0.8cm;
+		margin-left: 2.5cm;
+	}
+</style>
+
 <div class="div-container">
 	<!-- <Personal /> -->
 
