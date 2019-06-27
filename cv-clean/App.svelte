@@ -28,6 +28,25 @@
 
 	.pb { padding-bottom: 1rem }
 
+	ul.circle > li {
+		list-style-type: circle;
+	}
+	ul.square > li {
+		list-style-type: square;
+	}
+	ul.alpha > li {
+		list-style-type: lower-alpha;
+	}
+	ul.decimal > li {
+		list-style-type: decimal;
+	}
+	ul.roman > li {
+		list-style-type: lower-roman;
+	}
+	ul.upper-roman > li {
+		list-style-type: upper-roman;
+	}
+
 	li {word-wrap: break-word;}
 </style>
 
@@ -62,7 +81,7 @@
 		<h3 class="subtitle">
 			CAREER ACHIEVEMENTS
 		</h3>
-		<ul class="topic">
+		<ul class="topic square">
 			<li>Include 4/5 key achievements or highlights. Should be relevant and quantifiable.</li>
 			<li>Hired and led a team of 30 sales staff.</li>
 			<li>Grew sales revenue by 120%, from x to y.</li>
@@ -80,7 +99,7 @@
 			<div class="tiny-desc">Largest eggs producer in south Brazil</div>
 			<div>Sept ‘09 – present</div>
 
-			<ul class="topic">
+			<ul class="topic decimal">
 				<li>Insert content. Highlight responsibilities and key achievements/deliverables.</li>
 				<li>Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
 				<li>Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
@@ -92,7 +111,7 @@
 			<strong>Assistant at Sao Joao</strong>
 			<div>Sept ‘09 – Sept '09 (2 years)</div>
 
-			<ul class="topic">
+			<ul class="topic circle">
 				<li>Insert content. Highlight responsibilities and key achievements/deliverables.</li>
 				<li>Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
 				<li>Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
@@ -104,7 +123,7 @@
 			<strong>Assistant at Sao Joao</strong>
 			<div>Aug ‘02 – Sept '06 (4 years)</div>
 
-			<ul class="topic">
+			<ul class="topic upper-roman">
 				<li>Insert content. Highlight responsibilities and key achievements/deliverables.</li>
 				<li>Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
 				<li>Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
@@ -163,7 +182,7 @@
 			ADDITIONAL INFORMATION
 		</h3>
 
-		<ul class="topic">
+		<ul class="topic alpha">
 			<li><strong>Tools and technology:</strong> MS Office, Photoshop, SAP</li>
 			<li><strong>Languages:</strong> French (Fluent) and German (Basic).</li>
 		</ul>
