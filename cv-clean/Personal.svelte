@@ -26,7 +26,6 @@
 <style>
 	.div-container {
 		margin: 1.5cm;
-		margin-bottom: -0.5cm;
 		margin-left: 2.5cm;
 	}
 
