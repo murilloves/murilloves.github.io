@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="css">
+      C<span style="">hute no </span>S<span>eu </span>S<span>aco</span>
+    </div>
+  </body>
+  <style>
+    body {
+      background: #212121;
+      font-family: sans-serif;
+      margin: 0px
+    }
+    #css {
+      color: white;
+      font-size: 10rem;
+      text-align: center;
+      transition: font-size 1s;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    span {
+      font-size: 0;
+      transition: font-size 1s;
+      display: contents;
+    }
+    #css:hover > span {
+      font-size: 5rem;
+    }
+  </style>
+</html>
