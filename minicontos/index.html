@@ -45,7 +45,7 @@
 		<div class="col-md-8">
 			<font face="Corona Typewriter" >
 			<h3 id="test" class="display-3" style="text-align: left !important">
-				Apesar de “Mini”, os contos são completos e a complexidade de sua pequenez os torna únicos e deliciosos. Sirva-se `a vontade.
+				Apesar de “Mini”, os contos <br>são completos e a <br>complexidade de sua pequenez <br>os torna únicos e deliciosos.<br>Sirva-se `a vontade.
 			</h3>
 		</div> <!-- </col-md8> -->
 		<div class="col-md-2"> </div>
@@ -67,8 +67,12 @@
 				n++;
 				setTimeout(function() {
 				typeWriter(text, n)
-				}, 80);
+				}, randDelay());
 			}
+		}
+
+		function randDelay() {
+			return Math.floor(Math.random() * 80) + 20
 		}
 		// $(document).ready(function() {
 		// 	// e.stopPropagation();
