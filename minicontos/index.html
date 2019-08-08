@@ -3,6 +3,8 @@
 
 <head>
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title> Home | MiniContosAmbulantes </title>
 	<link href = "assets/bootstrap.css" rel = "stylesheet">
 
@@ -23,7 +25,7 @@
 
 <body id = "MiniContosAmbulantes" class = "col-md-12">
 
-	<div id="coluna principal" align="center">
+	<div id="coluna principal" align="center" class="wrapper">
 
 		<div id="banner" class="padding-top-3">
 			<img src="assets/img/banner.jpg">
@@ -67,7 +69,7 @@
 				n++;
 				setTimeout(function() {
 				typeWriter(text, n)
-				}, 100);
+				}, 80);
 			}
 		}
 		// $(document).ready(function() {
@@ -79,5 +81,51 @@
 			typeWriter(text, 0);
 		})();
 
-	</script>
+    </script>
+
+	<style>
+		#banner img {
+			width: 60%;
+			margin-bottom: -2%;
+		}
+		#MiniContosAmbulantes div.wrapper {
+			width: 70%
+		}
+		h3 {
+			font-size: 2vw;
+			line-height: 1.5
+		}
+	
+		@media only screen and (max-width: 900px) {
+			h3 {
+				font-size: 5vw;
+				line-height: 1.5;
+				padding: 0 5vw;
+			}
+			center img {
+				width: 80%;
+				margin-bottom: 0%;
+			}
+			body#MiniContosAmbulantes div.wrapper {
+				width: 100vw;
+			}
+			body#MiniContosAmbulantes #nav ul li a {
+				display: block;
+				background: #353535;
+				outline: solid 2px #353535;
+				border: solid 2px white;
+				color: white;
+				padding: 0;
+				text-decoration: none;
+				font-size: 8vw;
+				width: 21vw;
+			}
+			body ul, ol {
+				margin: 0 0 -40px 0;
+			}
+		}
+	
+	</style>
+		
+
 </body>
