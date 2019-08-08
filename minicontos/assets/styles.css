@@ -327,13 +327,15 @@ input.button.next {
 }
 
 #MiniContosAmbulantes #nav ul li a {
-	display: block;
-	background: #353535;
-	outline: solid 2px #353535;
-	border: solid 2px white;
-	color: white;
-	padding: 10px 15px;
-	text-decoration: none;
+    display: block;
+    background: #353535;
+    outline: solid 2px #353535;
+    border: solid 2px white;
+    color: white;
+    padding: 4vh 0;
+    text-decoration: none;
+    font-size: 4vw;
+    width: 12vw;
 }
 
 #MiniContosAmbulantes #nav ul li a:hover {
@@ -454,4 +456,9 @@ input.button.next {
 #contact-form input[type="checkbox"] + label {
 	display: inline;
 	cursor: pointer;
+}
+
+a img {
+    width: 90%;
+    padding: 5%;
 }
