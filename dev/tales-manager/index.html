@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title> Contos | MiniContosAmbulantes </title>
+	<link href = "assets/styles.css" rel = "stylesheet">
+
+	<style type="text/css">
+		@font-face
+		{
+		    font-family: "Corona Typewriter";
+		    src: url(fonts/corona3Typewriter.ttf) format("truetype");
+		}
+		@font-face
+		{
+		    font-family: "Veteran Typewriter";
+		    src: url(fonts/veteranTypewriter.ttf) format("truetype");
+		}
+		@font-face
+		{
+		    font-family: "Brain Flower";
+		    src: url(fonts/brainFlowerEuro.ttf) format("truetype");
+		}
+	</style>
+
+</head>
+
+<body id = "MiniContosAmbulantes">
+
+	<div class = "wrapper">
+
+		<font face="Veteran Typewriter" >
+
+    <form onsubmit="return addTale(event)">
+      <div class="w100">
+        <input id="taleTitle" placeholder="Title" class="w100">
+      </div>
+      <div class="w100">
+        <textarea id="taleText" class="w100" placeholder="Once upon a time..." name="tale" cols="30" rows="10"></textarea>
+      </div>
+      <button type="submit" class="btn-add">Add Short Tale</button>
+    </form>
+
+    <div id="error">
+
+    </div>
+
+    <h6 id="tale-container"></h6>
+
+	</div> <!-- wrapper -->
+
+<font face="Times" >
+<small>&copy; 2019 - MiniContosAmbulantes </small>
+</font>
+
+</body>
+
+<style>
+  form {padding: 3em 4em 0 4em}
+
+  h6 div { display: flex; padding: 1em; font-size: 15px; text-align: justify }
+  .w100 { width: 100% }
+
+  .flex { display: flex }
+  .flex0 { flex: 0 }
+  .flex1 { flex: 1 }
+
+  input { margin-bottom: 1em; border: none; border-bottom: 1px solid #aaa }
+  textarea { margin-bottom: 1em; border-radius: 6px; border: 1px solid #bbb }
+
+  h6 button { flex: 0; background: #fff; border-radius: 6px; border: 2px solid #ff4444; color: #ff4444; font-weight: 600; height: 30px; cursor: pointer; transition: 0.3s }
+  h6 button:hover { background: #ff4444; color: #fff; }
+  .btn-add { background: #237def; color: #fff; height: 30px; font-weight: 600; transition: 0.3s; border-radius: 6px; border: 2px solid #237cdf; cursor: pointer }
+  .btn-add:hover { background: #126abc; }
+</style>
+
+<script src="./tales-service.js"></script>
