@@ -91,9 +91,9 @@ const getTalesQuery = () => `{ tales { id title text } }`;
 
 deleteTaleFn = (event) => {
   let taleId = event.currentTarget.value;
-  let password = document.getElementById("password").value;
+  let passwordField = document.getElementById("password").value;
 
-  return fetch(`${BACKEND_PATH}${taleId}/${password}`, {
+  return fetch(`${BACKEND_PATH}${taleId}/${passwordField}`, {
     method: 'DELETE'
   })
   .then(response => {
@@ -146,14 +146,14 @@ const renderTales = ( data ) => {
 const addTale = (event) => {
   let taleTitle = document.getElementById("taleTitle").value;
   let taleText = document.getElementById("taleText").value;
-  let password = document.getElementById("password").value;
+  let passwordField = document.getElementById("password").value;
 
   let wasAdd = false;
 
   body = {
     title: taleTitle,
     text: taleText
-    password: password,
+    password: passwordField,
   };
 
   const options = {
