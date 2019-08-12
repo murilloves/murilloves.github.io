@@ -48,7 +48,11 @@
 
 		<font face="Veteran Typewriter" >
 
-		<h6 id="tale-container"></h6>
+    <div class="flex flex-justify-center">
+      <div id="loader"></div>
+    </div>
+
+		<h6 id="tales-container" style="display: none" class="animate-bottom"></h6>
 
 	</div> <!-- wrapper -->
 
@@ -59,47 +63,91 @@
 </body>
 
 <style>
-    center img {
-        width: 60%;
-        margin-bottom: -2%;
-    }
-    #MiniContosAmbulantes div.wrapper {
-        width: 70%
-    }
+  .flex { display: flex }
+  .flex-justify-center { justify-content: center }
+  center img {
+    width: 60%;
+    margin-bottom: -2%;
+  }
+  #MiniContosAmbulantes div.wrapper {
+    width: 70%
+  }
+  h6 div {
+    padding: 1em 0;
+    font-size: 2vw;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  @media only screen and (max-width: 900px) {
     h6 div {
-        padding: 1em 0;
-        font-size: 2vw;
-        line-height: 1.5;
-        text-align: justify;
+      font-size: 5vw;
+      line-height: 1.5;
+      padding: 0 5vw;
     }
-    @media only screen and (max-width: 900px) {
-        h6 div {
-            font-size: 5vw;
-            line-height: 1.5;
-            padding: 0 5vw;
-        }
-        center img {
-            width: 80%;
-            margin-bottom: 0%;
-        }
-        body#MiniContosAmbulantes div.wrapper {
-            width: 100vw;
-        }
-        #MiniContosAmbulantes #nav ul li a {
-            display: block;
-            background: #353535;
-            outline: solid 2px #353535;
-            border: solid 2px white;
-            color: white;
-            padding: 4vw 0;
-            text-decoration: none;
-            font-size: 8vw;
-            width: 21vw;
-        }
-        ul, ol {
-            margin: 0 0 -40px 0;
-        }
+    center img {
+      width: 80%;
+      margin-bottom: 0%;
     }
+    body#MiniContosAmbulantes div.wrapper {
+      width: 100vw;
+    }
+    #MiniContosAmbulantes #nav ul li a {
+      display: block;
+      background: #353535;
+      outline: solid 2px #353535;
+      border: solid 2px white;
+      color: white;
+      padding: 4vw 0;
+      text-decoration: none;
+      font-size: 8vw;
+      width: 21vw;
+    }
+    ul, ol {
+      margin: 0 0 -40px 0;
+    }
+  }
+
+  /* LOADER */
+  #loader {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #444;
+    width: 10vw;
+    height: 10vw;
+    -webkit-animation: spin 8s ease infinite;
+    animation: spin 8s ease infinite;
+  }
+
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(1800deg); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(1800deg); }
+  }
+
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  @-webkit-keyframes animatebottom {
+    from { bottom:-20px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  @keyframes animatebottom { 
+    from{ bottom:-20px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  #tales-container {
+    display: none;
+    text-align: center;
+  }
 </style>
 
 <script src="./tales-service.js"></script>
