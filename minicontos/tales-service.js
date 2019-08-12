@@ -1,12 +1,14 @@
-const taleContainer = document.querySelector("#tale-container");
+const talesContainer = document.querySelector("#tales-container");
+
+const loadingDiv = document.getElementById('loader');
 
 const getTalesQuery = () => `{ tales { id title text } }`;
 
 const renderTales = ( data ) => {
   const allTales = data;
 
-  while (taleContainer.firstChild) {
-    taleContainer.removeChild(taleContainer.firstChild);
+  while (talesContainer.firstChild) {
+    talesContainer.removeChild(talesContainer.firstChild);
   }
 
   const taleFragment = document.createDocumentFragment();
@@ -31,10 +33,15 @@ const renderTales = ( data ) => {
       talesList.appendChild(talesListItem);
 
       taleFragment.appendChild(talesList);
-      taleContainer.appendChild(taleFragment);
+      talesContainer.appendChild(taleFragment);
     });
 
   }
+
+  setTimeout(() => {
+    talesContainer.style.display = 'block';
+    loadingDiv.style.display = 'none';
+  }, 1000);
 
 }
 
