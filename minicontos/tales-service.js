@@ -1,6 +1,6 @@
 const talesContainer = document.querySelector("#tales-container");
 
-const loadingDiv = document.getElementById('loader');
+const loadingDiv = document.getElementById('loading-div');
 
 const getTalesQuery = () => `{ tales { id title text } }`;
 
