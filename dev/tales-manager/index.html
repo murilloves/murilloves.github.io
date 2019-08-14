@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title> Contos | MiniContosAmbulantes </title>
-	<link href = "assets/styles.css" rel = "stylesheet">
 
 	<style type="text/css">
 		@font-face
@@ -33,7 +32,10 @@
 
 		<font face="Veteran Typewriter" >
 
-    <form onsubmit="return addTale(event)">
+    <form onsubmit="return addTale(event)" style="padding: 3em 2em 0 2em;">
+	<div class="accesses">
+	    Moruda, seus contos foram lidos <span id="counter">x</span> vezes
+	</div>
       <div class="w100">
         <input id="taleTitle" placeholder="Title" class="w100">
       </div>
@@ -77,6 +79,19 @@
   h6 button:hover { background: #ff4444; color: #fff; }
   .btn-add { background: #237def; color: #fff; height: 30px; font-weight: 600; transition: 0.3s; border-radius: 6px; border: 2px solid #237cdf; cursor: pointer }
   .btn-add:hover { background: #126abc; }
+div.accesses {
+    margin-bottom: 2em;
+    font-size: 18px;
+    background: #333;
+    color: white;
+    font-family: monospace;
+    padding: 15px 30px;
+}
+#counter {
+    color: #237def;
+    font-size: 1.2em;
+    font-weight: 600;
+}
 </style>
 
 <!-- <script src="./tales-service.js"> -->
@@ -105,6 +120,9 @@ deleteTaleFn = (event) => {
 
 const renderTales = ( data ) => {
   const allTales = data.tales;
+  const counterQuantity = data.accesses.quantity;
+
+  document.getElementById("password").innerHTML = counterQuantity;
 
   while (taleContainer.firstChild) {
     taleContainer.removeChild(taleContainer.firstChild);
