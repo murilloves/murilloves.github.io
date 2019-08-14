@@ -122,7 +122,7 @@ const renderTales = ( data ) => {
   const allTales = data.tales;
   const counterQuantity = data.accesses.quantity;
 
-  document.getElementById("password").innerHTML = counterQuantity;
+  document.getElementById("counter").innerHTML = counterQuantity;
 
   while (taleContainer.firstChild) {
     taleContainer.removeChild(taleContainer.firstChild);
