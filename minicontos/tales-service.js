@@ -46,8 +46,17 @@ const renderTales = ( data ) => {
 }
 
 (() => {
+  body = {
+    count_access: 1,
+  };
+
   const options = {
-    method: "get",
+    method: "post",
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body),
   };
 
   fetch(`https://museekr.herokuapp.com/api/tales/all`, options)
