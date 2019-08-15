@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<body style="margin: 0; background: #f5f5f5">
+
+  <div style="width: calc(100vw - 60px); text-align: center; margin: auto">
+    <div style="margin-top: 28px">
+      <textarea id="strTemplate" placeholder="Place your inline styled code here"
+        style="width: 100%; height: 300px; border: 1px solid #ddd"></textarea>
+    </div>
+    <div style="margin-top: 30px;">
+      <button type="button" onclick="myFunction()"
+              style="cursor: pointer; height: 40px; background: #237def; border: none; border-radius: 4px; color: #fff; font-size: 16px; font-weight: bold; padding: 10px 20px">
+        Transform my inline style in classes!
+      </button>
+    </div>
+
+    <div style="text-align: left; background: #eee; padding: 20px; margin-top: 30px; border: 1px solid #ddd; border-radius: 10px">
+      <div>  
+        <pre id="html">Paste your inline styled code above and click on the button</pre>
+      </div>
+
+      <div>
+        <pre id="classes"></pre>
+      </div>
+    </div>
+  </div>
+
+<script>
+function myFunction() {
+  function generateHash(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  }
+
+  function mergeClasses(strTemplate) {
+    let arr = [];
+
+    // FIRST WE GET ONLY ONE HTML EACH TIME
+    strTemplate = strTemplate.replace(/<.*?>/g, (singleElement) => {
+
+      // THEN WE SEARCH FOR DUPLICATED CLASS ATTRIBUTES IN EACH ELEMENT
+      return singleElement.replace(/<.*?class.*?class.*?>/g, (htmlElement) => {
+        htmlElement = htmlElement.replace('class="', 'toBeMerged="');
+        let secondClassContent = htmlElement.split('class="')[1].split('"')[0];
+        htmlElement = htmlElement.replace(/class=".*?\"/, '');
+        htmlElement = htmlElement.replace('toBeMerged="', `class="${secondClassContent} `);
+        return htmlElement;
+      });
+
+    });
+    return strTemplate;
+  }
+
+  function replaceHtml(strTemplate, useHash, nameForClass = 'klass-name') {
+
+    let hash = generateHash(8);
+    let index = -1;
+
+    let arrCssClasses = [];
+
+    var modifiedHtml = strTemplate.replace(/style=\".*?\"/gi, (styleInline) => {
+      if (styleInline.length > 10) {
+        ++index;
+
+        cssClassName = `${nameForClass}-${hash}-${1 + index}`;
+        arrCssClasses.push(`.${cssClassName} { ${styleInline.split('style="')[1].split('"')[0].trim()} }`)
+
+        return `class="${cssClassName}"`;
+      } else {
+        return ``;
+      }
+    });
+
+    modifiedHtml = mergeClasses(modifiedHtml);
+
+    return { html: modifiedHtml, css: arrCssClasses };
+  }
+
+  let strTemplate = document.getElementById('strTemplate').value;
+
+  if (strTemplate.length > 10) {
+    let objOptimizedPage = replaceHtml(strTemplate, true);
+
+    document.getElementById("html").textContent = objOptimizedPage.html;
+    document.getElementById("classes").textContent = `<style>\n${objOptimizedPage.css.join('\n')}\n</style>`;
+  }
+
+}
+</script>
+
+</body>
+</html>
