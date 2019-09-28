@@ -41,7 +41,24 @@
 						</ul>
 					</footer>
 
-			</div>
+      </div>
+
+      <style>
+        ul.icons li a {
+          color: #aaa
+        }
+        ul.icons li a:before {
+          text-shadow:
+            1.25px 0px 0px #aaa,
+            -1.25px 0px 0px #aaa,
+            0px 1.25px 0px #aaa,
+            0px -1.25px 0px #aaa;
+          transition: 0.2s;
+        }
+        ul.icons li a:hover:before {
+          background: #ff7496;
+        }
+      </style>
 
 			<!-- Scripts -->
 			<script>
@@ -52,6 +69,5 @@
         let yearTags = document.getElementsByTagName('year');
         Array.from(yearTags).forEach(tag => tag.innerHTML = new Date().getFullYear());
 			</script>
-
 	</body>
 </html>
