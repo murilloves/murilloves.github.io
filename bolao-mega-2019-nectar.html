@@ -1,0 +1,89 @@
+<div>
+	<div>
+		<div>Sorteio:</div>
+		<div class="input-container">
+			<input id="input" onkeypress="processInput()" />
+		</div>
+	</div>
+
+	<div>
+		Dezenas:
+		<div id="dezenas"></div>
+	</div>
+</div>
+
+<script>
+
+const dezenas = [
+	[10,14,17,25,29,34,42,54],
+	['03',14,27,31,34,44,47,54],
+	['01',10,13,25,37,38,42,60],
+	['01','04',11,33,37,39,53,55],
+	[19,23,26,28,32,38,57],
+	['02',12,17,28,43,46,59],
+	[15,23,,25,27,43,58,60],
+	['06',10,12,27,40,59],
+	[17,18,35,38,40,54],
+	['08',14,22,35,36,47],
+	['03',14,16,23,42,59],
+];
+
+const colors = ['none', 'one', 'two', 'three', 'four', 'five', 'winner']
+
+document.getElementById('dezenas').innerHTML = `
+	${dezenas.map(el => `<div class="dezenas">${el}</div>`).join('')}
+`;
+
+let processInput = (ev) => {
+	let input = document.getElementById('input');
+	let arr = [];
+	document.getElementById('dezenas').innerHTML = '';
+
+	dezenas.forEach(dezenaJogo => {
+		let matches = 0;
+		let html = '';
+
+		dezenaJogo.forEach(num => {
+			if(input.value.includes(num)) {
+				matches++;
+				html += `<b class="blue">${num}</b> `
+			} else {
+				html += `${num} `
+			}
+		});
+
+		html = `${html}<span class="${colors[matches]}"> ---> ${matches}</span>`
+		arr.push({
+			matches: matches,
+			dezenaJogo: dezenaJogo,
+			html: html
+		});
+	});
+	const sortedArr = arr.sort((a, b) => (a.matches > b.matches) ? -1 : 1);
+
+	document.getElementById('dezenas').innerHTML = sortedArr.map(el => `
+		<div class="dezenas"> ${el.html} </div>		
+	`).join('');
+
+	console.log(arr);
+}
+
+</script>
+
+<style>
+	div { font-size: 20px; padding: 1em }
+
+	.input-container { display: flex; justify-content: center; }
+	#input { border-radius: 0.25em; width: 80vw; font-size: 65px; border: 2px solid #999; padding: 5vw; outline: transparent; }
+
+	div.dezenas { font-weight: 500; font-family: sans-serif; padding: 0.5em; }
+	.none { color: #bbb; }
+	.one { color: #888; }
+	.two { color: #ff6666; }
+	.three { color: orange; }
+	.four { color: #00ffae; }
+	.five { color: #21da0b; font-weight: bold }
+	.winner { color: #2979ff; font-weight: bold; text-transform: uppercase; font-size: 1.6em }
+
+	.blue { color: #2979ff; }
+</style>
