@@ -603,6 +603,8 @@ let processInput = (ev) => {
 		});
 
 		let premioStr = 0;
+		let premioValor = 0;
+		
 		if (matches === 15) { premioStr = '<span style="color: green">PRÊMIO $_$:<div> ~ R$ 800.000,00 para 3 ganhadores</div> <div> ~ R$ 1.300.000,00 para 2 ganhadores</div> <div> ~ R$ 2.500.000 para 1 ganhador</div> </span>'; premioValor = 2500000 }
 		else if (matches === 14) { premioStr = ' ~ R$ 1.500,00'; premioValor = 1500 }
 		else if (matches === 13) { premioStr = ' R$ 25,00'; premioValor = 25 }
