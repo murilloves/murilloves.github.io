@@ -1,0 +1,14 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="n-icon-kanban">
+<g id="n-icon">
+<g id="Union">
+<path d="M1.5 2C1.22386 2 1 2.22386 1 2.5V3.5C1 3.77614 1.22386 4 1.5 4H6.5C6.77614 4 7 3.77614 7 3.5V2.5C7 2.22386 6.77614 2 6.5 2H1.5Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1 7C1 6.44772 1.44772 6 2 6H6C6.55228 6 7 6.44772 7 7V21C7 21.5523 6.55228 22 6 22H2C1.44772 22 1 21.5523 1 21V7ZM3 20V8H5V20H3Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 7C9 6.44771 9.44772 6 10 6H14C14.5523 6 15 6.44772 15 7V17C15 17.5523 14.5523 18 14 18H10C9.44772 18 9 17.5523 9 17V7ZM11 16V8H13V16H11Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18 6C17.4477 6 17 6.44772 17 7V13C17 13.5523 17.4477 14 18 14H22C22.5523 14 23 13.5523 23 13V7C23 6.44772 22.5523 6 22 6H18ZM19 8V12H21V8H19Z" fill="black"/>
+<path d="M9 2.5C9 2.22386 9.22386 2 9.5 2H14.5C14.7761 2 15 2.22386 15 2.5V3.5C15 3.77614 14.7761 4 14.5 4H9.5C9.22386 4 9 3.77614 9 3.5V2.5Z" fill="black"/>
+<path d="M17.5 2C17.2239 2 17 2.22386 17 2.5V3.5C17 3.77614 17.2239 4 17.5 4H22.5C22.7761 4 23 3.77614 23 3.5V2.5C23 2.22386 22.7761 2 22.5 2H17.5Z" fill="black"/>
+</g>
+</g>
+</g>
+</svg>
