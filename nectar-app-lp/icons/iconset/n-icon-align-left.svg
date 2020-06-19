@@ -1,0 +1,10 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="n-icon-align-left">
+<g id="n-icon">
+<g id="Union">
+<path d="M2.5 3C2.22386 3 2 3.22386 2 3.5V20.5C2 20.7761 2.22386 21 2.5 21H3.5C3.77614 21 4 20.7761 4 20.5V3.5C4 3.22386 3.77614 3 3.5 3H2.5Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6 9C6 8.44772 6.44772 8 7 8H19C19.5523 8 20 8.44772 20 9V15C20 15.5523 19.5523 16 19 16H7C6.44772 16 6 15.5523 6 15V9ZM8 14V10H18V14H8Z" fill="black"/>
+</g>
+</g>
+</g>
+</svg>

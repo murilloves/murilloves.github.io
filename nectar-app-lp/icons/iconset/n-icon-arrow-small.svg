@@ -1,0 +1,6 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="n-icon-arrow-small">
+<rect id="Rectangle" x="16" y="16" width="16" height="16" rx="8" transform="rotate(-180 16 16)" fill="white"/>
+<path id="Combined Shape" fill-rule="evenodd" clip-rule="evenodd" d="M9.41421 5.75748L8 4.34326L6.58578 5.75748L3.4038 8.93946C3.20854 9.13472 3.20854 9.4513 3.4038 9.64656L4.11091 10.3537C4.30617 10.5489 4.62275 10.5489 4.81801 10.3537L8 7.17169L11.182 10.3537C11.3772 10.5489 11.6938 10.5489 11.8891 10.3537L12.5962 9.64656C12.7915 9.4513 12.7915 9.13472 12.5962 8.93946L9.41421 5.75748Z" fill="black"/>
+</g>
+</svg>
