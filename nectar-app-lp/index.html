@@ -1012,6 +1012,7 @@
   let interval;
   let section2;
   let section3;
+  let hiddenSections;
 
   scrollFadeAnimation = () => {
     if (document.body.scrollTop > section2.scrollHeight) {
@@ -1054,9 +1055,9 @@
 </script>
 
 <style>
-  #section2, .reveal-on-scroll {
+  #section2-u, .reveal-on-scroll-u {
     opacity: 0; -webkit-transform: translateY(15px); -ms-transform: translateY(15px); transform: translateY(15px); -webkit-transition: 0.8s ease-in-out; -o-transition: 0.8s ease-in-out; transition: 0.8s ease-in-out;
   }
 
-  .scrolled { opacity: 1 !important; -webkit-transform: translateY(0) !important; -ms-transform: translateY(0) !important; transform: translateY(0) !important; }
-</style> 
+  .scrolled-u { opacity: 1 !important; -webkit-transform: translateY(0) !important; -ms-transform: translateY(0) !important; transform: translateY(0) !important; }
+</style>
