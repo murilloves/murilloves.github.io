@@ -20,30 +20,29 @@
       </div>
 
       <div id="section1" class="bg-dark w-100 h-100 flex flex-column flex-align-center flex-justify-center">
-        <div class="section">
-          <a href="#baixar-nectar-field" class="show-mobile flex faixa-eu-quero">
-            Eu quero
-          </a>
-          <div class="absolute w-100 left-0" style="bottom: -8vw;">
-            <div
-              class="absolute bottom-0 z-index1 w-100 h-75 flex flex-align-center flex-justify-center fade-bg-section-one">
-              <a href="#nectar-stay-home">
-                <button class="btn-action-first-section zoom-300-m">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="n-icon-arrow-down"><g id="n-icon-arrow-up"><path id="Combined Shape" d="M17.3033 14.6467C17.4986 14.8419 17.4986 15.1585 17.3033 15.3538L12.3536 20.3035C12.1583 20.4988 11.8417 20.4988 11.6465 20.3035L6.69672 15.3538C6.50146 15.1585 6.50146 14.8419 6.69672 14.6466L7.40383 13.9395C7.59909 13.7443 7.91567 13.7443 8.11093 13.9395L11 16.8286L11 4.50088C11 4.22473 11.2239 4.00088 11.5 4.00088L12.5 4.00088C12.7762 4.00088 13 4.22473 13 4.50088L13 16.8286L15.8891 13.9395C16.0844 13.7443 16.401 13.7443 16.5962 13.9395L17.3033 14.6467Z" fill="#FEC10D"/></g></g></svg>
-                </button>
+        <div class="outter-cloister">
+          <div class="inner-cloister">
+            <div class="section flex flex-column flex-justify-center h-100p">
+              <div class="relative flex flex-column flex-justify-end text-banner text-center color-light text-banner-mobile zoom-075 flex-3d">
+                <span>
+                  Tenha uma ferramenta fácil de usar e
+                  <br class="hide-mobile">
+                  <span>poderosa para guiar suas <span class="color-primary">vendas externas</span></span>
+                </span>
+              </div>
+              <div class="flex flex-2d">
+                <div class="flex flex-align-center flex-justify-center">
+                  <a href="#nectar-stay-home">
+                    <button class="btn-action-first-section zoom-300-m">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="n-icon-arrow-down"><g id="n-icon-arrow-up"><path id="Combined Shape" d="M17.3033 14.6467C17.4986 14.8419 17.4986 15.1585 17.3033 15.3538L12.3536 20.3035C12.1583 20.4988 11.8417 20.4988 11.6465 20.3035L6.69672 15.3538C6.50146 15.1585 6.50146 14.8419 6.69672 14.6466L7.40383 13.9395C7.59909 13.7443 7.91567 13.7443 8.11093 13.9395L11 16.8286L11 4.50088C11 4.22473 11.2239 4.00088 11.5 4.00088L12.5 4.00088C12.7762 4.00088 13 4.22473 13 4.50088L13 16.8286L15.8891 13.9395C16.0844 13.7443 16.401 13.7443 16.5962 13.9395L17.3033 14.6467Z" fill="#FEC10D"/></g></g></svg>
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <a href="#baixar-nectar-field" class="show-mobile flex faixa-eu-quero">
+                Eu quero
               </a>
             </div>
-            <div class="show-mobile" style="overflow-x: hidden; ">
-              <img class="absolute w-100 bottom-0" src="icons/personalized/map.svg" style=" width: 300vw; position: inherit; margin-left: -100vw; margin-right: -100vw; margin-bottom: 30vw; overflow-x: hidden;">
-            </div>
-            <img class="absolute w-100 bottom-0 hide-mobile" src="icons/personalized/map.svg">
-          </div>
-          <div class="relative flex-0 z-index2 flex-column text-banner text-center color-light zoom-075 text-banner-mobile">
-            <span>
-              Tenha uma ferramenta fácil de usar e
-              <br class="hide-mobile">
-              <span>poderosa para guiar suas <span class="color-primary">vendas externas</span></span>
-            </span>
           </div>
         </div>
       </div>
@@ -648,6 +647,7 @@
   .w-100 { width: 100%; }
   .w-50 { width: 50%; }
   .w-triple-section { min-width: 280px; }
+  .h-100p { height: 100%; }
   .h-100 { height: 100vh; }
   .h-75 { height: 75vh; }
   .h-50 { height: 50vh; }
@@ -684,6 +684,8 @@
   .bg-primary-light { background-color: #fcf4e1; }
   .bg-primary-gradient { background: -o-linear-gradient(122deg, #FF9900 0%, #FEC10D 100%); background: linear-gradient(328deg, #FF9900 0%, #FEC10D 100%); }
   .fade-bg-section-one { background: -o-radial-gradient(transparent, #1b1b23 42%); background: radial-gradient(transparent, #1b1b23 42%); }
+  .outter-cloister { height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; background-image: url(icons/personalized/map.svg); background-position: bottom; background-repeat: no-repeat; background-size: 100%; }
+  .inner-cloister { height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; background: -o-radial-gradient(closest-side at 50% 75%, transparent, #1b1b23 80%); background: radial-gradient(closest-side at 50% 75%, transparent, #1b1b23 80%); }
 
   .hover-underline { text-decoration: none; }
   .hover-underline:hover { text-decoration: underline; }
@@ -752,7 +754,9 @@
     .zoom-125 { zoom: 1.25 }
   
     .m-adassa-fullscreen { margin-left: 120px; }
-  
+    .flex-2d { flex: 2 }
+    .flex-3d { flex: 3 }
+
     .show-mobile { display: none; }
   }
   
@@ -762,7 +766,9 @@
     .zoom-140 { zoom: 1.40 }
   
     .m-adassa-fullscreen { margin-left: 120px; }
-  
+    .flex-2d { flex: 2 }
+    .flex-3d { flex: 3 }
+
     .show-mobile { display: none; }
   }
   
@@ -790,7 +796,7 @@
   
     .text-banner.text-banner-mobile {
       zoom: 1.50;
-      margin-top: -15vh;
+      flex: 2.
     }
     .text-left-mobile { text-align: left; }
     .flex-align-start-mobile { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
@@ -808,7 +814,9 @@
     .w-links { width: 35vw !important; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
     .fade-bg-section-one { background: -o-radial-gradient(transparent, #1b1b23 62%); background: radial-gradient(transparent, #1b1b23 62%); }
     .faixa-eu-quero { position: absolute; bottom: 0; left: 0; background: -webkit-gradient(linear, left top, right top, from(#FF9900), to(#FEC10D)); background: -o-linear-gradient(left, #FF9900 0%, #FEC10D 100%); background: linear-gradient(90deg, #FF9900 0%, #FEC10D 100%); height: 20vw; width: 100%; z-index: 2; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; font-size: 56px; font-weight: 600; color: #000; text-decoration: initial; }
-  
+    .outter-cloister { background-size: 400%; }
+    .inner-cloister { background: -o-radial-gradient(closest-side at 50% 75%, transparent, #1b1b23 140%); background: radial-gradient(closest-side at 50% 75%, transparent, #1b1b23 140%); }
+
     .ml-0-m { margin-left: 0; }
     .ml-1-m { margin-left: 12px; }
     .ml-16-m { margin-left: 16px; }
@@ -842,21 +850,21 @@
     .mt-8-m { margin-top: 96px; }
     .mt-12-m { margin-top: 144px; }
   }
-  
+
   @-webkit-keyframes arrowDownSection {
-    0%   {margin-top: 0;}
-    5%   {margin-top: 0;}
-    50%  {margin-top: 24px;}
-    55%  {margin-top: 24px;}
-    100% {margin-top: 0;}
+    0%   {margin-top: -72px;}
+    5%   {margin-top: -72px;}
+    50%  {margin-top: -48px;}
+    55%  {margin-top: -48px;}
+    100% {margin-top: -72px;}
   }
-  
+
   @keyframes arrowDownSection {
-    0%   {margin-top: 0;}
-    5%   {margin-top: 0;}
-    50%  {margin-top: 24px;}
-    55%  {margin-top: 24px;}
-    100% {margin-top: 0;}
+    0%   {margin-top: -72px;}
+    5%   {margin-top: -72px;}
+    50%  {margin-top: -48px;}
+    55%  {margin-top: -48px;}
+    100% {margin-top: -72px;}
   }
   @-webkit-keyframes arrowDownFollowUp {
     0%   {margin-top: 50px; margin-bottom: 42px}
