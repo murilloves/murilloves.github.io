@@ -3,7 +3,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;650;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="bg-semi-dark w-100 header-height flex flex-align-center flex-justify-center zoom-200-m">
+    <div class="bg-semi-dark w-100 header-height flex flex-align-center flex-justify-center zoom-200-m absolute">
       <a href="https://nectarcrm.com.br/" class="section color-gray pointer flex flex-align-center ml-2 hover-underline zoom-112">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="#AEB0BA" xmlns="http://www.w3.org/2000/svg"><g id="n-icon-arrow-left"><path id="Combined Shape" fill-rule="evenodd" clip-rule="evenodd" d="M15.6464 21.5459C15.8417 21.7412 16.1583 21.7412 16.3536 21.5459L17.0607 20.8388C17.2559 20.6436 17.2559 20.327 17.0607 20.1317L8.92893 12L17.0607 3.86827C17.2559 3.673 17.2559 3.35642 17.0607 3.16116L16.3536 2.45405C16.1583 2.25879 15.8417 2.25879 15.6464 2.45405L7.51472 10.5858L6.10051 12L7.51472 13.4142L15.6464 21.5459Z" fill="#AEB0BA"/></g></svg>
         <span class="ml-1 hide-mobile">Voltar para NectarCRM</span>
@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div id="section1" class="bg-dark w-100 h-100 flex flex-column flex-align-center flex-justify-center">
+    <div id="section1" class="bg-dark w-100 h-100 flex flex-column flex-align-center flex-justify-center min-h-100">
       <div class="outter-cloister">
         <div class="inner-cloister">
           <div class="section flex flex-column flex-justify-center h-100p">
@@ -63,7 +63,7 @@
       </div>
     </div>
 
-    <div class="bg-light w-100 relative flex flex-column flex-align-center flex-justify-center">
+    <div class="bg-light w-100 relative flex flex-column flex-align-center flex-justify-center min-h-100">
       <div class="section-md flex flex-align-center flex-justify-center zoom-080">
         <div class="flex flex-column">
           <div class="mt-8 zoom-150-m reveal-on-scroll">
@@ -121,7 +121,7 @@
       </div>
     </div>
 
-    <div class="bg-primary-gradient w-100 relative flex flex-column flex-align-center flex-justify-center">
+    <div class="bg-primary-gradient w-100 relative flex flex-column flex-align-center flex-justify-center min-h-100">
       <div class="section-md color-dark flex flex-align-center flex-justify-center flex-column zoom-080">
         <div class="text-title text-center mt-8 mb-8 zoom-150-m reveal-on-scroll">
           Acesso rápido e organizado a todas
@@ -247,7 +247,7 @@
       </div>
     </div>
 
-    <div class="bg-dark w-100 relative flex flex-align-center flex-justify-center">
+    <div class="bg-dark w-100 relative flex flex-align-center flex-justify-center min-h-100">
       <div class="section-md flex flex-align-center flex-justify-center flex-justify-center flex-column mt-8 mb-8 zoom-080">
         <div class="rounded-shape-big mt-4 mb-4 zoom-130-m">
           <svg id="feature-icon-0" style="transition: 1s ease; opacity: 0" class="absolute" width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="n-icon-funnel"><path id="Rectangle" fill-rule="evenodd" clip-rule="evenodd" d="M22.2104 5C22.2104 4.44772 21.7627 4 21.2104 4H2.78957C2.60451 4 2.42308 4.05135 2.26547 4.14834C1.79511 4.43779 1.64846 5.05374 1.93791 5.5241L9 17V20.6126C9 20.7201 9.01733 20.8268 9.05132 20.9288C9.22597 21.4527 9.79229 21.7359 10.3162 21.5613L14.3162 20.2279C14.7246 20.0918 15 19.7097 15 19.2792V17L22.0621 5.5241C22.1591 5.36649 22.2104 5.18506 22.2104 5ZM11 16.4339L4.57913 6H19.4209L13 16.4339V18.5585L11 19.2251V16.4339Z" fill="#FEC10D"/></g></svg>
@@ -437,7 +437,7 @@
       </div>
     </div>
 
-    <div class="bg-light w-100 relative flex flex-align-center flex-justify-center">
+    <div class="bg-light w-100 relative flex flex-align-center flex-justify-center min-h-100">
       <div class="section-md flex flex-align-center flex-justify-center flex-justify-center flex-column mt-8 mb-8 zoom-080">
         <div class="text-banner text-center color-medium-gray mt-8-m zoom-140-m reveal-on-scroll">
           Toda sua
@@ -602,7 +602,7 @@
   .table { display: table; }
   .table-cell { display: table-cell; }
 
-  .absolute { position: relative; }
+  .absolute { position: absolute; }
   .relative { position: relative; }
   .pointer { cursor: pointer; }
 
@@ -645,6 +645,7 @@
   .w-100 { width: 100%; }
   .w-50 { width: 50%; }
   .w-triple-section { min-width: 280px; }
+  .min-h-100 { min-height: 100vh; }
   .h-100p { height: 100%; }
   .h-100 { height: 100vh; }
   .h-75 { height: 75vh; }
