@@ -1,4 +1,4 @@
-<html> 
+<html>
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;650;700&display=swap" rel="stylesheet">
   </head>
@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div id="section1" class="bg-dark w-100 h-100 flex flex-column flex-align-center flex-justify-center min-h-100">
+    <div id="section1" class="bg-dark w-100 h-100p flex flex-column flex-align-center flex-justify-center min-h-90">
       <div class="outter-cloister">
         <div class="inner-cloister">
           <div class="section flex flex-column flex-justify-center h-100p">
@@ -63,7 +63,7 @@
       </div>
     </div>
 
-    <div class="bg-light w-100 relative flex flex-column flex-align-center flex-justify-center min-h-100">
+    <div class="bg-light w-100 relative flex flex-column flex-align-center flex-justify-center min-h-100 section-checkin-m">
       <div class="section-md flex flex-align-center flex-justify-center zoom-080">
         <div class="flex flex-column">
           <div class="mt-8 zoom-150-m reveal-on-scroll">
@@ -123,7 +123,7 @@
       </div>
     </div>
 
-    <div class="bg-primary-gradient w-100 relative flex flex-column flex-align-center flex-justify-center section-acesso-rapido">
+    <div class="bg-primary-gradient w-100 relative flex flex-column flex-align-center flex-justify-center section-acesso-m">
       <div class="section-md color-dark flex flex-align-center flex-justify-center flex-column zoom-080">
         <div class="text-title text-center mt-8 mb-8 zoom-150-m reveal-on-scroll">
           Acesso rápido e organizado a todas
@@ -648,6 +648,7 @@
   .w-50 { width: 50%; }
   .w-triple-section { min-width: 280px; }
   .min-h-100 { min-height: 100vh; }
+  .min-h-90 { min-height: 90vh; }
   .h-100p { height: 100%; }
   .h-100 { height: 100vh; }
   .h-75 { height: 75vh; }
@@ -814,7 +815,10 @@
     .faixa-eu-quero { position: absolute; bottom: 0; left: 0; background: -webkit-gradient(linear, left top, right top, from(#FF9900), to(#FEC10D)); background: -o-linear-gradient(left, #FF9900 0%, #FEC10D 100%); background: linear-gradient(90deg, #FF9900 0%, #FEC10D 100%); height: 20vw; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; font-size: 56px; font-weight: 600; color: #000; text-decoration: initial; }
     .outter-cloister { background-size: 400%; }
     .inner-cloister { background: -o-radial-gradient(closest-side at 50% 75%, transparent, #1b1b23 140%); background: radial-gradient(closest-side at 50% 75%, transparent, #1b1b23 140%); }
-    .section-acesso-rapido { min-height: 550vw; }
+
+    /* Gambiarras Safari nojento */
+    .section-acesso-m { min-height: 530vw; }
+    .section-checkin-m { min-height: 420vw; }
 
     .ml-0-m { margin-left: 0; }
     .ml-1-m { margin-left: 12px; }
@@ -1062,4 +1066,3 @@
 
   .scrolled { opacity: 1 !important; -webkit-transform: translateY(0) !important; -ms-transform: translateY(0) !important; transform: translateY(0) !important; }
 </style>
- 
