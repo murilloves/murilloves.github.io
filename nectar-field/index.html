@@ -815,17 +815,6 @@
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover { background: #80828cbb; }
 
-  @media screen and (prefers-color-scheme: dark) {
-    .color-dark-gray { color: rgb(156, 147, 134); }
-    .color-primary { color: rgb(254, 199, 35); }
-    .color-primary-dark { color: rgb(255, 163, 26); }
-    
-    [data-darkreader-inline-fill] { fill: var(none) !important; }
-
-    .section-acesso-m .color-dark { color: #2B2B33; }
-    .section-acesso-m .color-white { color: #FFFFFF; }
-  }
-
   @media screen and (min-width: 1000px) and (max-width: 1500px) {
     .zoom-075 { zoom: 0.75 }
     .zoom-080 { zoom: 0.80 }
@@ -938,6 +927,17 @@
     .mt-5-m { margin-top: 60px; }
     .mt-8-m { margin-top: 96px; }
     .mt-12-m { margin-top: 144px; }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .color-dark-gray { color: rgb(156, 147, 134); }
+    .color-primary { color: rgb(254, 199, 35); }
+    .color-primary-dark { color: rgb(255, 163, 26); }
+    
+    [data-darkreader-inline-fill] { fill: var(none) !important; }
+
+    .section-acesso-m .color-dark { color: #2B2B33; }
+    .section-acesso-m .color-white { color: #FFFFFF; }
   }
 
   @-webkit-keyframes arrowDownSection {
