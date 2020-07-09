@@ -1,6 +1,8 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;650;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://nectarcrm.com.br/">
 
@@ -587,25 +589,33 @@
       </div>
       <div class="table-cell w-50 bg-primary-gradient zoom-130 w-100-m" style="vertical-align: middle;">
         <div class="flex flex-align-center flex-justify-center flex-justify-center flex-column mt-12 mb-12">
-          <div class="text-medium color-dark zoom-130-m zoom-125" style="font-size: 28px; max-width: 75%; ">
+          <div id="text-section-contact" class="text-medium color-dark zoom-130-m zoom-125" style="font-size: 28px; max-width: 75%; transition: 0.6s ease">
             Quer saber mais do
             <br class="hide-mobile"/>
             <span class="color-white">super poder</span> que você pode ter?
           </div>
-          <div class="mt-3 zoom-130-m zoom-125">
-            <div class="flex mt-3">
+          <form id="form-contact" class="mt-3 zoom-130-m zoom-125" style="transition: 0.6s ease">
+            <div class="flex flex-align-center mt-2">
               <label class="font-label-form">Nome</label>
-              <input class="form-bottom"/>
+              <input id="name" name="name" type="text" class="form-bottom"/>
             </div>
-            <div class="flex mt-3">
+            <div class="flex flex-align-center mt-2">
               <label class="font-label-form">Email</label>
-              <input class="form-bottom"/>
+              <input id="email" name="email" type="email" class="form-bottom"/>
             </div>
-            <div class="flex mt-3">
+            <div class="flex flex-align-center mt-2">
               <label class="font-label-form">Telefone</label>
-              <input class="form-bottom"/>
+              <input id="phone" name="phone" type="number" class="form-bottom"/>
             </div>
-          </div>
+            <div style="margin-top: 3em; display: flex; flex-grow: 1; justify-content: flex-end">
+              <button
+                onclick="sendForm()"
+                style="width: 48px; height: 48px; border-radius: 48px; border: none; background-color: #ffffff;"
+                type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg);" width="28" height="28" viewBox="0 0 24 24" fill="none"><g id="n-icon-arrow-up-alt"><path id="Combined Shape" d="M6.69668 9.35335C6.50142 9.15809 6.50142 8.84151 6.69668 8.64624L11.6464 3.6965C11.8417 3.50123 12.1583 3.50123 12.3535 3.6965L17.3033 8.64624C17.4985 8.84151 17.4985 9.15809 17.3033 9.35335L16.5962 10.0605C16.4009 10.2557 16.0843 10.2557 15.8891 10.0605L13 7.17136V19.4991C13 19.7753 12.7761 19.9991 12.5 19.9991H11.5C11.2238 19.9991 11 19.7753 11 19.4991V7.17138L8.11089 10.0605C7.91563 10.2557 7.59905 10.2557 7.40379 10.0605L6.69668 9.35335Z" fill="black"/></g></svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -794,7 +804,7 @@
   .svg-icon { transition: all 1s ease 0s; padding: 16px; background: rgb(43, 43, 51); border-radius: 100px; }
 
   input.form-bottom {
-    background: transparent; border: none; color: #2B2B33; border-bottom: 1px solid #ffffff44; width: 100%; height: 24px; padding: 0 0 10px 70px; margin-left: -70px; font-size: 14px; font-family: inherit; font-weight: 600; outline: 0px; -webkit-transition: 0.2s; -o-transition: 0.2s; transition: 0.2s;
+    background: transparent; border: none; color: #2B2B33; border-bottom: 1px solid #ffffff44; width: 100%; height: 34px; padding: 10px 0 10px 70px; margin-left: -70px; font-size: 14px; font-family: inherit; font-weight: 600; outline: 0px; -webkit-transition: 0.2s; -o-transition: 0.2s; transition: 0.2s;
   }
   input.form-bottom:hover { border-bottom: 1px solid #ffffff88; }
   input.form-bottom:focus { border-bottom: 1px solid #ffffffff; }
@@ -817,7 +827,7 @@
   .ml-acesso-rapido { margin-left: 110px; }
   .mt-follow-up { margin-top: 76px; }
   .bg-adassa-gradient { background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.15)), color-stop(70%, #FFFFFF), to(#FFFFFF)); background: -o-linear-gradient(right, rgba(255, 255, 255, 0.15) 0%, #FFFFFF 70%, #FFFFFF 100%); background: linear-gradient(270deg, rgba(255, 255, 255, 0.15) 0%, #FFFFFF 70%, #FFFFFF 100%); }
-  .font-label-form { min-width: 70px; font-size: 11px; font-weight: 600; color: #ffffff; }
+  .font-label-form { position: relative; min-width: 70px; font-size: 11px; font-weight: 600; color: #ffffff; }
   .fit-content { height: -webkit-fit-content;    height: -moz-fit-content;    height: fit-content; }
   
   /* width */
@@ -828,6 +838,27 @@
   ::-webkit-scrollbar-thumb { background: #80828c77; border-radius: 10px; }
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover { background: #80828cbb; }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #FEC10D inset;
+  }
+
+  /* Cor do texto do autocomplete */
+  input:-webkit-autofill {
+    -webkit-text-fill-color: #212121 !important;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
 
   @media screen and (min-width: 1000px) and (max-width: 1500px) {
     .zoom-075 { zoom: 0.75 }
@@ -1000,6 +1031,68 @@
 </style>
 
 <script>
+  // Request
+  formSent = false;
+  sendForm = (e) => {
+    const formElement = document.querySelector('#form-contact')
+    const forms = new FormData(formElement)
+    const sendObj = {
+      origem: 'Landing_Page_Nectar_Field',
+      nome: forms.get('name'),
+      emails: [ forms.get('email') ],
+      telefones: [ forms.get('phone') ]
+    }
+
+    if (sendObj.nome.length > 3 && sendObj.emails.length > 0 && sendObj.telefones.length > 0 && !formSent) {
+      formSent = true;
+
+      const textSectionContact = document.querySelector('#text-section-contact');
+      formElement.style.opacity = 0;
+      textSectionContact.style.opacity = 0;
+
+      postRequest(sendObj);
+
+      setTimeout(() => {
+        textSectionContact.style.opacity = 1;
+        textSectionContact.innerHTML = `
+          Dados <span class="color-white">recebidos!</span>
+          <br />
+          Entraremos em contato em breve.
+        `;
+      }, 600);
+    }
+  }
+
+  postRequest = (sendObj) => {
+    sendHttpRequest(
+      'POST',
+      'http://app.nectarcrm.com.br/crm/api/1/contatos/ignorarCamposObrigatorios=true&ignorarValidacoes=true',
+      sendObj
+    ).then(response => {
+      console.log(response);
+    })
+  }
+
+  sendHttpRequest = (method, url, data) => {
+    const promise = new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open(method, url);
+
+      xhr.responseType = 'json';
+
+      xhr.setRequestHeader('Content-Type', 'application/json');
+
+      xhr.onload = () => {
+        resolve(xhr.response);
+      }
+
+      xhr.send(JSON.stringify(data));
+    });
+
+    return promise;
+  }
+
+  // Animations
   const btnFollowUp = document.getElementById('btn-follow-up');
   let openFollowUp = false;
 
