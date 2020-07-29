@@ -28,6 +28,14 @@
 </html>
 
 <style>
+  :root {
+    --color-white: #ffffff;
+    --color-pink: #f93376;
+    --color-red: #ff2626;
+    --color-blue: #2979ff;
+    --color-light-blue: #7eaeff;
+  }
+  
   body { margin: 0; }
 
   .presentation-text {
@@ -45,8 +53,8 @@
   }
   .color-pinky-red {
     opacity: 1;
-    color: #f93376;
-    text-shadow: 0 0 3px #ff2626;
+    color: var(--color-pink);
+    text-shadow: 0 0 3px var(--color-red);
   }
   .ml-50 {
     margin-left: 50px;
@@ -56,8 +64,8 @@
     100% { opacity: 0 }
   }
   @keyframes changeToWhite {
-    0% { color: #ec407a }
-    100% { color: #ffffff }
+    0% { color: var(--color-pink) }
+    100% { color: var(--color-white) }
   }
 
   #section-stars {
@@ -78,13 +86,13 @@
     align-items: center;
     justify-content: center;
     font-size: 32pt;
-    color: #ffffff;
+    color: var(--color-white);
     transition: opacity 2s ease;
     opacity: 1;
     text-align: center;
     position: relative;
     z-index: 1000;
-    text-shadow: 0 0 4px #2979ff;
+    text-shadow: 0 0 4px var(--color-light-blue);
     /* opacity: 0; */
   }
 
@@ -92,7 +100,7 @@
 
   .star {
     position: absolute;
-    border-radius: 100%;
+    border-radius: 10px;
     padding: 25px;
     transition: margin 0.8s ease-in-out;
   }
@@ -102,8 +110,8 @@
     border-radius: 10px;
     opacity: 0;
     /* transition: opacity 0.4s ease; */
-    background-color: #ffffff;
-    box-shadow: 0px 0px 4px #ffffff;
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 4px var(--color-light-blue);
   }
 
   .star:hover span {
@@ -116,11 +124,11 @@
     animation-fill-mode: forwards;
   }
   @keyframes glow {
-    0% { opacity: 0.6 }
-    30% { opacity: 0.8 }
-    50% { opacity: 0.2 }
-    70% { opacity: 0.9 }
-    90% { opacity: 0.4 }
+    0% { opacity: 0.60 }
+    30% { opacity: 0.85 }
+    50% { opacity: 0.40 }
+    70% { opacity: 0.92 }
+    90% { opacity: 0.70 }
   }
 </style>
 
