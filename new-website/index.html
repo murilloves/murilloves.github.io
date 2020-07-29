@@ -136,7 +136,8 @@
   let gradientTimeMS = 3000;
   const initialDelay = 6800;
   const starsQtd = 500;
-  const starsPercentageMoving = 0.95;
+  const starsPercentageMovingFowards = 0.95;
+  const starsPercentageMovingBackwards = 0.90;
   const movingVelocity = 8;
   const sectionStars = document.getElementById('section-stars');
   const minShineOpacity = 0.1;
@@ -241,12 +242,20 @@
 
       const stars = document.getElementsByClassName('star');
       Array.from(stars).forEach(star => {
-        if (Math.random() > starsPercentageMoving) {
+        const randomMovement = Math.random();
+        let forwardOrBackwards = 0;
+        if (randomMovement > starsPercentageMovingFowards) {
+          forwardOrBackwards = 1;
+        } else if (Math.random() > starsPercentageMovingBackwards) {
+          forwardOrBackwards = -1;
+        }
+        forwardOrBackwards = Math.random() > starsPercentageMovingFowards ?
+        if (forwardOrBackwards !== 0) {
           const starPosX = Number(star.style.left.split('vw')[0]);
           const starPosY = Number(star.style.top.split('vh')[0]);
     
-          star.style.marginLeft = Math.floor((ev.x - starPosX / 2) / scrMiddle.xDivisorFactor) + 'px';
-          star.style.marginTop = Math.floor((ev.y - starPosY / 2) / scrMiddle.yDivisorFactor) + 'px';
+          star.style.marginLeft = forwardOrBackwards * Math.floor((ev.x - starPosX / 2) / scrMiddle.xDivisorFactor) + 'px';
+          star.style.marginTop = forwardOrBackwards + Math.floor((ev.y - starPosY / 2) / scrMiddle.yDivisorFactor) + 'px';
         }
       });
     });
