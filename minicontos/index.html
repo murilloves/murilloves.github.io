@@ -1,147 +1,282 @@
-<!DOCTYPE html>
 <html>
+  <head></head>
+  <body>
+    <div class="section-100">
+      <div id="bg-back"></div>
+      <div id="bg-front"></div>
+      <div id="section-stars"></div>
 
-<head>
+      <div id="section-text" style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 32pt;
+        /* text-shadow: 0 0 10px #ffffff; */
+        color: white;
+        transition: opacity 2s ease;
+        opacity: 1;
+        text-align: center;
+        /* opacity: 0; */
+        ">
+        <div>
+          <div>
+            <span class="presentation-text" delay="1000"> Hello,</span>
+            <span class="presentation-text" delay="0"> I'm </span>
+            <span class="presentation-text" delay="0" style="color: #ff3344"> Murillo Silva</span><span class="presentation-text" delay="1000">.</span>
+            <br/>
+            <span class="presentation-text"> I'm a front-end web developer. </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body { margin: 0; }
 
-	<title> Home | MiniContosAmbulantes </title>
-	<link href = "assets/bootstrap.css" rel = "stylesheet">
+  .presentation-text {
+    display: none;
+  }
 
-	<style type="text/css">
-		@font-face
-		{
-		    font-family: "Corona Typewriter";
-		    src: url(fonts/corona3Typewriter.ttf) format("truetype");
-		}
-		@font-face
-		{
-		    font-family: "Brain Flower";
-		    src: url(fonts/brainFlowerEuro.ttf) format("truetype");
-		}
-	</style>
+  #section-stars {
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+  }
 
-</head>
+  #section-stars, #bg-back, #bg-front, #section-text {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+  }
 
-<body id = "MiniContosAmbulantes" class = "col-md-12" style="padding: 0;">
+  .section-100 { overflow: hidden; }
 
-	<div id="coluna principal" align="center" class="wrapper">
+  .star {
+    position: absolute;
+    border-radius: 100%;
+    padding: 25px;
+    transition: margin 0.8s ease-in-out;
+  }
 
-		<div id="banner" class="padding-top-3">
-			<img src="assets/img/banner.jpg">
-		</div><!-- </banner> -->
+  .star span {
+    position: absolute;
+    border-radius: 10px;
+    opacity: 0;
+    /* transition: opacity 0.4s ease; */
+    background-color: #ffffff;
+    box-shadow: 0px 0px 4px #ffffff;
+  }
 
-		<div id="nav">
-			<ul class="padding-top-3">
-				<font face="Brain Flower" size="6">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="contos.html">Contos</a></li>
-					<li><a href="contato.html">Contato</a></li>
-				</font>
-			</ul>
-		</div><!-- </nav> -->
+  .star:hover span {
+    animation-name: glow;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 13;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
+  @keyframes glow {
+    0% { opacity: 0.6 }
+    30% { opacity: 0.8 }
+    50% { opacity: 0.2 }
+    70% { opacity: 0.9 }
+    90% { opacity: 0.4 }
+  }
+</style>
 
-		<div class="col-md-2"> </div>
-		<div class="col-md-8">
-			<font face="Corona Typewriter" >
-			<h3 id="test" class="display-3" style="text-align: left !important">
-				Apesar de “Mini”, os contos <br>são completos e a <br>complexidade de sua pequenez <br>os torna únicos e deliciosos.<br>Sirva-se `a vontade.
-			</h3>
-		</div> <!-- </col-md8> -->
-		<div class="col-md-2"> </div>
+<script>
+  let gradientTimeMS = 1500;
+  const initialDelay = 6800;
+  const starsQtd = 500;
+  const starsPercentageMoving = 0.95;
+  const movingVelocity = 8;
+  const sectionStars = document.getElementById('section-stars');
+  const minShineOpacity = 0.1;
+  const maxShineOpacity = 0.7;
 
-	</div> <!-- </coluna principal> -->
+  createStar = (coordX, coordY, index) => {
+    const shine = Math.random() * (maxShineOpacity - minShineOpacity) + minShineOpacity;
+
+    let outterNode = document.createElement("div");
+    outterNode.classList.add('star');
+    outterNode.style.left = coordX + "vw";
+    outterNode.style.top = coordY + "vh";
+    outterNode.style.zIndex = index;
+
+    let innerNode = document.createElement("span");
+    innerNode.style.opacity = shine;
+    const randomNumber = Math.random();
+    const starSize = Math.floor(randomNumber * 3) + 1;
+    innerNode.style.animation = `glow 3.14s ease ${randomNumber * 18}s infinite normal forwards`;
+    innerNode.style.width = starSize;
+    innerNode.style.height = starSize;
+
+    outterNode.appendChild(innerNode);
+    sectionStars.appendChild(outterNode);
+  }
+
+  getRandomNumber = (max, min) => Math.random() * (max - min) + min;
+
+  skyGradientIndex = 0;
+  skyGradients = [
+    'linear-gradient(to bottom, #00000c 85%,#020111 100%)',
+    'linear-gradient(to bottom, #020111 85%,#191621 100%)',
+    'linear-gradient(to bottom, #020111 60%,#20202c 100%)',
+    'linear-gradient(to bottom, #020111 10%,#3a3a52 100%)',
+    'linear-gradient(to bottom, #20202c 0%,#515175 100%)',
+    'linear-gradient(to bottom, #40405c 0%,#6f71aa 80%,#8a76ab 100%)',
+    'linear-gradient(to bottom, #4a4969 0%,#7072ab 50%,#cd82a0 100%)',
+    'linear-gradient(to bottom, #757abf 0%,#8583be 60%,#eab0d1 100%)',
+    'linear-gradient(to bottom, #82addb 0%,#ebb2b1 100%)',
+    'linear-gradient(to bottom, #94c5f8 1%,#a6e6ff 70%,#b1b5ea 100%)',
+    'linear-gradient(to bottom, #b7eaff 0%,#94dfff 100%)',
+    'linear-gradient(to bottom, #9be2fe 0%,#67d1fb 100%)',
+    'linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%)',
+    'linear-gradient(to bottom, #57c1eb 0%,#246fa8 100%)',
+    'linear-gradient(to bottom, #2d91c2 0%,#1e528e 100%)',
+    'linear-gradient(to bottom, #2473ab 0%,#1e528e 70%,#5b7983 100%)',
+    'linear-gradient(to bottom, #1e528e 0%,#265889 50%,#9da671 100%)',
+    'linear-gradient(to bottom, #1e528e 0%,#728a7c 50%,#e9ce5d 100%)',
+    'linear-gradient(to bottom, #154277 0%,#576e71 30%,#e1c45e 70%,#b26339 100%)',
+    'linear-gradient(to bottom, #163C52 0%,#4F4F47 30%,#C5752D 60%,#B7490F 80%, #2F1107 100%)',
+    'linear-gradient(to bottom, #071B26 0%,#071B26 30%,#8A3B12 80%,#240E03 100%)',
+    'linear-gradient(to bottom, #010A10 30%,#59230B 80%,#2F1107 100%)',
+    'linear-gradient(to bottom, #090401 50%,#4B1D06 100%)',
+    'linear-gradient(to bottom, #00000c 80%,#150800 100%)',
+  ];
+
+  setBackgroundGradient = () => {
+    document.getElementById('bg-back').style.background = skyGradients[skyGradientIndex];
+    document.getElementById('bg-front').style.background = skyGradients[skyGradientIndex];
+  }
+
+  startIntervalBackgroundGradient = () => {
+    skyGradientIndex + 1 >= skyGradients.length
+      ? skyGradientIndex = 0
+      : skyGradientIndex++;
+
+    document.getElementById('bg-back').style.background = skyGradients[skyGradientIndex];
+    document.getElementById('bg-front').style.transition = `${gradientTimeMS}ms linear`;
+    document.getElementById('bg-front').style.opacity = 0;
+
+    setTimeout( () => {
+      document.getElementById('bg-front').style.background = skyGradients[skyGradientIndex];
+      document.getElementById('bg-front').style.transition = 'none';
+      document.getElementById('bg-front').style.opacity = 1;
+
+      setTimeout(() => {
+        // gradientTimeMS += 500;
+        startIntervalBackgroundGradient();
+      }, 30);
+    }, gradientTimeMS);
+  }
+
+  addListenerMousePosition = () => {
+    window.addEventListener('mousemove', function(ev) {
+      const scrWidth = screen.width;
+      const scrHeight = screen.height;
+
+      const scrMiddle = {
+        xDivisorFactor: Math.floor(scrWidth / movingVelocity),
+        yDivisorFactor: Math.floor(scrHeight / movingVelocity),
+      }
+
+      const xPosition = ev.x;
+      const yPosition = ev.y;
+
+      // console.log(' x: ', Math.floor((e.x - scrMiddle.x) / scrMiddle.xDivisorFactor), ' y: ', Math.floor((e.y - scrMiddle.y) / scrMiddle.yDivisorFactor));
+
+      const stars = document.getElementsByClassName('star');
+      Array.from(stars).forEach(star => {
+        if (Math.random() > starsPercentageMoving) {
+          const starPosX = Number(star.style.left.split('vw')[0]);
+          const starPosY = Number(star.style.top.split('vh')[0]);
+    
+          star.style.marginLeft = Math.floor((ev.x - starPosX / 2) / scrMiddle.xDivisorFactor) + 'px';
+          star.style.marginTop = Math.floor((ev.y - starPosY / 2) / scrMiddle.yDivisorFactor) + 'px';
+        }
+      });
+    });
+  }
+
+  defineStarsPositioning = () => {
+    let screenSize = {
+      height: sectionStars.offsetHeight,
+      width: sectionStars.offsetWidth,
+    }
+    console.log('screenSize ', screenSize );
+
+    for (let itr = 0; itr < starsQtd; itr++) {
+      const coordX = getRandomNumber(100 + 5, -5);
+      const coordY = getRandomNumber(100 + 5, -5);
+
+      createStar(coordX, coordY, itr);
+    }
+
+    sectionStars.style.opacity = 1;
+  }
+
+  const textNodes = [
+    {
+      textNode: "<span class='presentation-text'> Hello, I'm </span>",
+    },
+    {
+      textNode: "<span class='presentation-text' style='color: #ff3344'> Murillo Silva</span>"
+    },
+    {
+      textNode: "<span>.</span>"
+    },
+    {
+      textNode: "<span class='presentation-text'> I'm a front-end web developer. </span>"
+    },
+  ]
+
+  const textElements = Array.from(document.getElementsByClassName('presentation-text'));
+  let phraseDelay = 500;
+  let hasDelay = -1;
+  let typingIndex = 0;
+  initTextTyping = () => {
+    typeWriter(textElements[typingIndex], textElements[typingIndex].innerHTML, 0);
+  }
+
+  typeWriter = (element, text, n) => {
+    if (n < (text.length)) {
+      element.innerHTML = text.substring(0, n+1);
+      element.style.display = 'inline-block';
+      n++;
+      setTimeout(() => {
+        typeWriter(element, text, n);
+      }, randTextDelay());
+    } else if (typingIndex < textElements.length - 1) {
+      typingIndex++;
+      setTimeout(() => {
+        typeWriter(textElements[typingIndex], textElements[typingIndex].innerHTML, 0);
+      }, element.getAttribute('delay'));
+    }
+  }
+
+  randTextDelay = () => {
+    return Math.floor(Math.random() * 50) + 50
+  }
 
 
-	<div class="col-md-12">
-		<font face="Times" >
-		</font>
-	</div>
+  (() => {
+    setBackgroundGradient();
+    defineStarsPositioning();
 
-	<small>&copy; 2019 - MiniContosAmbulantes </small>
+    setTimeout(() => {
+      startIntervalBackgroundGradient();
+    }, initialDelay);
 
-	<script>
-		function typeWriter(text, n) {
-			if (n < (text.length)) {
-				document.getElementById('test').innerHTML = text.substring(0, n+1);
-				n++;
-				setTimeout(function() {
-				typeWriter(text, n)
-				}, randDelay());
-			}
-		}
+    setTimeout(() => {
+      addListenerMousePosition();
+      initTextTyping();
+    }, 0);
+  })();
 
-		function randDelay() {
-			return Math.floor(Math.random() * 80) + 20
-		}
-		// $(document).ready(function() {
-		// 	// e.stopPropagation();
-			
-		// });
-		(function() {
-			var text = document.getElementById('test').innerHTML;
-			typeWriter(text, 0);
-		})();
-
-    </script>
-
-	<style>
-		#banner img {
-			width: 60%;
-			margin: 2% 0 -5% 0 !important;
-		}
-		#MiniContosAmbulantes div.wrapper {
-			width: 70%
-		}
-		h3 {
-			font-size: 2vw;
-			line-height: 1.5
-		}
-	
-		@media only screen and (max-width: 900px) {
-			h3 {
-				font-size: 4.5vw;
-				line-height: 1.5;
-				padding: 0 8vw;
-			}
-			#banner img {
-				width: 90%;
-				margin-bottom: 0%;
-			}
-			body#MiniContosAmbulantes div.wrapper {
-				width: 100vw;
-			    position: absolute;
-			}
-			body#MiniContosAmbulantes #nav ul li a {
-				display: block;
-				background: #353535;
-				outline: solid 2px #353535;
-				border: solid 2px white;
-				color: white;
-				padding: 5px 0;
-				text-decoration: none;
-				font-size: 8vw;
-				width: 21vw;
-			}
-			body ul, ol {
-				margin: 40px 0 50px 0;
-			    padding-inline-start: 0;
-			}
-
-			body#MiniContosAmbulantes #nav {
-				margin: 40px 0 0;
-			}
-
-			body#MiniContosAmbulantes small {
-				position: absolute;
-				width: 100%;
-				bottom: 0;
-			}
-
-			body { height: 90vh }
-		}
-
-	</style>
-
-
-</body>
+    
+</script>
