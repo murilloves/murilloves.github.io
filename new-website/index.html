@@ -6,19 +6,7 @@
       <div id="bg-front"></div>
       <div id="section-stars"></div>
 
-      <div id="section-text" style="
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: 32pt;
-        /* text-shadow: 0 0 10px #ffffff; */
-        color: white;
-        transition: opacity 2s ease;
-        opacity: 1;
-        text-align: center;
-        /* opacity: 0; */
-        ">
+      <div id="section-text">
         <div>
           <div style="width: 525px; height: 100px; text-align: left">
             <span class="fadeOpacity1 ml-50">
@@ -57,8 +45,8 @@
   }
   .color-pinky-red {
     opacity: 1;
-    color: #ec407a;
-    text-shadow: 0 0 3px #000000;
+    color: #f93376;
+    text-shadow: 0 0 3px #ff2626;
   }
   .ml-50 {
     margin-left: 50px;
@@ -82,6 +70,22 @@
     height: 100vh;
     overflow: hidden;
     position: absolute;
+  }
+  
+  #section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 32pt;
+    color: #ffffff;
+    transition: opacity 2s ease;
+    opacity: 1;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    text-shadow: 0 0 4px #2979ff;
+    /* opacity: 0; */
   }
 
   .section-100 { overflow: hidden; }
