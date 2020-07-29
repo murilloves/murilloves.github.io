@@ -20,12 +20,18 @@
         /* opacity: 0; */
         ">
         <div>
-          <div>
-            <span class="presentation-text" delay="1000"> Hello,</span>
-            <span class="presentation-text" delay="0"> I'm </span>
-            <span class="presentation-text" delay="0" style="color: #ff3344"> Murillo Silva</span><span class="presentation-text" delay="1000">.</span>
+          <div style="width: 525px; text-align: left">
+            <span class="fadeOpacity1 ml-50">
+              <span class="presentation-text" delay="1000"> Hello,</span>
+              <span class="presentation-text" delay="0"> I'm </span>
+            </span>
+            <span class="fadeOpacity3 color-pinky-red">
+              <span class="presentation-text" delay="0">Murillo Silva</span><span class="presentation-text" delay="1000">.</span>
+            </span>
             <br/>
-            <span class="presentation-text"> I'm a front-end web developer. </span>
+            <span class="fadeOpacity2">
+              <span class="presentation-text"> I'm a front-end web developer. </span>
+            </span>
           </div>
         </div>
       </div>
@@ -38,6 +44,30 @@
 
   .presentation-text {
     display: none;
+  }
+  .fadeOpacity1 {
+    animation: fadeOpacity 1500ms ease 7000ms 1 forwards;
+  }
+  .fadeOpacity2 {
+    animation: fadeOpacity 1500ms ease 7800ms 1 forwards;
+  }
+  .fadeOpacity3 {
+    animation: fadeOpacity 1500ms ease 12000ms 1 forwards, changeToWhite 1000ms ease 8600ms 1 forwards;
+  }
+  .color-pinky-red {
+    opacity: 1;
+    color: #ff3344;
+  }
+  .ml-50 {
+    margin-left: 50px;
+  }
+  @keyframes fadeOpacity {
+    0% { opacity: 1 }
+    100% { opacity: 0 }
+  }
+  @keyframes changeToWhite {
+    0% { color: #ff3344 }
+    100% { color: #ffffff }
   }
 
   #section-stars {
