@@ -23,6 +23,13 @@
               <span class="presentation-text"> I'm a full-stack web developer. </span>
             </span>
           </div>
+          <div class="flex-all-centered">
+            <button id="btn-find-out">
+              Find out more &nbsp;
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+            </button>
+            <style id="style-btn-hover"></style>
+          </div>
         </div>
       </div>
     </div>
@@ -31,8 +38,10 @@
 
 <style>
   :root {
+    --color-black: #020111;
+    --color-dark: #212121;
     --color-white: #ffffff;
-    --color-murillo: #ffcbdc;
+    --color-murillo: #ffe1eb;
     --color-red: #ff2626;
     --color-pink: #f93376;
     --color-blue: #2979ff;
@@ -52,6 +61,41 @@
     font-weight: 200;
   }
 
+  button#btn-find-out svg {
+    transition: fill 0.3s, transform 0.3s;
+  }
+  button#btn-find-out:hover svg {
+    transform: rotate(90deg);
+    fill: var(--color-black);
+  }
+  button#btn-find-out:hover {
+    color: var(--color-black);
+    box-shadow: 1px 2px 0px 1px #00000088;
+    opacity: 1;
+  }
+  button#btn-find-out {
+    font-family: inherit;
+    background: transparent;
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+    fill: var(--color-white);
+    font-size: 23px;
+    margin-top: 1em;
+    padding: 0.5em 0.6em 0.5em 1.2em;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+  }
+
+  .flex-all-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .presentation-text {
     display: none;
   }
@@ -229,15 +273,6 @@
     'linear-gradient(to bottom, #020111 85%,#191621 100%)',
     'linear-gradient(to bottom, #020111 60%,#20202c 100%)',
     'linear-gradient(to bottom, #020111 85%,#191621 100%)',
-
-    // 'linear-gradient(to bottom, #00000c 85%,#020111 100%)',
-    // 'linear-gradient(to bottom, #00000c 80%,#150800 100%)',
-    // 'linear-gradient(to bottom, #090401 70%,#2F1107 100%)',
-    // 'linear-gradient(to bottom, #090401 60%,#59230B 100%)',
-    // 'linear-gradient(to bottom, #090401 70%,#2F1107 100%)',
-    // 'linear-gradient(to bottom, #00000c 80%,#150800 100%)',
-    // 'linear-gradient(to bottom, #00000c 85%,#020111 100%)',
-    // 'linear-gradient(to bottom, #000000 90%,#01000c 100%)',
   ];
 
   setBackgroundGradient = () => {
@@ -361,10 +396,26 @@
     return Math.floor(Math.random() * 50) + 50
   }
 
+  addEventToButton = () => {
+    document.getElementById('btn-find-out').addEventListener('mouseover', (ev) => {
+      const elem = document.getElementsByClassName('text-my-name')[0];
+      const textColor = window.getComputedStyle(elem, null).getPropertyValue("color");
+      // ev.target.style.backgroundColor = textColor;
+      // ev.target.style.borderColor = textColor;
+
+      document.getElementById('style-btn-hover').innerHTML = `
+        button#btn-find-out:hover {
+          border: 2px solid ${textColor};
+          background-color: ${textColor};
+        }      
+      `
+    })
+  }
 
   (() => {
     setBackgroundGradient();
     defineStarsPositioning();
+    addEventToButton();
 
     setTimeout(() => {
       startIntervalBackgroundGradient();
