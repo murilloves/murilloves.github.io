@@ -91,7 +91,7 @@
     transition: background-color 0.3s, border 0.3s, color 0.3s;
     opacity: 0;
     visibility: hidden;
-    animation: animateOpacity 1.5s ease 7s;
+    animation: animateOpacity 1.5s ease 6.9s;
     animation-fill-mode: forwards;
   }
   @keyframes animateOpacity {
@@ -401,7 +401,7 @@
   }
 
   randTextDelay = () => {
-    return Math.floor(Math.random() * 50) + 50
+    return Math.floor(Math.random() * 35) + 35
   }
 
   addEventToButton = () => {
@@ -432,7 +432,7 @@
     setTimeout(() => {
       addListenerMousePosition();
       initTextTyping();
-    }, 0);
+    }, 1500);
   })();
 
 
