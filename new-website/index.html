@@ -113,7 +113,9 @@
     color: var(--color-pink);
     font-weight: 600;
     transition: var(--text-my-name-transition);
-    animation: changeColorName 126s ease 4s infinite forwards;
+    animation: changeColorName 151s ease 4s infinite forwards;
+    /* ( 3.5 * 42 * 1.03 ) */
+    /* CALC: qtdSegsCadaFrame (3.5) * qtdFramesDeCor (42) * delayEntreUmSlideEOutro(1.03s) */
   }
   @keyframes changeColorName {
     0% { color: var(--color-pink) }
@@ -204,7 +206,7 @@
 </style>
 
 <script>
-  let gradientTimeMS = 3000;
+  let gradientTimeMS = 3500;
   const initialDelay = 2800;
   const starsQtd = 500;
   const starsPercentageMovingFowards = 0.97;
