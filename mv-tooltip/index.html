@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button tooltip-title="I'm a tooltip!"> Hover me </button>
+
+</body>
+</html>
+
+<style>
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  button {
+    border-radius: 6px;
+    border: none;
+    background-color: #2979ff;
+    color: #FFFFFF;
+    height: 36px;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  button:focus {
+    outline-width: 2px;
+    outline-color: inherit;
+    outline-style: outset;
+  }
+  button::after {
+    cursor: initial;
+  }
+
+  [tooltip-title] {
+    /* base style for the element */
+    position: relative;
+  }
+
+  [tooltip-title]::after { 
+
+    /* Takes the content from tooltip-title attribute */
+    content: attr(tooltip-title);
+
+    /* should be hidden initially */
+    opacity: 0;
+    visibility: hidden;
+
+    /* basic styling tooltip */
+    background: #222;
+    border-radius: 4px;
+    color: #fff;
+    margin-bottom: 12px;
+    padding: 0.5em 1em;
+    white-space: nowrap;
+    z-index: 10;
+
+    /* Positioning tooltip */ 
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+
+    /* Basic effects on tooltip */   
+    transition: all 0.2s ease-out 0.2s;
+    transform: translate(-50%, 10px);
+    transform-origin: top;
+
+    /* Prevents tooltip from firing button click event through it when clicked */
+    pointer-events:none;
+  }
+
+  [tooltip-title]:hover::after {
+    /* Making it visible on hover */
+    visibility: visible;
+    opacity: 1; 
+  }
+
+  [tooltip-title]:hover::after {
+    /* Effects on hover */   
+    transform: translate(-50%, 0);
+  }
+
+</style>
