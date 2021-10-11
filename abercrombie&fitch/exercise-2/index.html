@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+  <html>
+
+  <head>
+    <title>Todo list App</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'/>
+    <link href='./styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div id="content-add-task"></div>
+      <div id="content-task-list"></div>
+
+    </div>
+
+    <script type="module">
+      import { mountAddTaskComponent, addTask } from "./components/AddTask/index.js"
+      import { mountTaskListComponent, getAllTasks } from "./components/TaskList/index.js"
+
+      mountAddTaskComponent(document)
+      mountTaskListComponent(document)
+
+      const taskList = getAllTasks()
+      let taskInput = document.getElementById("new-task");
+      let hasError = document.getElementById("has-error");
+      let addButton = document.getElementById("btn-add-task");
+      let incompleteTasksHolder = document.getElementById("incomplete-tasks");
+      let completedTasksHolder = document.getElementById("completed-tasks");
+
+      addButton.addEventListener("click", function () {
+        const tasks = getAllTasks()
+        addTask(taskInput, hasError, tasks)
+
+        mountTaskListComponent(document)
+
+        taskInput.value = "";
+      });
+
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>RESTful API data</title>
+
+    <meta name="description" content="Consuming RESTful API data">
+    <meta name="author" content="MurilloSilva">
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="src/scripts.js"></script>
+
+    <style>
+      body {
+        font-family: system-ui;
+        background: #ff6e7f;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(113deg, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(113deg, #bfe9ff, #ff6e7f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        background: #9796f0;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(113deg, #fbc7d4, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(113deg, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: auto;
+      }
+      li {
+        list-style: none;
+        margin: auto;
+        width: fit-content;
+      }
+      li .card {
+        border-radius: 0.5rem;
+        margin: 1rem auto;
+        display: flex;
+        flex: 1;
+        min-width: 20rem;
+        background-color: #fafafe;
+        color: #253746DD;
+        opacity: 0.94;
+        transition: box-shadow .3s, opacity .15s;
+      }
+      li .card:hover {
+        opacity: 1;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      li .card img {
+        width: 5rem;
+        height: 5rem;
+        padding: 1rem;
+        border-radius: 100rem;
+        filter: opacity(0.85);
+        transition: filter .15s;
+      }
+      li .card:hover img {
+        filter: opacity(1);
+      }
+      li .card .contact-name p {
+        margin: 1.25rem 0 0;
+        font-weight: 500;
+      }
+      button.show-more {
+        margin-top: 1.72rem;
+        background-color: transparent;
+        padding: .2rem .4rem;
+        border-radius: .5rem;
+        cursor: pointer;
+        height: max-content;
+        margin-right: 1rem;
+        border: 1px solid #f5f5fa;
+        background-color: #fff;
+        color: #666979;
+        font-size: 0.75rem;
+        transition: .15s;
+      }
+      button.show-more:hover {
+        color: #126bf1;
+      }
+      button.show-more.opened {
+        background-color: #fff;
+        display: none;
+      }
+
+      .details {
+        font-size: 0.75rem;
+        opacity: 0;
+        transition: 0.3s;
+        height: 0;
+      }
+      .details.show {
+        opacity: 1;
+      }
+
+      .flex {
+        display: flex;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .w-100 {
+        width: 100%;
+      }
+    </style>
+
+  </head>
+  <body>
+    <script type="text/x-handlebars-template" id="template">
+      <ul>
+        {{#each list}}
+          <li>
+            <div class="card">
+              <img src="{{ this.avatar }}" />
+              <div class="w-100">
+                <div class="contact-name flex w-100 items-center justify-between">
+                  <p>{{ this.name }}</p>
+                </div>
+                <button
+                  id="{{this.id}}"
+                  onclick="toggleShowMore(this.id)"
+                  class="show-more {{#if this.showMore}} opened {{/if}}">
+                  more...
+                </button>
+                <div class="details {{#if this.showMore}} show {{/if}}">
+                  <p>ID: {{ this.id }}</p>
+                  <p>Registered at: {{ formatDate this.createdAt }}</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+      </ul> 
+    </script>
+
+    <div id="output" />
+
+  </body>
+</html>
