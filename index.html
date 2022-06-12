@@ -16,21 +16,23 @@
 				<!-- Main -->
 					<section id="main">
 						<header>
-							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+							<span class="avatar"><img src="images/avatar.png" alt="" /></span>
 							<h1>Murillo Vieira</h1>
-							<p>Developer</p>
+							<p>Digital Nomad and Developer</p>
 						</header>
-						<footer>
+						<main>
 							<ul class="icons">
-								<li><a href="https://murilloves.github.io/dev/" target="_blank" class="fa-laptop">Website</a></li>
-								<li><a href="https://github.com/murilloves" target="_blank" class="fa-github">Github</a></li>
-								<li><a href="https://www.linkedin.com/in/murillo-vieira/" target="_blank" class="fa-linkedin">Linkedin</a></li>
-								<!--
-                  <li><a href="https://www.instagram.com/murislo/" target="_blank" class="fa-instagram">Instagram</a></li>
-                  <li><a href="https://murilloves.github.io/snake/" target="_blank" class="fa-gamepad">Game</a></li>
-                -->
+								<div>
+									<li class="website"><a href="https://murilloves.github.io/dev/" target="_blank" class="fa-laptop">Website</a></li>
+									<li class="github"><a href="https://github.com/murilloves" target="_blank" class="fa-github">Github</a></li>
+								</div>
+								<div>
+									<li class="linkedin"><a href="https://www.linkedin.com/in/murillo-vieira/" target="_blank" class="fa-linkedin">Linkedin</a></li>
+									<li class="instagram"><a href="https://www.instagram.com/murislodev/" target="_blank" class="fa-instagram">Instagram</a></li>
+									<li class="game"><a href="https://murilloves.github.io/snake/" target="_blank" class="fa-gamepad">Game</a></li>
+								</div>
 							</ul>
-						</footer>
+						</main>
 					</section>
 
 				<!-- Footer -->
@@ -44,20 +46,46 @@
       </div>
 
       <style>
+				main {
+					margin-top: 3rem;
+				}
+				.avatar img {
+			  	max-width: 12.5rem;
+				}
         ul.icons li a {
-          color: #aaa
+          color: #a1a3a6;
         }
         ul.icons li a:before {
           text-shadow:
-            1.25px 0px 0px #aaa,
-            -1.25px 0px 0px #aaa,
-            0px 1.25px 0px #aaa,
-            0px -1.25px 0px #aaa;
+            1.25px 0px 0px #a1a3a6,
+            -1.25px 0px 0px #a1a3a6,
+            0px 1.25px 0px #a1a3a6,
+            0px -1.25px 0px #a1a3a6;
           transition: 0.2s;
         }
-        ul.icons li a:hover:before {
-          background: #ff7496;
+				ul.icons li a:hover {
+					border: none;
+				}
+				ul.icons li a:hover:before {
+					text-shadow: none;
         }
+
+				ul.icons li.website a:hover:before {
+					background-color: #ffcb52;
+				}
+				ul.icons li.github a:hover:before {
+					background-color: #400099;
+				}
+				ul.icons li.linkedin a:hover:before {
+					background-color: #0177b5;
+				}
+				ul.icons li.instagram a:hover:before {
+					background-color: #ff7496;
+				}
+				ul.icons li.game a:hover:before {
+					background-color: #3ae54b;
+				}
+
       </style>
 
 			<!-- Scripts -->
