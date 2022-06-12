@@ -2842,7 +2842,7 @@ input, select, textarea {
 					width: 100%;
 				}
 
-		@media screen and (min-width: 1681px) {
+		@media screen and (min-width: 1281px) {
 
 			.posts article:nth-child(3n + 1):before {
 				display: none;
@@ -2866,7 +2866,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 1680px) {
+		@media screen and (max-width: 1280px) {
 
 			.posts article {
 				width: calc(50% - 6em);
@@ -2878,7 +2878,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (min-width: 481px) and (max-width: 1680px) {
+		@media screen and (min-width: 481px) and (max-width: 1280px) {
 
 			.posts article:nth-child(2n + 1):before {
 				display: none;
