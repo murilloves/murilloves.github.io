@@ -110,20 +110,18 @@ footer {
 	width: 82vw;
 	max-width: 840px;
 	margin: auto;
-	/* color: var(--text-primary); */
 }
 #tales-container img {
 	animation: changeOpacity 4s ease-in-out 0s forwards alternate infinite;
 }
 #tales-container p {
-	animation: changeOpacity 2s ease-in-out 0s forwards;
+	animation: changeOpacity2 2s ease-in-out 0s forwards;
 }
 @keyframes changeOpacity {
-	0% {
-		opacity: 0.5;
-	}
-	100% {
-		opacity: 0.8;
-	}
+	0% { opacity: 0.5; }
+	100% { opacity: 0.8; }
 }
-
+@keyframes changeOpacity2 {
+	0% { opacity: 0.7; }
+	100% { opacity: 1; }
+}
