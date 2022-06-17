@@ -1,147 +1,65 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title> Home | MiniContosAmbulantes </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="assets/styles.css" rel="stylesheet">
 
-<head>
+		<style type="text/css">
+			@font-face {
+				font-family: "Corona Typewriter";
+				src: url(fonts/corona3Typewriter.ttf) format("truetype");
+			}
+			@font-face {
+				font-family: "Brain Flower";
+				src: url(fonts/brainFlowerEuro.ttf) format("truetype");
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<header class="banner">
+				<img src="assets/img/banner.jpg" />
+				<div class="nav">
+					<ul class="ff-brainFlower">
+						<li><a>Home</a></li>
+						<li><a href="contos.html">Contos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</div>
+			</header>
 
-	<title> Home | MiniContosAmbulantes </title>
-	<link href = "assets/bootstrap.css" rel = "stylesheet">
+			<main class="typewrited-text ff-coronaTypewriter">
+				<h3 id="typewriting" class="">
+					Apesar de “Mini”, os contos <br>são completos e a <br>complexidade de sua pequenez <br>os torna únicos e
+					deliciosos.<br>Sirva-se `a vontade.
+				</h3>
+			</main>
 
-	<style type="text/css">
-		@font-face
-		{
-		    font-family: "Corona Typewriter";
-		    src: url(fonts/corona3Typewriter.ttf) format("truetype");
-		}
-		@font-face
-		{
-		    font-family: "Brain Flower";
-		    src: url(fonts/brainFlowerEuro.ttf) format("truetype");
-		}
-	</style>
+		</div>
 
-</head>
-
-<body id = "MiniContosAmbulantes" class = "col-md-12" style="padding: 0;">
-
-	<div id="coluna principal" align="center" class="wrapper">
-
-		<div id="banner" class="padding-top-3">
-			<img src="assets/img/banner.jpg">
-		</div><!-- </banner> -->
-
-		<div id="nav">
-			<ul class="padding-top-3">
-				<font face="Brain Flower" size="6">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="contos.html">Contos</a></li>
-					<li><a href="contato.html">Contato</a></li>
-				</font>
-			</ul>
-		</div><!-- </nav> -->
-
-		<div class="col-md-2"> </div>
-		<div class="col-md-8">
-			<font face="Corona Typewriter" >
-			<h3 id="test" class="display-3" style="text-align: left !important">
-				Apesar de “Mini”, os contos <br>são completos e a <br>complexidade de sua pequenez <br>os torna únicos e deliciosos.<br>Sirva-se `a vontade.
-			</h3>
-		</div> <!-- </col-md8> -->
-		<div class="col-md-2"> </div>
-
-	</div> <!-- </coluna principal> -->
-
-
-	<div class="col-md-12">
-		<font face="Times" >
-		</font>
-	</div>
-
-	<small>&copy; 2019 - MiniContosAmbulantes </small>
+		<footer>&copy; 2020 - MiniContosAmbulantes </footer>
+	</body>
 
 	<script>
 		function typeWriter(text, n) {
 			if (n < (text.length)) {
-				document.getElementById('test').innerHTML = text.substring(0, n+1);
+				document.getElementById('typewriting').innerHTML = text.substring(0, n + 1);
 				n++;
-				setTimeout(function() {
-				typeWriter(text, n)
-				}, randDelay());
+				setTimeout(function () {
+					typeWriter(text, n)
+				}, randomDelay());
 			}
 		}
 
-		function randDelay() {
+		function randomDelay() {
 			return Math.floor(Math.random() * 80) + 20
 		}
-		// $(document).ready(function() {
-		// 	// e.stopPropagation();
-			
-		// });
-		(function() {
-			var text = document.getElementById('test').innerHTML;
+
+		(function () {
+			const text = document.getElementById('typewriting').innerHTML;
 			typeWriter(text, 0);
 		})();
-
-    </script>
-
-	<style>
-		#banner img {
-			width: 60%;
-			margin: 2% 0 -5% 0 !important;
-		}
-		#MiniContosAmbulantes div.wrapper {
-			width: 70%
-		}
-		h3 {
-			font-size: 2vw;
-			line-height: 1.5
-		}
-	
-		@media only screen and (max-width: 900px) {
-			h3 {
-				font-size: 4.5vw;
-				line-height: 1.5;
-				padding: 0 8vw;
-			}
-			#banner img {
-				width: 90%;
-				margin-bottom: 0%;
-			}
-			body#MiniContosAmbulantes div.wrapper {
-				width: 100vw;
-			    position: absolute;
-			}
-			body#MiniContosAmbulantes #nav ul li a {
-				display: block;
-				background: #353535;
-				outline: solid 2px #353535;
-				border: solid 2px white;
-				color: white;
-				padding: 5px 0;
-				text-decoration: none;
-				font-size: 8vw;
-				width: 21vw;
-			}
-			body ul, ol {
-				margin: 40px 0 50px 0;
-			    padding-inline-start: 0;
-			}
-
-			body#MiniContosAmbulantes #nav {
-				margin: 40px 0 0;
-			}
-
-			body#MiniContosAmbulantes small {
-				position: absolute;
-				width: 100%;
-				bottom: 0;
-			}
-
-			body { height: 90vh }
-		}
-
-	</style>
-
-
-</body>
+	</script>
+</html>

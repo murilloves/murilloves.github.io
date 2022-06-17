@@ -1,154 +1,53 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
+    <title> Contos | MiniContosAmbulantes </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/styles.css" rel="stylesheet">
 
-	<title> Contos | MiniContosAmbulantes </title>
-	<link href = "assets/styles.css" rel = "stylesheet">
+    <style type="text/css">
+      @font-face {
+        font-family: "Corona Typewriter";
+        src: url(fonts/corona3Typewriter.ttf) format("truetype");
+      }
+      @font-face {
+        font-family: "Veteran Typewriter";
+        src: url(fonts/veteranTypewriter.ttf) format("truetype");
+      }
+      @font-face {
+        font-family: "Brain Flower";
+        src: url(fonts/brainFlowerEuro.ttf) format("truetype");
+      }
+    </style>
+  </head>
+  <body>
+		<div class="wrapper">
 
-	<style type="text/css">
-		@font-face
-		{
-		    font-family: "Corona Typewriter";
-		    src: url(fonts/corona3Typewriter.ttf) format("truetype");
-		}
-		@font-face
-		{
-		    font-family: "Veteran Typewriter";
-		    src: url(fonts/veteranTypewriter.ttf) format("truetype");
-		}
-		@font-face
-		{
-		    font-family: "Brain Flower";
-		    src: url(fonts/brainFlowerEuro.ttf) format("truetype");
-		}
-	</style>
+			<header class="banner">
+				<img src="assets/img/banner.jpg" />
+				<div class="nav">
+					<ul class="ff-brainFlower">
+						<li><a href="index.html">Home</a></li>
+						<li><a >Contos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </header>
 
-</head>
+      <div class="">
+        <div id="loader"></div>
+      </div>
 
-<body id = "MiniContosAmbulantes">
+      <div class="ff-veteranTypewriter">
+        <h6 id="tales-container" class="">
 
-	<div class = "wrapper">
-
-		<div id="banner">
-			<a href="" title="stylesheet">
-				<img src="assets/img/banner.jpg" alt="MiniContosAmbulantes">
-			</a>
-		</div><!-- banner -->
-
-		<div id="nav">
-			<ul><h4>
-				<font face="Brain Flower" >
-				<li><a href="index.html">Home</a></li>
-				<li><a href="contos.html">Contos</a></li>
-				<li><a href="contato.html">Contato</a></li>
-			</ul>
-		</div><!-- nav -->
-
-		<font face="Veteran Typewriter" >
-
-    <div id="loading-div" class="flex flex-justify-center padding-top-50">
-      <div id="loader"></div>
+        </h6>
+      </div>
     </div>
 
-		<h6 id="tales-container" style="display: none" class="animate-bottom"></h6>
+		<footer>&copy; 2020 - MiniContosAmbulantes </footer>
 
-	</div> <!-- wrapper -->
+    <!-- <script src="./tales-service.js"></script> -->
+  </body>
 
-<font face="Times" >
-<small>&copy; 2019 - MiniContosAmbulantes </small>
-</font>
-
-</body>
-
-<style>
-  .flex { display: flex }
-  .flex-justify-center { justify-content: center }
-  .padding-top-50 { padding-top: 50px }
-  center img {
-    width: 60%;
-    margin-bottom: -2%;
-  }
-  #MiniContosAmbulantes div.wrapper {
-    width: 70%
-  }
-  h6 div {
-    padding: 1em 0;
-    font-size: 2vw;
-    line-height: 1.5;
-    text-align: justify;
-  }
-  @media only screen and (max-width: 900px) {
-    h6 div {
-      font-size: 5vw;
-      line-height: 1.5;
-      padding: 0 5vw;
-    }
-    center img {
-      width: 80%;
-      margin-bottom: 0%;
-    }
-    body#MiniContosAmbulantes div.wrapper {
-      width: 100vw;
-    }
-    #MiniContosAmbulantes #nav ul li a {
-      display: block;
-      background: #353535;
-      outline: solid 2px #353535;
-      border: solid 2px white;
-      color: white;
-      padding: 4vw 0;
-      text-decoration: none;
-      font-size: 8vw;
-      width: 21vw;
-    }
-    ul, ol {
-      margin: 0 0 -40px 0;
-    }
-  }
-
-  /* LOADER */
-  #loader {
-    border: 4px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 4px solid #444;
-    width: 10vw;
-    height: 10vw;
-    -webkit-animation: spin 8s ease infinite;
-    animation: spin 8s ease infinite;
-  }
-
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(1800deg); }
-  }
-
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(1800deg); }
-  }
-
-  /* Add animation to "page content" */
-  .animate-bottom {
-    position: relative;
-    -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 1s;
-    animation-name: animatebottom;
-    animation-duration: 1s
-  }
-  @-webkit-keyframes animatebottom {
-    from { bottom:-20px; opacity:0 } 
-    to { bottom:0px; opacity:1 }
-  }
-  @keyframes animatebottom { 
-    from{ bottom:-20px; opacity:0 } 
-    to{ bottom:0; opacity:1 }
-  }
-  #tales-container {
-    display: none;
-    text-align: center;
-  }
-</style>
-
-<script src="./tales-service.js"></script>
+</html>

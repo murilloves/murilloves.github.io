@@ -2,7 +2,13 @@ const talesContainer = document.querySelector("#tales-container");
 
 const loadingDiv = document.getElementById('loading-div');
 
-const getTalesQuery = () => `{ tales { id title text } }`;
+const getTalesQuery = () => `{
+  tales {
+    id
+    title
+    text
+  }
+}`;
 
 const renderTales = ( data ) => {
   const allTales = data;
@@ -12,8 +18,6 @@ const renderTales = ( data ) => {
   }
 
   const taleFragment = document.createDocumentFragment();
-
-  // <center><img src="assets/img/tribal.png"></center>
 
   if(allTales.length) {
 
