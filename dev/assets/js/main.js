@@ -265,7 +265,7 @@ function showHideElements (elementClassToShow, elementClassToHide) {
 	Array.from(document.getElementsByClassName(elementClassToShow)).forEach(element => {
 	    element.style.display = 'block';
 	});
-        Array.from(document.getElementsByClassName(elementClassToHide)).forEach(element => {
-            element.style.display = 'none';
-        });
+	Array.from(document.getElementsByClassName(elementClassToHide)).forEach(element => {
+		element.style.display = 'none';
+	});
 }
