@@ -122,7 +122,6 @@ html body li {
 html body li > input[type="checkbox"] {
   margin: 0 10px;
   position: relative;
-  top: 15px;
 }
 
 html body li > label {
