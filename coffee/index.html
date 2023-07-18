@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Murilloves Coffee</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap'); */
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
         html {
-            font-size: 15px;
+            font-size: 16px;
+            background-color: #e8c59e;
+            background-image: linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0)), url("brown-recycled-paper-texture-background.png");
+            background-size: 100% 61%;
+            /* background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url("https://www.tilingtextures.com/wp-content/uploads/2017/03/0020-1024x1024.jpg"); */
+            /* background-size: cover; */
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            background-image: url("brown-recycled-paper-texture-background.png");
-            background-size: 100% 67.5%;
             margin: 2rem;
-            color: #212121;
+            color: #343434;
             font-weight: 200;
             font-family: 'Open Sans', sans-serif;
+        }
+        .container {
+            max-width: 18rem;
+            margin: 3rem auto;
         }
         .text-center {
             text-align: center;
@@ -32,14 +39,23 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            color: #333333;
-            font-size: 0.9rem;
+            gap: 4rem;
+            font-size: 0.85rem;
+        }
+        .menu-item > div small {
+            font-size: 0.7rem;
         }
         .menu-item > div .price-tag {
-            width: 1.5rem;
+            min-width: 4rem;
             text-align: left;
             font-size: 0.85rem;
-            color: #555555;
+            color: #4a4b4d;
+            display: flex;
+            justify-content: space-between;
+        }
+        .menu-item > div .price-tag s {
+            font-size: 0.8rem;
+            color: #4a4b4d;
         }
         h4 {
             margin-block-start: 1rem;
@@ -51,7 +67,7 @@
     </style>
 </head>
 <body>
-    <main>
+    <main class="container">
         <header>
             <h3 class="text-center">Murilloves Coffee &trade;</h3>
         </header>
@@ -60,15 +76,15 @@
             <div class="menu-item">
                 <div>
                     <span>Expresso <small class="disabled">&nbsp; (50ml)</small></span>
-                    <span class="price-tag">6</span>
-                </div>
-                <div>
-                    <span>Expresso Duplo <small class="disabled">&nbsp; (100ml)</small></span>
-                    <span class="price-tag">9</span>
+                    <span class="price-tag">Free <s>&nbsp;6&nbsp;</s></span>
                 </div>
                 <div>
                     <span>Ristreto</span>
-                    <span class="price-tag">12</span>
+                    <span class="price-tag">Free <s>&nbsp;7&nbsp;</s></span>
+                </div>
+                <div>
+                    <span>Expresso Duplo <small class="disabled">&nbsp; (100ml)</small></span>
+                    <span class="price-tag">Free <s>&nbsp;9&nbsp;</s></span>
                 </div>
             </div>
         </article>
@@ -76,16 +92,16 @@
             <h4>Filtrados</h4>
             <div class="menu-item">
                 <div>
-                    <span>Passado no <s>saco</s> coador de pano <small>&nbsp; (200ml)</small></span>
-                    <span class="price-tag">4</span>
-                </div>
-                <div>
                     <span>Melitta <small class="disabled">&nbsp; (120ml)</small></span>
-                    <span class="price-tag">12</span>
+                    <span class="price-tag">Free <s>&nbsp;12&nbsp;</s></span>
                 </div>
                 <div>
                     <span>Hario V60 <small>&nbsp; (150ml)</small></span>
-                    <span class="price-tag">15</span>
+                    <span class="price-tag">Free <s>&nbsp;15&nbsp;</s></span>
+                </div>
+                <div>
+                    <span>Coador de pano <s>Passado no saco</s><small>&nbsp; (200ml)</small></span>
+                    <span class="price-tag">Free <s>&nbsp;4&nbsp;</s></span>
                 </div>
             </div>
         </article>
@@ -94,11 +110,11 @@
             <div class="menu-item">
                 <div>
                     <span>Moka Italiana <small>&nbsp; (240ml)</small></span>
-                    <span class="price-tag">18</span>
+                    <span class="price-tag">Free <s>&nbsp;18&nbsp;</s></span>
                 </div>
                 <div>
                     <span>French Press <small>&nbsp; (300ml)</small></span>
-                    <span class="price-tag">22</span>
+                    <span class="price-tag">Free <s>&nbsp;22&nbsp;</s></span>
                 </div>
             </div>
         </article>
