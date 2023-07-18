@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murilloves Coffee</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+        html {
+            font-size: 15px;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-image: url("brown-recycled-paper-texture-background.png");
+            background-size: 100% 67.5%;
+            margin: 2rem;
+            color: #212121;
+            font-weight: 200;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .mt-2 { margin-top: 2rem; }
+        .mt-3 { margin-top: 3rem; }
+        .mt-5 { margin-top: 5rem; }
+        .menu-item {
+            margin: 1rem 0 1.5rem;
+        }
+        .menu-item > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #333333;
+            font-size: 0.9rem;
+        }
+        .menu-item > div .price-tag {
+            width: 1.5rem;
+            text-align: left;
+            font-size: 0.85rem;
+            color: #555555;
+        }
+        h4 {
+            margin-block-start: 1rem;
+            margin-block-end: 1rem;
+        }
+        .disabled {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h3 class="text-center">Murilloves Coffee &trade;</h3>
+        </header>
+        <article class="mt-2">
+            <h4>Black</h4>
+            <div class="menu-item">
+                <div>
+                    <span>Expresso <small class="disabled">&nbsp; (50ml)</small></span>
+                    <span class="price-tag">6</span>
+                </div>
+                <div>
+                    <span>Expresso Duplo <small class="disabled">&nbsp; (100ml)</small></span>
+                    <span class="price-tag">9</span>
+                </div>
+                <div>
+                    <span>Ristreto</span>
+                    <span class="price-tag">12</span>
+                </div>
+            </div>
+        </article>
+        <article>
+            <h4>Filtrados</h4>
+            <div class="menu-item">
+                <div>
+                    <span>Passado no <s>saco</s> coador de pano <small>&nbsp; (200ml)</small></span>
+                    <span class="price-tag">4</span>
+                </div>
+                <div>
+                    <span>Melitta <small class="disabled">&nbsp; (120ml)</small></span>
+                    <span class="price-tag">12</span>
+                </div>
+                <div>
+                    <span>Hario V60 <small>&nbsp; (150ml)</small></span>
+                    <span class="price-tag">15</span>
+                </div>
+            </div>
+        </article>
+        <article>
+            <h4>Especiais</h4>
+            <div class="menu-item">
+                <div>
+                    <span>Moka Italiana <small>&nbsp; (240ml)</small></span>
+                    <span class="price-tag">18</span>
+                </div>
+                <div>
+                    <span>French Press <small>&nbsp; (300ml)</small></span>
+                    <span class="price-tag">22</span>
+                </div>
+            </div>
+        </article>
+        <footer class="mt-5">
+            <h6>
+                &copy; 2023 Murilloves | All rights reserved
+            </h6>
+        </footer>
+    </main>
+</body>
+</html>
