@@ -23,23 +23,25 @@
             font-family: 'Open Sans', sans-serif;
         }
         .container {
-            max-width: 18rem;
+            max-width: 19rem;
             margin: 3rem auto;
         }
         .text-center {
             text-align: center;
         }
+        .ml-1 { margin-left: 1rem; }
+        .mt-05 { margin-top: 0.5rem; }
+        .mt-1 { margin-top: 1rem; }
         .mt-2 { margin-top: 2rem; }
         .mt-3 { margin-top: 3rem; }
         .mt-5 { margin-top: 5rem; }
         .menu-item {
-            margin: 1rem 0 1.5rem;
+            margin: 0.75rem 0 1.25rem;
         }
         .menu-item > div {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            gap: 4rem;
+            gap: 2rem;
             font-size: 0.85rem;
         }
         .menu-item > div small {
@@ -48,20 +50,20 @@
         .menu-item > div .price-tag {
             min-width: 4rem;
             text-align: left;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: #3a3b3d;
             display: flex;
             justify-content: space-between;
         }
         .menu-item > div .price-tag s {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: #3a3b3d;
         }
-        h4 {
-            margin-block-start: 1rem;
-            margin-block-end: 1rem;
+        h5 {
+            margin-block-start: 0.5rem;
+            margin-block-end: 0.5rem;
         }
-        .disabled {
+        .d-none {
             display: none;
         }
     </style>
@@ -71,56 +73,221 @@
         <header>
             <h3 class="text-center">Murilloves Coffee &trade;</h3>
         </header>
+
         <article class="mt-2">
-            <h4>Black</h4>
-            <div class="menu-item">
-                <div>
-                    <span>Expresso <small class="disabled">&nbsp; (50ml)</small></span>
-                    <span class="price-tag">Free <s>&nbsp;6&nbsp;</s></span>
-                </div>
-                <div>
-                    <span>Ristreto</span>
-                    <span class="price-tag">Free <s>&nbsp;7&nbsp;</s></span>
-                </div>
-                <div>
-                    <span>Expresso Duplo <small class="disabled">&nbsp; (100ml)</small></span>
-                    <span class="price-tag">Free <s>&nbsp;9&nbsp;</s></span>
-                </div>
-            </div>
+            <h4>Cafés</h4>
         </article>
-        <article>
-            <h4>Filtrados</h4>
-            <div class="menu-item">
-                <div>
-                    <span>Melitta <small class="disabled">&nbsp; (120ml)</small></span>
-                    <span class="price-tag">Free <s>&nbsp;12&nbsp;</s></span>
+        <div class="ml-1">
+            <article>
+                <h5>Filtrados</h5>
+                <div class="menu-item">
+                    <div>
+                        <span>Hario V60 <small>&nbsp; (250ml)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;15&nbsp;</s></span>
+                    </div>
+                    <div>
+                        <span>Melitta <small>&nbsp; (refil)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;12&nbsp;</s></span>
+                    </div>
+                    <div>
+                        <span>Coador de pano <s class="d-none">Passado no saco</s></span>
+                        <span class="price-tag">Free <s>&nbsp;6&nbsp;</s></span>
+                    </div>
                 </div>
-                <div>
-                    <span>Hario V60 <small>&nbsp; (150ml)</small></span>
-                    <span class="price-tag">Free <s>&nbsp;15&nbsp;</s></span>
+            </article>
+            <article>
+                <h5>Especiais</h5>
+                <div class="menu-item">
+                    <div>
+                        <span>Moka Italiana <small>&nbsp; (240ml)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;18&nbsp;</s></span>
+                    </div>
+                    <div>
+                        <span>French Press <small>&nbsp; (300ml)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;22&nbsp;</s></span>
+                    </div>
+                    <div>
+                        <span>Aeropress 85C <small>&nbsp; (180ml)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;24&nbsp;</s></span>
+                    </div>
                 </div>
-                <div>
-                    <span>Coador de pano <s>Passado no saco</s><small>&nbsp; (200ml)</small></span>
-                    <span class="price-tag">Free <s>&nbsp;4&nbsp;</s></span>
+            </article>
+            <article>
+                <h5>Latte</h5>
+                <div class="menu-item">
+                    <div>
+                        <span>Capuccino Leite Ninho</span>
+                        <span class="price-tag">Free <s>&nbsp;14&nbsp;</s></span>
+                    </div>
+                    <div>
+                        <span>Pingado Especial <small>&nbsp; (vaporizado Prensa Francesa)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;12&nbsp;</s></span>
+                    </div>
                 </div>
-            </div>
+            </article>
+            <article>
+                <h5>Black</h5>
+                <div class="menu-item">
+                    <div>
+                        <span>Expresso <small>&nbsp; (Aeropress)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;9&nbsp;</s></span>
+                    </div>
+                    <div>
+                        <span>Ristreto <small>&nbsp; (Aeropress)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;8&nbsp;</s></span>
+                    </div>
+                    <div>
+                        <span>Carioca <small class="d-none">&nbsp; (100ml)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;8&nbsp;</s></span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <article class="mt-2">
+            <h4>Homemade Breakfast</h4>
         </article>
-        <article>
-            <h4>Especiais</h4>
-            <div class="menu-item">
-                <div>
-                    <span>Moka Italiana <small>&nbsp; (240ml)</small></span>
-                    <span class="price-tag">Free <s>&nbsp;18&nbsp;</s></span>
+        <div class="ml-1">
+            <article>
+                <div class="menu-item">
+                    <div>
+                        <span>Combinadinho Murilloves&trade;
+                            <small>(delicioso couvert de de paes na manteiga, ovos mexidos na tigela e bacon fritinho, hmmmm)</small>
+                        </span>
+                        <span class="price-tag">Free <s>&nbsp;22&nbsp;</s></span>
+                    </div>
+                    <div class="mt-1">
+                        <span>Panqueca de chocolate 100%
+                            <small>&nbsp; (acompanha pasta de amendoim, doce de leite e mel)</small>
+                        </span>
+                        <span class="price-tag">Free <s>&nbsp;22&nbsp;</s></span>
+                    </div>
                 </div>
-                <div>
-                    <span>French Press <small>&nbsp; (300ml)</small></span>
-                    <span class="price-tag">Free <s>&nbsp;22&nbsp;</s></span>
+            </article>
+            <article>
+                <h5>Toasts Especiais</h5>
+                <div class="menu-item">
+                    <div>
+                        <span>Peanut Butter Jelly</span>
+                        <span class="price-tag">Free <s>&nbsp;21&nbsp;</s></span>
+                    </div>
+                    <div class="mt-05">
+                        <span>Avocado Toast </span>
+                        <span class="price-tag">Free <s>&nbsp;27&nbsp;</s></span>
+                    </div>
                 </div>
-            </div>
+            </article>
+            <article>
+                <h5>Snacks</h5>
+                <div class="menu-item">
+                    <div>
+                        <span>Cacetinho com queijinho
+                            <br />
+                            <small>(pao na chapa com requeijao)</small>
+                        </span>
+                        <span class="price-tag">Free <s>&nbsp;12&nbsp;</s></span>
+                    </div>
+                    <div class="mt-05">
+                        <span>Pao de Queijo Mini<small>&nbsp; (12 un)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;9&nbsp;</s></span>
+                    </div>
+                    <div class="mt-05">
+                        <span>Romeu e Julieta<small>&nbsp; (discos de provolone com goiabada)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;11&nbsp;</s></span>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h5>Healthy (nosa)</h5>
+                <div class="menu-item">
+                    <div>
+                        <span>Salada de frutas com mel</span>
+                        <span class="price-tag">Free <s>&nbsp;14&nbsp;</s></span>
+                    </div>
+                    <div class="mt-05">
+                        <span>Iogurte com granola e mel </span>
+                        <span class="price-tag">Free <s>&nbsp;12&nbsp;</s></span>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h5>Black</h5>
+                <div class="menu-item">
+                    <div>
+                        <span>Expresso <small>&nbsp; (Aeropress)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;9&nbsp;</s></span>
+                    </div>
+                    <div>
+                        <span>Ristreto <small>&nbsp; (Aeropress)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;8&nbsp;</s></span>
+                    </div>
+                    <div>
+                        <span>Carioca <small class="d-none">&nbsp; (100ml)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;8&nbsp;</s></span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <article class="mt-2">
+            <h4>Fancy Snacks</h4>
         </article>
+        <div class="ml-1">
+            <article>
+                <div class="menu-item">
+                    <div>
+                        <span>Croissant amanteigado
+                            <br />
+                            <small>(Day Bakery)</small>
+                        </span>
+                        <span class="price-tag">Free <s>&nbsp;?&nbsp;</s></span>
+                    </div>
+                    <div class="mt-05">
+                        <span>Cinnamon Roll <small>&nbsp; (Day Bakery)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;?&nbsp;</s></span>
+                    </div>
+                    <div class="mt-05">
+                        <span>Pao Queijo Tulha <small>&nbsp; (Day Bakery)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;?&nbsp;</s></span>
+                    </div>
+                    <div class="mt-05">
+                        <span>Pain au Chocolat Amendoas ou Pistache <small>&nbsp; (Day Bakery)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;?&nbsp;</s></span>
+                    </div>
+                    <div class="mt-05">
+                        <span>Tortinha de Limao <small>&nbsp; (Pao e Cia)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;?&nbsp;</s></span>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <article class="mt-2">
+            <h4>Sucos</h4>
+        </article>
+        <div class="ml-1">
+            <article>
+                <div class="menu-item">
+                    <div>
+                        <span>Caldo de Laranja <small>&nbsp; (200ml)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;15&nbsp;</s></span>
+                    </div>
+                    <div>
+                        <span>Uva Integral <small>&nbsp; (150ml)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;13&nbsp;</s></span>
+                    </div>
+                    <div>
+                        <span>Acerola <small>&nbsp; (240ml)</small></span>
+                        <span class="price-tag">Free <s>&nbsp;12&nbsp;</s></span>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+
         <footer class="mt-5">
             <h6>
-                &copy; 2023 Murilloves | All rights reserved
+                &copy; 2024 Murilloves | All rights reserved
             </h6>
         </footer>
     </main>
